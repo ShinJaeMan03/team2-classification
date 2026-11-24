@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>멀티탭위험도판정기</title>
+<style>
+:root{
+  --night:#0f2238; --night2:#24506f; --snow:#eff5f9; --paper:#ffffff; --ink:#14283b; --mute:#546a7d;
+  --line:#d3e0ea; --ice:#22638f; --ice-soft:#e3eff7; --ember:#c44a18; --ember-soft:#fdeee6;
+  --safe:#1a7a62; --caution:#e8b021; --danger:#c44a18; --critical:#a31b2d;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--snow);color:var(--ink);font:16px/1.6 "Pretendard","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;word-break:keep-all;overflow-wrap:break-word}
+h1,h2,h3,p,ul,ol{margin:0}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:3px solid #f0a63a;outline-offset:2px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+.num{font-variant-numeric:tabular-nums}
+
+/* 상단: 눈 오는 밤 */
+.hero{position:relative;background:linear-gradient(#0f2238,#24506f 88%);color:#fff;overflow:hidden}
+.hero canvas,.hero .town{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero .town{top:auto;bottom:0;height:120px}
+.hero .wrap{position:relative;padding-top:30px;padding-bottom:104px}
+.hero h1{font-size:clamp(26px,3.6vw,42px);line-height:1.25;letter-spacing:-.03em;font-weight:800;text-wrap:balance}
+.hero p{margin-top:8px;color:#d5e6f2;max-width:34em}
+.snow-btn{position:absolute;right:24px;top:24px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.4);color:#fff;border-radius:6px;padding:4px 12px;font-size:14px;cursor:pointer}
+.tabs{position:relative;display:flex;gap:6px;margin-top:-46px;z-index:2}
+.tabs button{border:0;border-radius:10px 10px 0 0;padding:10px 20px;background:#c7dbe8;color:#23455f;font-weight:600;cursor:pointer;min-height:46px}
+.tabs button[aria-selected=true]{background:var(--snow);color:var(--ink)}
+.tabs small{font-weight:500;opacity:.8}
+
+main.wrap{padding-top:22px;padding-bottom:60px}
+.cols{display:grid;grid-template-columns:minmax(0,1.18fr) minmax(0,1fr);gap:22px;align-items:start}
+.cols>*{min-width:0}
+.panel{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+.panel+.panel{margin-top:18px}
+.panel h2{font-size:19px;letter-spacing:-.02em;margin-bottom:12px}
+.result{position:sticky;top:14px}
+.hint{color:var(--mute);font-size:14px}
+
+.scen{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;align-items:center}
+.scen span{font-weight:700;margin-right:4px}
+.btn{border:1px solid #a9c3d5;background:var(--paper);border-radius:8px;padding:7px 14px;cursor:pointer;min-height:42px}
+.btn:hover{background:var(--ice-soft)}
+.btn.primary{background:var(--ice);border-color:var(--ice);color:#fff;font-weight:600}
+.btn.primary:hover{background:#174e73}
+.scen .btn[aria-pressed=true]{background:var(--night);border-color:var(--night);color:#fff}
+
+.fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+label.f{display:block;font-size:14px;font-weight:600}
+label.f select,label.f input{display:block;width:100%;margin-top:4px;font-weight:400;font-size:16px}
+input[type=number],input[type=text],select{border:1px solid #a9c3d5;border-radius:8px;padding:7px 10px;background:#fff;min-height:42px;min-width:0}
+input.bad{border-color:var(--critical);background:#fff3f4}
+input.need{border-color:#c98a2b;background:#fff9ee}
+.checks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 14px;margin-top:14px}
+.checks label{display:flex;gap:8px;align-items:center;font-size:15px;min-height:32px}
+input[type=checkbox]{width:19px;height:19px;accent-color:var(--ice);flex:none;margin:0}
+
+.add{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px}
+.add .hint{grid-column:1/-1;min-height:1.6em}
+details.custom{margin-top:6px}
+details.custom summary{cursor:pointer;color:var(--ice);font-weight:600;font-size:15px;padding:4px 0}
+.customrow{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr) auto auto;gap:8px;align-items:center;margin-top:8px}
+.customrow label{display:flex;gap:6px;align-items:center;font-size:15px}
+
+/* 멀티탭 그림 */
+.strip{display:flex;flex-wrap:wrap;gap:8px;background:#f7fafc;border:2px solid #b9cddb;border-radius:14px;padding:12px;margin:14px 0 6px}
+.sock{width:88px;text-align:center;font-size:13px;line-height:1.3}
+.sock i{display:block;width:52px;height:52px;margin:0 auto 5px;border-radius:50%;border:2px solid #b9cddb;background:#fff radial-gradient(circle at 34% 50%,#5d7488 4px,transparent 5px),#fff;background:radial-gradient(circle at 34% 50%,#7890a3 4px,transparent 5px),radial-gradient(circle at 66% 50%,#7890a3 4px,transparent 5px),#fff}
+.sock.on i{border-color:var(--ice);background:var(--ice)}
+.sock.heat i{border-color:var(--ember);background:var(--ember)}
+.sock.off i{opacity:.45}
+.sock.over{color:var(--critical);font-weight:700}
+.sock.over i{border-style:dashed;border-color:var(--critical)}
+.sock b{display:block;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.legend{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:13px;color:var(--mute)}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:5px}
+
+.items{list-style:none;padding:0;margin-top:12px}
+.item{border-top:1px solid var(--line);padding:11px 0;display:grid;grid-template-columns:minmax(0,1.5fr) 104px 104px auto auto 42px;gap:10px;align-items:end}
+.item .nm{align-self:center;min-width:0}
+.item .nm b{display:block;line-height:1.35}
+.item label{font-size:12.5px;color:var(--mute)}
+.item label.n input{display:block;width:100%;color:var(--ink);font-size:16px}
+.item label.c{display:flex;flex-direction:column;align-items:center;gap:4px;padding-bottom:9px;white-space:nowrap}
+.del{border:1px solid #d9b6b0;background:#fff;color:var(--critical);border-radius:8px;min-height:42px;cursor:pointer;font-size:20px;line-height:1}
+.del:hover{background:#fdeeee}
+.badge{display:inline-block;font-size:12px;border-radius:4px;padding:0 6px;background:var(--ice-soft);color:#174e73;line-height:1.7}
+.badge.est{background:#fff2d9;color:#734c00}
+.badge.user{background:#e9edf0;color:#3d4f5e}
+.empty{padding:22px 0 8px;color:var(--mute)}
+
+/* 결과 */
+.grade{border-radius:12px;color:#fff;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+.grade strong{font-size:36px;line-height:1.15;letter-spacing:-.03em}
+.grade .sc{font-size:22px;font-weight:700}
+.g-safe{background:var(--safe)}.g-caution{background:var(--caution);color:var(--ink)!important}.g-danger{background:var(--danger)}.g-critical{background:var(--critical)}.g-none{background:#5c7386}
+.gauge{position:relative;margin:24px 0 6px}
+.gauge .bar{display:flex;height:18px;border-radius:9px;overflow:hidden}
+.gauge .bar span{display:block}
+.gauge .mark{position:absolute;top:-9px;width:4px;height:36px;margin-left:-2px;background:var(--ink);border-radius:2px;box-shadow:0 0 0 2px #fff;transition:left .35s}
+.scale{position:relative;height:20px;font-size:12.5px;color:var(--mute)}
+.scale span{position:absolute;transform:translateX(-50%)}
+.scale span:first-child{transform:none}.scale span:last-child{transform:translateX(-100%)}
+.floor{margin-top:10px;background:#fff7e8;border:1px solid #edd5a4;border-radius:8px;padding:8px 12px;font-size:14.5px}
+.kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:16px 0 4px}
+.kpis div{border-top:3px solid var(--ice);padding-top:6px}
+.kpis span{display:block;font-size:13px;color:var(--mute)}
+.kpis b{font-size:23px;letter-spacing:-.02em;white-space:nowrap}
+.loadbar{position:relative;height:12px;background:#e3ebf1;border-radius:6px;margin-top:12px}
+.loadbar i{position:absolute;left:0;top:0;bottom:0;border-radius:6px;transition:width .35s}
+.loadbar u{position:absolute;top:-4px;height:20px;width:2px;background:var(--ink)}
+.sub{font-size:17px;margin:20px 0 8px;letter-spacing:-.01em}
+.factors{list-style:none;padding:0}
+.factors li{display:grid;grid-template-columns:minmax(0,1fr) 92px;gap:4px 12px;padding:8px 0;border-top:1px solid var(--line);font-size:15px}
+.factors li b{display:block}
+.factors .pt{text-align:right;font-weight:700;white-space:nowrap}
+.factors .pt small{font-weight:400;color:var(--mute)}
+.factors .m{grid-column:1/-1;height:6px;background:#e6eef3;border-radius:3px}
+.factors .m i{display:block;height:100%;border-radius:3px;background:var(--ember)}
+.factors li.zero{color:var(--mute)}
+
+.plan{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.plan>div{border:1px solid var(--line);border-radius:10px;padding:12px 14px;min-width:0}
+.plan .wall{background:var(--ember-soft);border-color:#f0cdb9}
+.plan .keep{background:var(--ice-soft);border-color:#c3dbea}
+.plan h3{font-size:15.5px;margin-bottom:4px}
+.plan ul{padding-left:18px;font-size:15px}
+.plan small{color:var(--mute)}
+.after{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:15.5px}
+.pill{color:#fff;border-radius:6px;padding:2px 10px;font-weight:700;white-space:nowrap}
+.advice{list-style:none;padding:0;margin-top:14px}
+.advice li{display:grid;grid-template-columns:76px minmax(0,1fr);gap:10px;padding:9px 0;border-top:1px solid var(--line);font-size:15.5px}
+.advice .k{font-weight:700;color:var(--ice)}
+.advice .k.now{color:var(--critical)}
+
+.basis{margin-top:22px}
+.basis.first{margin-top:0}
+.linkbtn{border:0;background:none;padding:0;color:var(--ice);text-decoration:underline;cursor:pointer}
+.basis .two{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.basis .two>*{min-width:0}
+.basis h3{font-size:16px;margin:16px 0 6px}
+table{border-collapse:collapse;width:100%;font-size:14.5px}
+th,td{text-align:left;border-bottom:1px solid var(--line);padding:6px 8px 6px 0;vertical-align:top}
+.tw{overflow-x:auto}
+.basis ul{padding-left:18px;font-size:14.5px}
+.basis a{color:var(--ice)}
+.cause{display:grid;grid-template-columns:128px minmax(0,1fr) 104px;gap:4px 10px;align-items:center;font-size:14px}
+.cause .b{height:12px;background:#e6eef3;border-radius:3px}
+.cause .b i{display:block;height:100%;background:var(--ice);border-radius:3px}
+.cause .v{text-align:right;white-space:nowrap}
+.cause .fx{color:var(--mute);font-size:12.5px;display:block;line-height:1.3}
+#evidence td:first-child{white-space:nowrap;font-weight:600;padding-right:18px}
+.devbox{max-height:440px;overflow:auto;border:1px solid var(--line);border-radius:8px;padding:0 12px;margin-top:10px}
+.devbox th{position:sticky;top:0;background:var(--paper);box-shadow:0 1px 0 var(--line)}
+.devbox td:nth-child(-n+4),.devbox th{white-space:nowrap;padding-right:16px}
+.soon{text-align:center;padding:90px 20px;color:var(--mute);font-size:20px}
+[hidden]{display:none!important}
+
+@media (max-width:980px){.cols,.basis .two{grid-template-columns:minmax(0,1fr)}.result{position:static}}
+@media (max-width:640px){
+  .wrap{padding:0 16px}.panel{padding:16px}
+  .snow-btn{position:static;margin-top:12px}
+  .fields{grid-template-columns:1fr 1fr}.checks{grid-template-columns:1fr}
+  .item{grid-template-columns:1fr 1fr auto auto;align-items:end}
+  .item .nm{grid-column:1/4}.item .del{grid-column:4;grid-row:1;min-width:42px}
+  .item label.n{grid-row:2}.item label.c{grid-row:2}
+  .customrow{grid-template-columns:1fr 1fr}.plan{grid-template-columns:1fr}
+  .kpis b{font-size:19px}.tabs button{padding:8px 9px;font-size:14px;flex:1}.tabs small{display:block}
+  .cause{grid-template-columns:104px minmax(0,1fr) 92px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <canvas id="snow" aria-hidden="true"></canvas>
+  <svg class="town" viewBox="0 0 1240 120" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <path d="M0 78 Q180 34 380 66 T780 58 T1240 70 V120 H0Z" fill="#2f5f80"/>
+    <g fill="#173450"><rect x="700" y="38" width="84" height="82"/><rect x="796" y="20" width="112" height="100"/><rect x="920" y="46" width="76" height="74"/><rect x="1010" y="30" width="96" height="90"/></g>
+    <g fill="#f4f9fc"><path d="M696 40q4-10 18-8 12-8 28-3 18-7 46 11z"/><path d="M792 22q8-12 26-9 20-8 42 0 30-6 52 9z"/><path d="M916 48q10-10 28-7 26-7 56 7z"/><path d="M1006 32q12-11 34-8 34-8 70 8z"/></g>
+    <g fill="#3f6b8a"><rect x="714" y="56" width="14" height="16"/><rect x="752" y="56" width="14" height="16"/><rect x="814" y="42" width="16" height="18"/><rect x="872" y="42" width="16" height="18"/><rect x="814" y="74" width="16" height="18"/><rect x="936" y="64" width="14" height="16"/><rect x="968" y="64" width="14" height="16"/><rect x="1028" y="50" width="16" height="18"/><rect x="1070" y="78" width="16" height="18"/></g>
+    <rect x="843" y="42" width="16" height="18" fill="#ffd27a"/>
+    <path d="M0 104 Q260 84 560 100 T1240 92 V120 H0Z" fill="#eff5f9"/>
+  </svg>
+  <div class="wrap">
+    <h1>자취방 멀티탭, 이대로 꽂아도 괜찮을까?</h1>
+    <p>연결한 기기를 고르면 과부하와 화재위험도를 계산하고, 어디에 옮겨 꽂을지 알려 드립니다.</p>
+    <button class="snow-btn" id="snowBtn" type="button">눈 멈추기</button>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="tabs" role="tablist" aria-label="기능 선택">
+    <button role="tab" id="tab1" aria-controls="panel1" aria-selected="true" type="button">기능 1 · 화재위험도</button>
+    <button role="tab" id="tab2" aria-controls="panel2" aria-selected="false" tabindex="-1" type="button">기능 2 · 전기요금 <small>(준비 중)</small></button>
+    <button role="tab" id="tab3" aria-controls="panel3" aria-selected="false" tabindex="-1" type="button">판정 기준·자료</button>
+  </div>
+</div>
+
+<main class="wrap">
+  <!-- ================= 기능 1 화면 ================= -->
+  <section id="panel1" role="tabpanel" aria-labelledby="tab1">
+    <div class="scen" id="scen"><span>예시 상황</span></div>
+    <div class="cols">
+      <div>
+        <div class="panel">
+          <h2>멀티탭 정보</h2>
+          <div class="fields">
+            <label class="f">정격전류 (220V)<select id="amps"><option value="10">10A (2,200W)</option><option value="16">16A (3,520W)</option></select></label>
+            <label class="f">구수<select id="sockets"></select></label>
+            <label class="f">사용 기간 (년)<input id="years" type="number" min="0" max="30" step="0.5" inputmode="decimal"></label>
+          </div>
+          <div class="checks">
+            <label><input type="checkbox" id="dust"> 먼지가 많이 쌓여 있다</label>
+            <label><input type="checkbox" id="damage"> 겉면·전선이 손상됐다</label>
+            <label><input type="checkbox" id="overheat"> 뜨겁거나 탄 냄새가 난다</label>
+            <label><input type="checkbox" id="daisy"> 멀티탭에 멀티탭을 꽂았다</label>
+          </div>
+        </div>
+        <div class="panel">
+          <h2>연결한 기기</h2>
+          <div class="add">
+            <select id="pick" aria-label="기기 선택"></select>
+            <button class="btn primary" id="addBtn" type="button">추가</button>
+            <p class="hint" id="pickInfo"></p>
+          </div>
+          <details class="custom"><summary>목록에 없는 기기 직접 입력</summary>
+            <div class="customrow">
+              <input type="text" id="cName" placeholder="기기 이름" maxlength="20" aria-label="직접 입력 기기 이름">
+              <input type="number" id="cWatts" placeholder="소비전력 W" min="1" max="10000" aria-label="직접 입력 소비전력 W">
+              <label><input type="checkbox" id="cHeat"> 발열</label>
+              <button class="btn" id="cAdd" type="button">추가</button>
+            </div>
+            <p class="hint" id="cMsg" role="status"></p>
+          </details>
+          <div class="strip" id="strip" aria-hidden="true"></div>
+          <div class="legend"><span><i style="background:#c44a18"></i>발열 기기</span><span><i style="background:#22638f"></i>일반 기기</span><span>흐리게: 동시 사용 안 함</span></div>
+          <ul class="items" id="items"></ul>
+        </div>
+      </div>
+
+      <div class="result">
+        <div class="panel" id="resultPanel">
+          <h2>화재위험도</h2>
+          <div id="gradeBox" aria-live="polite"></div>
+          <div id="resultBody"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel" id="planPanel" style="margin-top:22px">
+      <h2>효율적인 연결 방식</h2>
+      <div id="planBody"></div>
+    </div>
+
+    <p class="hint" style="margin-top:16px">수업용 프로그램이며 공인된 화재 예측 기준이 아닙니다. <button class="linkbtn" id="goBasis" type="button">판정 기준과 자료 보기</button></p>
+  </section>
+
+  <!-- ================= 기능 2 화면 (다음 주) ================= -->
+  <section id="panel2" role="tabpanel" aria-labelledby="tab2" hidden>
+    <div class="panel soon" id="feature2Root">준비 중</div>
+  </section>
+
+  <!-- ================= 판정 기준·자료 화면 ================= -->
+  <section id="panel3" role="tabpanel" aria-labelledby="tab3" hidden>
+    <div class="panel basis first">
+      <h2>판정 기준</h2>
+      <div class="two" id="basis"></div>
+    </div>
+    <div class="panel basis">
+      <h2>전기화재 원인</h2>
+      <div class="two" id="causes"></div>
+    </div>
+    <div class="panel basis">
+      <h2>근거 자료</h2>
+      <div class="tw" id="evidence"></div>
+    </div>
+    <div class="panel basis">
+      <h2>기기 소비전력 출처</h2>
+      <p class="hint" id="devSummary"></p>
+      <div class="devbox" id="devTable" tabindex="0" role="region" aria-label="기기별 소비전력과 출처 표"></div>
+    </div>
+    <p class="hint" style="margin-top:16px">수업용 프로그램입니다. 배점은 조사 자료를 바탕으로 팀이 정한 값이며 공인된 화재 예측 기준이 아닙니다. 실제 사용 전에는 제품 라벨의 정격을 확인하고, 이상이 있으면 전문가 점검을 받으세요.</p>
+  </section>
+</main>
+
+<script>
+"use strict";
+/* ╔══════════════════════════════════════════════════════════════╗
+   ║ 1. 기기 데이터  (기능 1·2 공용)                                ║
+   ║ kind: kea=공단 값, conv=공단 값 환산, est=추정값,               ║
+   ║       est1=추정값(제품 1개)                                    ║
+   ║ heat: 발열 기기 기본값,  heating: 난방기기                      ║
+   ╚══════════════════════════════════════════════════════════════╝ */
+const EEP = n => `https://eep.energy.or.kr/certification/certi_list_${n}.aspx`;
+const DNW = q => `https://search.danawa.com/dsearch.php?query=${encodeURIComponent(q)}`;
+const KIND_LABEL = { kea:"공단", conv:"공단 환산", est:"추정값", est1:"추정값(제품 1개)", user:"직접 입력", edited:"직접 수정" };
+
+const DEVICE_DB = [
+  // 난방·계절
+  { id:"fanheater", cat:"난방·계절", name:"전기온풍기",        watts:2000, heat:true,  heating:true, kind:"kea",  url:EEP(293), src:"공단 신고 523개 정격 중앙값(2022년 이후, 3,520W 이하)" },
+  { id:"stove",     cat:"난방·계절", name:"전기스토브",        watts:1200, heat:true,  heating:true, kind:"kea",  url:EEP(134), src:"공단 신고 1,209개 정격 중앙값(2022년 이후, 3,520W 이하)" },
+  { id:"blanket",   cat:"난방·계절", name:"전기요(싱글)",      watts:120,  heat:true,  heating:true, kind:"est1", url:"https://www.kurly.com/goods/1001730521", src:"일월 IW-KM59 싱글 표기 약 120W" },
+  { id:"humid_h",   cat:"난방·계절", name:"가열식 가습기",     watts:600,  heat:true,  kind:"est",  url:DNW("가열식 가습기"), src:"다나와 표기 38개 중앙값(중간 50% 390~680W)" },
+  { id:"humid_u",   cat:"난방·계절", name:"초음파 가습기",     watts:23,   heat:false, kind:"est",  url:DNW("초음파 가습기"), src:"다나와 표기 33개 중앙값(중간 50% 3~25W)" },
+  { id:"fan",       cat:"난방·계절", name:"선풍기",            watts:50,   heat:false, kind:"est1", url:"https://www.ssg.com/item/itemView.ssg?itemId=1000027898219", src:"SSG 14인치 제품 1개(검색 결과로만 확인)" },
+  { id:"portac",    cat:"난방·계절", name:"이동식 에어컨",     watts:1823, heat:false, kind:"kea",  url:EEP(290), src:"공단 신고 619개 냉방 소비전력 측정 중앙값" },
+  { id:"dehumid",   cat:"난방·계절", name:"제습기(12L 이하)",  watts:162,  heat:false, kind:"kea",  url:EEP(145), src:"공단 신고 220개 1시간 소비전력량 중앙값(2022년 이후)" },
+  // 주방
+  { id:"kettle",    cat:"주방", name:"전기포트",           watts:1350, heat:true,  kind:"est",  url:DNW("무선주전자"), src:"다나와 표기 39개 중앙값(중간 50% 900~1,850W)" },
+  { id:"microwave", cat:"주방", name:"전자레인지",         watts:1350, heat:true,  kind:"est",  url:DNW("전자레인지"), src:"다나와 소비전력 표기 40개 중앙값(중간 50% 1,100~1,570W)" },
+  { id:"airfryer",  cat:"주방", name:"에어프라이어",       watts:1500, heat:true,  kind:"est",  url:DNW("에어프라이어"), src:"다나와 표기 39개 중앙값(중간 50% 1,400~1,750W)" },
+  { id:"rice6",     cat:"주방", name:"전기밥솥(6인용 이하)", watts:880,  heat:true,  kind:"kea",  url:EEP(295), src:"공단 신고 726개 정격 중앙값(2022년 이후)" },
+  { id:"rice10",    cat:"주방", name:"전기밥솥(10인용 이상)", watts:1455, heat:true,  kind:"kea",  url:EEP(295), src:"공단 신고 337개 정격 중앙값(2022년 이후)" },
+  { id:"induction", cat:"주방", name:"인덕션(1구)",        watts:2000, heat:true,  kind:"est",  url:DNW("1구 인덕션"), src:"다나와 표기 39개 중앙값(중간 50% 2,000~2,000W)" },
+  { id:"ramen",     cat:"주방", name:"라면포트·멀티쿠커",  watts:820,  heat:true,  kind:"est",  url:DNW("멀티쿠커 라면포트"), src:"다나와 표기 24개 중앙값(중간 50% 730~1,000W)" },
+  { id:"grill",     cat:"주방", name:"전기그릴",           watts:1500, heat:true,  kind:"est",  url:DNW("전기그릴"), src:"다나와 표기 35개 중앙값(중간 50% 1,200~1,700W)" },
+  { id:"toaster",   cat:"주방", name:"토스터",             watts:900,  heat:true,  kind:"est",  url:DNW("토스터기"), src:"다나와 표기 37개 중앙값(중간 50% 800~1,300W)" },
+  { id:"coffee",    cat:"주방", name:"캡슐커피머신",       watts:1260, heat:true,  kind:"est",  url:DNW("캡슐커피머신"), src:"다나와 표기 35개 중앙값(중간 50% 1,150~1,340W)" },
+  { id:"fridge",    cat:"주방", name:"소형 냉장고",        watts:69,   heat:false, kind:"est1", url:DNW("소형냉장고"), src:"다나와 제품 1개 표기" },
+  { id:"icemaker",  cat:"주방", name:"제빙기",             watts:200,  heat:false, kind:"est",  url:DNW("제빙기"), src:"다나와 표기 30개 중앙값(중간 50% 150~500W)" },
+  // 미용·의류
+  { id:"dryer",     cat:"미용·의류", name:"헤어드라이어",     watts:1600, heat:true,  kind:"est",  url:DNW("헤어드라이어"), src:"다나와 표기 38개 중앙값(중간 50% 1,600~1,700W)" },
+  { id:"straight",  cat:"미용·의류", name:"고데기",           watts:43,   heat:true,  kind:"est",  url:DNW("고데기"), src:"다나와 표기 27개 중앙값(중간 50% 35~70W)" },
+  { id:"iron",      cat:"미용·의류", name:"스팀다리미",       watts:1800, heat:true,  kind:"est",  url:DNW("스팀다리미"), src:"다나와 표기 37개 중앙값(중간 50% 1,500~2,100W)" },
+  { id:"washer",    cat:"미용·의류", name:"통돌이 세탁기(10kg)", watts:300, heat:false, kind:"est1", url:"https://www.lge.co.kr/washing-machines/tr10wl-dkor", src:"LG TR10WL 1개(원문 표 대조는 못 함)" },
+  // 책상·영상
+  { id:"laptop",    cat:"책상·영상", name:"노트북 충전기(65W)", watts:73,  heat:false, kind:"conv", url:EEP(125), src:"공단 어댑터 출력 65W ÷ 효율 중앙값 88.6%(574개)" },
+  { id:"phone",     cat:"책상·영상", name:"휴대폰 충전기(15W)", watts:18,  heat:false, kind:"conv", url:EEP(125), src:"공단 어댑터 최다 출력 15W ÷ 효율 중앙값 81.3%(1,859개)" },
+  { id:"mon24",     cat:"책상·영상", name:"모니터(24형)",       watts:15,  heat:false, kind:"kea",  url:EEP(278), src:"공단 신고 2,633개 켜진 상태 측정 중앙값(2022년 이후)" },
+  { id:"mon27",     cat:"책상·영상", name:"모니터(27형)",       watts:21,  heat:false, kind:"kea",  url:EEP(278), src:"공단 신고 4,533개 켜진 상태 측정 중앙값(2022년 이후)" },
+  { id:"tv43",      cat:"책상·영상", name:"TV(43형급)",         watts:46,  heat:false, kind:"conv", url:EEP(143), src:"공단 √㎡당 소비전력 × √화면면적, 3,262개 중앙값(2022년 이후)" },
+  { id:"beam",      cat:"책상·영상", name:"빔프로젝터",         watts:252, heat:false, kind:"est",  url:DNW("빔프로젝터"), src:"다나와 표기 34개 중앙값(중간 50% 137~335W)" },
+  { id:"laser",     cat:"책상·영상", name:"레이저 복합기",      watts:770, heat:true,  kind:"kea",  url:EEP(286), src:"공단 신고 344개 정격 중앙값(2022년 이후)" },
+  // 청소·공기·조명
+  { id:"vacuum",    cat:"청소·공기·조명", name:"유선 청소기",   watts:1254, heat:false, kind:"kea",  url:EEP(115), src:"공단 신고 299개 측정 소비전력 중앙값(전체 연도)" },
+  { id:"airclean",  cat:"청소·공기·조명", name:"공기청정기",    watts:36,   heat:false, kind:"conv", url:EEP(121), src:"공단 ㎡당 소비전력 × 표준사용면적, 80개 표본 중앙값" },
+  { id:"stand",     cat:"청소·공기·조명", name:"LED 스탠드",    watts:12,   heat:false, kind:"est",  url:DNW("LED 스탠드"), src:"다나와 표기 30개 중앙값(중간 50% 6~20W)" },
+  { id:"ledbulb",   cat:"청소·공기·조명", name:"LED 전구",      watts:14,   heat:false, kind:"kea",  url:EEP(246), src:"공단 신고 3,318개 정격 중앙값(2022년 이후)" },
+];
+
+/* 한국전기안전공사 「연도별 전기화재 발화원인별 현황」 2025년 (첨부 파일) */
+const FIRE_CAUSES_2025 = [
+  ["미확인 단락",3422,36.5,""],["절연열화 단락",1646,17.6,"사용 기간"],["트래킹 단락",1176,12.5,"먼지"],["접촉 불량",1091,11.6,"사용 기간"],
+  ["과부하·과전류",714,7.6,"부하율"],["기타",635,6.8,""],["압착 손상 단락",270,2.9,"손상"],["누전·지락",208,2.2,""],["반단선",138,1.5,"손상"],["층간 단락",76,0.8,""],
+];
+
+/* 2024년 스위치 멀티탭 화재 337건 (소방청 국가화재정보시스템, 한국화재보험협회 정리) */
+const STRIP_CAUSES_2024 = [
+  ["과부하",64,"부하율"],["미확인 전기적 요인",63,""],["접촉 불량",50,"사용 기간"],["절연열화",44,"사용 기간"],["트래킹",40,"먼지"],
+  ["부주의",29,""],["압착 손상",15,"손상"],["기계적 요인·미상·기타",15,""],["반단선",9,"손상"],["기타 전기적 요인",7,""],["누전·지락",1,""],
+].map(([n,c,f]) => [n, c, Math.round(c / 337 * 1000) / 10, f]);
+
+/* 화면 하단 '근거 자료' 표: [항목, 내용, 출처 이름, 주소(첨부 파일은 null)] */
+const EVIDENCE = [
+  ["정격 용량","멀티탭 정격용량(W = 전압 × 전류)을 넘지 않게 사용","산업통상부·국립소방연구원·한국소비자원","https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/170883/view"],
+  ["연속 연결","멀티탭에 또 다른 멀티탭을 연결하지 않기","산업통상부·국립소방연구원·한국소비자원","https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/170883/view"],
+  ["고전력 기기","에어컨·온열기 같은 제품은 벽면 전용·단독 콘센트 사용","산업통상부·국립소방연구원·한국소비자원","https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/170883/view"],
+  ["난방기기","벽면 콘센트에 단독 연결, 멀티탭에 여러 난방제품 동시 사용 금지","한국전기안전공사 발표 보도(MTN)","https://news.mtn.co.kr/article/2026111215323455408"],
+  ["1,000W 기준","1,000W 이상 기기는 멀티탭 사용을 피하기","다음 뉴스","https://v.daum.net/v/G2ipgt9UcO"],
+  ["부하율 80%","정격용량의 80% 이내 사용이 바람직","노원소방서 안내 보도","https://www.sisanews.org/articles/224311530757"],
+  ["교체 시기","법정 기한은 없고 1~2년 권장(전기안전공사·환경공단 권장으로 인용)","한국화재보험협회","https://www.kfpa.or.kr/webzine/202510/disaster8.html"],
+  ["구수와 차단기","4구 이상 멀티탭은 과부하 보호장치 설치를 규정(KS C 8305)","한국화재보험협회","https://www.kfpa.or.kr/webzine/202510/disaster8.html"],
+  ["동시 사용","멀티탭 16A를 넘어도 20A 분기 차단기는 차단되지 않음","한국화재보험협회","https://www.kfpa.or.kr/webzine/202510/disaster8.html"],
+  ["과전류와 온도","20A에서 20분 뒤 87.9℃, 30A에서 약 13분 뒤 161℃(과부하 차단 없는 3구)","전기안전연구원 실험(2015)","https://www.koreascience.or.kr/article/CFKO201531751956880.pdf"],
+  ["발열 한도","단자 온도 상승 45K 이하","KC 60884-1","https://www.law.go.kr/LSW/flDownload.do?flSeq=169459195"],
+  ["판정 규칙","부하율 80%, 5년, 먼지, 손상, 발열, 연속 연결 기준(합성 데이터)","첨부 powerstrip_training.csv",null],
+  ["화재 원인 통계","2025년 전기화재 발화원인별 현황","첨부 한국전기안전공사 CSV",null],
+];
+
+/* ╔══════════════════════════════════════════════════════════════╗
+   ║ 2. 위험도 가중치·판정 기준  (숫자는 전부 여기서 수정)            ║
+   ╚══════════════════════════════════════════════════════════════╝ */
+const RISK = {
+  voltage: 220,
+  highPowerW: 1000,                       // 이 이상은 벽 콘센트 권장
+  load:    { max:50, safePct:80, curve:[[0,0],[50,10],[80,28],[100,45],[125,50]] }, // [부하율%, 점수], 사이는 비례
+  age:     { max:18, steps:[[0,0],[1,4],[2,9],[3,13],[5,18]], replaceFrom:2, oldFrom:5 }, // [이상 년, 점수]
+  heat:    { max:15, byCount:[0,5,11,15] },                          // 동시 사용 발열 기기 0,1,2,3개 이상
+  long:    { max:9,  heatHours:6, heatPts:6, normalHours:12, normalPts:3 },
+  sockets: { max:8 },                                                // 구수 초과 시 점수
+  grades: [
+    { key:"safe",     label:"안전",      min:0,  color:"var(--safe)" },
+    { key:"caution",  label:"주의",      min:25, color:"var(--caution)" },
+    { key:"danger",   label:"위험",      min:50, color:"var(--danger)" },
+    { key:"critical", label:"매우 위험", min:70, color:"var(--critical)" },
+  ],
+  /* 점수와 상관없이 보장하는 최소 등급 */
+  floors: [
+    { grade:"critical", text:"부하율 100% 초과",               test:m => m.peakW > m.capacityW },
+    { grade:"critical", text:"기기 하나만 켜도 정격 용량 초과", test:m => m.soloW > m.capacityW && m.peakW <= m.capacityW },
+    { grade:"danger",   text:"연결 기기 수가 구수를 초과",      test:m => m.socketOver > 0 },
+    { grade:"danger",   text:"겉면·전선 손상",                 test:(m,s) => s.damage },
+    { grade:"danger",   text:"이상 발열·탄 냄새",              test:(m,s) => s.overheat },
+    { grade:"danger",   text:"멀티탭 연속 연결",               test:(m,s) => s.daisy },
+    { grade:"caution",  text:"부하율 80% 이상",                test:m => m.loadPct >= RISK.load.safePct },
+    { grade:"caution",  text:"기기 하나만 켜도 80% 이상",       test:m => m.soloW / m.capacityW * 100 >= RISK.load.safePct && m.loadPct < RISK.load.safePct },
+    { grade:"caution",  text:"사용 기간 5년 이상",             test:(m,s) => s.years >= RISK.age.oldFrom },
+    { grade:"caution",  text:"먼지 쌓임",                      test:(m,s) => s.dust },
+  ],
+};
+
+/* ╔══════════════════════════════════════════════════════════════╗
+   ║ 3. 예시 시나리오  (사용 시간은 시연용 예시값)                    ║
+   ╚══════════════════════════════════════════════════════════════╝ */
+const SCENARIOS = [
+  { name:"자취방 책상",            strip:{ amps:10, sockets:4, years:1 }, items:[["laptop",8],["mon27",8],["stand",5],["phone",3]] },
+  { name:"겨울철 난방",            strip:{ amps:16, sockets:4, years:1 }, items:[["fanheater",4],["stove",3],["blanket",8]] },
+  { name:"드라이기 + 전기포트",    strip:{ amps:10, sockets:3, years:1 }, items:[["dryer",0.5],["kettle",0.5],["phone",3]] },
+  { name:"5년 넘은 멀티탭",        strip:{ amps:10, sockets:3, years:6 }, items:[["laptop",8],["mon24",8],["stand",5]] },
+];
+
+/* ╔══════════════════════════════════════════════════════════════╗
+   ║ 4. 공용 상태  (기능 1·2가 같은 품목 목록을 사용)                 ║
+   ║ item = { uid, dbId, name, watts, hours, heat, heating, simul, kind, src } ║
+   ╚══════════════════════════════════════════════════════════════╝ */
+const AppState = (() => {
+  const blankStrip = () => ({ amps:10, sockets:4, years:1, dust:false, damage:false, overheat:false, daisy:false });
+  let strip = blankStrip(), items = [], uid = 0;
+  const subs = [];
+  const emit = kind => subs.forEach(fn => fn(kind));            // kind: "list"=목록이 바뀜, "value"=값만 바뀜
+  const make = (dbId, hours = null) => {
+    const d = DEVICE_DB.find(x => x.id === dbId);
+    return { uid:++uid, dbId, name:d.name, watts:d.watts, hours, heat:d.heat, heating:!!d.heating, simul:true, kind:d.kind, src:d.src };
+  };
+  return {
+    get strip(){ return strip; },
+    get items(){ return items; },
+    subscribe(fn){ subs.push(fn); },
+    setStrip(patch){ strip = { ...strip, ...patch }; emit("value"); },
+    addFromDb(dbId){ items = [...items, make(dbId)]; emit("list"); },
+    addCustom(name, watts, heat){ items = [...items, { uid:++uid, dbId:null, name, watts, hours:null, heat, heating:false, simul:true, kind:"user", src:"사용자 입력" }]; emit("list"); },
+    updateItem(id, patch){ items = items.map(i => i.uid === id ? { ...i, ...patch } : i); emit("value"); },
+    removeItem(id){ items = items.filter(i => i.uid !== id); emit("list"); },
+    load(sc){ strip = { ...blankStrip(), ...sc.strip }; items = sc.items.map(([id,h]) => make(id,h)); emit("list"); },
+  };
+})();
+
+/* ╔══════════════════════════════════════════════════════════════╗
+   ║ 5. 계산 함수  (화면과 무관, 재사용 가능)                         ║
+   ╚══════════════════════════════════════════════════════════════╝ */
+const josa = (w, a, b) => { const b0 = w.replace(/\([^)]*\)$/, ""), c = b0.charCodeAt(b0.length-1); return w + (c >= 0xAC00 && c <= 0xD7A3 ? ((c - 0xAC00) % 28 ? a : b) : a === "을" ? "을(를)" : "은(는)"); };   // 받침에 맞는 조사
+const sumWatts = list => list.reduce((s, i) => s + (i.watts || 0), 0);
+const calcCapacity = amps => RISK.voltage * amps;
+const calcPeakWatts = items => sumWatts(items.filter(i => i.simul));
+const gradeIndex = key => RISK.grades.findIndex(g => g.key === key);
+const gradeByScore = score => RISK.grades.reduce((a, g) => score >= g.min ? g : a);
+
+function interpolate(x, pts){
+  if (x <= pts[0][0]) return pts[0][1];
+  for (let i = 1; i < pts.length; i++){
+    const [x0,y0] = pts[i-1], [x1,y1] = pts[i];
+    if (x <= x1) return y0 + (x - x0) / (x1 - x0) * (y1 - y0);
+  }
+  return pts[pts.length-1][1];
+}
+
+function calcMetrics(strip, items){
+  const capacityW = calcCapacity(strip.amps), peakW = calcPeakWatts(items);
+  return {
+    capacityW, peakW, loadPct: peakW / capacityW * 100,
+    soloW: Math.max(0, ...items.map(i => i.watts || 0)),
+    simul: items.filter(i => i.simul),
+    heatSimul: items.filter(i => i.simul && i.heat),
+    heatLong: items.filter(i => i.heat && i.hours !== null && i.hours >= RISK.long.heatHours),
+    normalLong: items.filter(i => !i.heat && i.hours !== null && i.hours >= RISK.long.normalHours),
+    socketOver: Math.max(0, items.length - strip.sockets),
+    noHours: items.filter(i => i.hours === null), noWatts: items.filter(i => !i.watts),
+  };
+}
+
+function scoreRisk(strip, items){
+  const m = calcMetrics(strip, items), R = RISK;
+  const factors = [
+    { key:"load",    name:"부하율",         max:R.load.max,    pts: interpolate(m.loadPct, R.load.curve) },
+    { key:"age",     name:"사용 기간",      max:R.age.max,     pts: R.age.steps.reduce((p,[y,v]) => strip.years >= y ? v : p, 0) },
+    { key:"heat",    name:"동시 사용 발열 기기", max:R.heat.max, pts: R.heat.byCount[Math.min(m.heatSimul.length, R.heat.byCount.length-1)] },
+    { key:"long",    name:"장시간 사용",    max:R.long.max,    pts: (m.heatLong.length ? R.long.heatPts : 0) + (m.normalLong.length ? R.long.normalPts : 0) },
+    { key:"sockets", name:"구수 초과",      max:R.sockets.max, pts: m.socketOver ? R.sockets.max : 0 },
+  ];
+  const total = Math.round(factors.reduce((s,f) => s + f.pts, 0));
+  const base = gradeByScore(total);
+  const hits = R.floors.filter(f => f.test(m, strip));
+  const gi = Math.max(gradeIndex(base.key), ...hits.map(h => gradeIndex(h.grade)));
+  return { metrics:m, factors, total, base, grade:R.grades[gi], floors:hits.filter(h => gradeIndex(h.grade) > gradeIndex(base.key)) };
+}
+
+/* 벽 콘센트로 옮길 기기를 고르고, 적용 후 점수를 다시 계산 */
+function buildPlan(strip, items){
+  let stay = [...items]; const move = [];
+  const byW = list => [...list].sort((a,b) => (b.watts||0) - (a.watts||0));
+  const take = (it, why) => { stay = stay.filter(x => x !== it); move.push({ item:it, why }); };
+  const cap = calcCapacity(strip.amps);
+  byW(items.filter(i => i.watts >= RISK.highPowerW)).forEach(i => take(i, `${RISK.highPowerW.toLocaleString()}W 이상`));
+  byW(stay.filter(i => i.heating)).forEach(i => take(i, "난방기기 단독 연결"));
+  for (let h; (h = byW(stay.filter(i => i.heat && i.simul))).length > 1;) take(h[0], "발열 기기 분리");
+  for (let s; calcPeakWatts(stay) >= cap * RISK.load.safePct / 100 && (s = byW(stay.filter(i => i.simul))).length;) take(s[0], "부하율 낮추기");
+  while (stay.length > strip.sockets) take(byW(stay)[0], "구수 맞추기");
+  const replace = strip.damage || strip.overheat || strip.years >= RISK.age.replaceFrom;
+  const afterStrip = { ...strip, dust:false, daisy:false, ...(replace ? { years:0, damage:false, overheat:false } : {}) };
+  return { stay, move, replace, after: scoreRisk(afterStrip, stay) };
+}
+
+function buildAdvice(strip, items, res, plan){
+  const m = res.metrics, a = [], W = n => Math.round(n).toLocaleString() + "W", P = n => Math.round(n) + "%";
+  const names = l => l.map(i => i.name).join(", ");
+  const push = (k, t, now) => a.push({ k, t, now:!!now });
+  if (strip.overheat) push("즉시", "사용을 멈추고 플러그를 뽑은 뒤 멀티탭을 교체하세요. 뜨거움·탄 냄새는 접촉 불량이나 과부하 신호일 수 있습니다.", true);
+  if (strip.damage) push("즉시", "손상된 멀티탭은 더 쓰지 말고 교체하세요.", true);
+  if (strip.daisy) push("즉시", "멀티탭에 꽂은 멀티탭을 빼고, 각각 벽 콘센트에 직접 연결하세요.", true);
+  const highs = m.simul.filter(i => i.watts >= RISK.highPowerW);
+  if (highs.length >= 2){
+    const alt = m.peakW - sumWatts(highs) + Math.max(...highs.map(i => i.watts));
+    push("번갈아", `${josa(names(highs), "을", "를")} 동시에 켜지 않고 하나씩 쓰면 부하율이 ${P(m.loadPct)}에서 ${P(alt / m.capacityW * 100)}로 내려갑니다.`);
+  }
+  if (plan.move.length >= 2) push("벽 콘센트", `옮긴 기기는 콘센트 하나에 하나씩 꽂으세요. 같은 차단기(보통 20A)를 함께 쓸 수 있으니 합계 ${W(sumWatts(plan.move.map(x => x.item)))}를 한꺼번에 켜지 마세요.`);
+  const heatings = m.simul.filter(i => i.heating);
+  if (heatings.length >= 2) push("난방", `${names(heatings)}처럼 난방기기 여러 개를 한 멀티탭에 동시에 쓰지 말고 벽 콘센트에 단독으로 연결하세요.`);
+  if (strip.amps === 10 && m.loadPct >= RISK.load.safePct){
+    const p16 = m.peakW / calcCapacity(16) * 100;
+    push("용량", p16 < RISK.load.safePct ? `16A 멀티탭으로 바꾸면 부하율이 ${P(p16)}로 내려갑니다.` : `16A 멀티탭으로 바꿔도 부하율이 ${P(p16)}라서, 기기를 나누는 것이 먼저입니다.`);
+  }
+  if (strip.years >= RISK.age.replaceFrom && !strip.damage && !strip.overheat) push("교체", `${strip.years}년 사용했습니다. 권장 교체 시기(1~2년)가 지났으니 KC 인증과 과부하 차단 기능이 있는 제품으로 교체하세요.`, strip.years >= RISK.age.oldFrom);
+  if (strip.dust) push("청소", "전원을 끄고 플러그를 뽑은 뒤 마른 천이나 면봉으로 먼지를 닦고, 빈 구멍은 안전 커버로 막으세요.");
+  if (m.heatLong.length) push("시간", `${josa(names(m.heatLong), "은", "는")} 하루 ${RISK.long.heatHours}시간 이상 사용합니다. 타이머를 쓰고 외출하거나 잘 때 끄세요.`);
+  if (m.normalLong.length) push("시간", `${josa(names(m.normalLong), "은", "는")} 하루 ${RISK.long.normalHours}시간 이상 사용합니다. 플러그와 멀티탭이 뜨겁지 않은지 자주 확인하세요.`);
+  if (m.socketOver) push("구수", `기기가 구수보다 ${m.socketOver}개 많습니다. 멀티탭을 이어 붙이지 말고 다른 벽 콘센트로 옮기세요.`);
+  if (!a.length) push("유지", plan.move.length ? "위 배치대로 옮기면 됩니다." : "지금 연결을 유지해도 됩니다. 새 기기를 꽂기 전에 다시 확인하세요.");
+  return a;
+}
+/* ▶ 기능 2 계산 함수(전력 사용량, 요금, 절약 방안)는 여기에 추가 */
+
+/* ╔══════════════════════════════════════════════════════════════╗
+   ║ 6. 화면 (기능 1)                                               ║
+   ╚══════════════════════════════════════════════════════════════╝ */
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
+const won = n => Math.round(n).toLocaleString();
+const badge = kind => `<span class="badge ${kind === "est" || kind === "est1" ? "est" : kind === "user" || kind === "edited" ? "user" : ""}">${KIND_LABEL[kind]}</span>`;
+const readNum = (el, min, max) => {                               // 비었거나 범위를 벗어나면 null
+  const v = el.value.trim() === "" ? NaN : Number(el.value);
+  const ok = Number.isFinite(v) && v >= min && v <= max;
+  el.classList.toggle("bad", !ok && (el.value.trim() !== "" || el.validity.badInput));
+  return ok ? v : null;
+};
+
+function renderControls(){
+  const s = AppState.strip;
+  $("amps").value = s.amps; $("sockets").value = s.sockets; $("years").value = s.years; $("years").classList.remove("bad");
+  ["dust","damage","overheat","daisy"].forEach(k => $(k).checked = s[k]);
+}
+
+function renderItems(){
+  const list = AppState.items;
+  $("items").innerHTML = list.length ? list.map(i => `
+    <li class="item" data-uid="${i.uid}">
+      <div class="nm"><b>${esc(i.name)}</b><span class="kindBadge" title="${esc(i.src)}">${badge(i.kind)}</span></div>
+      <label class="n">소비전력 W<input type="number" data-k="watts" min="1" max="10000" step="1" value="${i.watts}" aria-label="${esc(i.name)} 소비전력 W"></label>
+      <label class="n">하루 시간<input type="number" data-k="hours" min="0" max="24" step="0.5" value="${i.hours ?? ""}" placeholder="입력" class="${i.hours === null ? "need" : ""}" aria-label="${esc(i.name)} 하루 평균 사용 시간"></label>
+      <label class="c">발열<input type="checkbox" data-k="heat" ${i.heat ? "checked" : ""} aria-label="${esc(i.name)} 발열"></label>
+      <label class="c">동시 사용<input type="checkbox" data-k="simul" ${i.simul ? "checked" : ""} aria-label="${esc(i.name)} 동시 사용"></label>
+      <button class="del" type="button" aria-label="${esc(i.name)} 삭제">×</button>
+    </li>`).join("") : `<li class="empty">아직 기기가 없습니다. 목록에서 골라 추가하거나 위의 예시 상황을 눌러 보세요.</li>`;
+}
+
+function renderStrip(){
+  const { sockets } = AppState.strip, list = AppState.items;
+  let h = "";
+  for (let n = 0; n < Math.max(sockets, list.length); n++){
+    const i = list[n], over = n >= sockets;
+    h += i ? `<div class="sock on ${i.heat ? "heat" : ""} ${i.simul ? "" : "off"} ${over ? "over" : ""}"><i></i><b>${esc(i.name)}</b>${over ? "구수 초과" : won(i.watts || 0) + "W"}</div>` : `<div class="sock"><i></i>빈 구</div>`;
+  }
+  $("strip").innerHTML = h;
+}
+
+function factorText(f, s, m){
+  const top = [...m.simul].sort((a,b) => (b.watts||0) - (a.watts||0)).filter((i,n) => n === 0 || (n < 3 && i.watts >= m.peakW * .05)).map(i => i.name);   // 비중이 작은 기기는 "외 n개"로
+  const more = m.simul.length > top.length ? ` 외 ${m.simul.length - top.length}개` : "";
+  switch (f.key){
+    case "load": return m.simul.length ? `${top.join(" + ")}${more}${m.simul.length > 1 ? " 동시" : ""} 사용으로 부하율 ${m.loadPct.toFixed(1)}%` : "동시 사용으로 체크한 기기 없음";
+    case "age": return `멀티탭 ${s.years}년 사용`;
+    case "heat": return m.heatSimul.length ? `${m.heatSimul.map(i => i.name).join(", ")} (${m.heatSimul.length}개)` : "동시에 켜는 발열 기기 없음";
+    case "long": { const l = [...m.heatLong, ...m.normalLong]; return l.length ? l.map(i => `${i.name} ${i.hours}시간`).join(", ") : "장시간 사용 기기 없음"; }
+    case "sockets": return m.socketOver ? `${s.sockets}구에 ${s.sockets + m.socketOver}개 연결` : "구수 이내";
+  }
+}
+
+function renderResult(){
+  const s = AppState.strip, items = AppState.items;
+  if (!items.length){
+    $("gradeBox").innerHTML = `<div class="grade g-none"><strong>대기 중</strong><span>기기를 추가하면 판정합니다</span></div>`;
+    $("resultBody").innerHTML = ""; $("planPanel").hidden = true; return;
+  }
+  const r = scoreRisk(s, items), m = r.metrics, G = RISK.grades;
+  $("gradeBox").innerHTML = `<div class="grade g-${r.grade.key}"><strong>${r.grade.label}</strong><span class="sc num">${r.total}점 / 100점</span></div>`;
+  const segs = G.map((g,i) => `<span style="width:${(G[i+1]?.min ?? 100) - g.min}%;background:${g.color}"></span>`).join("");
+  const loadG = m.loadPct > 100 ? "var(--critical)" : m.loadPct >= RISK.load.safePct ? "var(--danger)" : "var(--safe)";
+  const warn = [];
+  if (m.noHours.length) warn.push(`사용 시간을 입력하지 않은 기기 ${m.noHours.length}개는 장시간 사용 점수에서 빠졌습니다.`);
+  if (m.noWatts.length) warn.push(`소비전력이 비었거나 잘못된 기기 ${m.noWatts.length}개는 0W로 계산했습니다.`);
+  $("resultBody").innerHTML = `
+    <div class="gauge" role="img" aria-label="위험도 점수 ${r.total}점"><div class="bar">${segs}</div><div class="mark" style="left:${Math.min(100, r.total)}%"></div></div>
+    <div class="scale num"><span style="left:0">0</span>${G.slice(1).map(g => `<span style="left:${g.min}%">${g.min}</span>`).join("")}<span style="left:100%">100</span></div>
+    ${r.floors.length ? `<div class="floor"><b>최소 등급 적용:</b> 점수만 보면 ${r.base.label}이지만 ${r.floors.map(f => f.text).join(", ")} 때문에 ${r.grade.label}로 판정했습니다.</div>` : ""}
+    ${warn.length ? `<div class="floor">${warn.join("<br>")}</div>` : ""}
+    <div class="kpis num">
+      <div><span>최대 동시 사용 전력</span><b>${won(m.peakW)}W</b></div>
+      <div><span>정격 용량</span><b>${won(m.capacityW)}W</b></div>
+      <div><span>부하율</span><b style="color:${loadG}">${m.loadPct.toFixed(1)}%</b></div>
+    </div>
+    <div class="loadbar" role="img" aria-label="부하율 ${m.loadPct.toFixed(1)}퍼센트"><i style="width:${Math.min(100, m.loadPct / 1.5)}%;background:${loadG}"></i><u style="left:${80/1.5}%"></u><u style="left:${100/1.5}%"></u></div>
+    <div class="scale num"><span style="left:0">0%</span><span style="left:${80/1.5}%">80%</span><span style="left:${100/1.5}%">100%</span><span style="left:100%">150%</span></div>
+    <h3 class="sub">위험요인</h3>
+    <ul class="factors">${[...r.factors].sort((a,b) => b.pts - a.pts).map(f => `
+      <li class="${f.pts ? "" : "zero"}"><div><b>${f.name}</b>${esc(factorText(f, s, m))}</div><div class="pt num">+${f.pts.toFixed(1)} <small>/ ${f.max}</small></div><div class="m"><i style="width:${f.pts / f.max * 100}%"></i></div></li>`).join("")}</ul>`;
+
+  const p = buildPlan(s, items), adv = buildAdvice(s, items, r, p);
+  const li = l => l.map(x => `<li>${x}</li>`).join("");
+  const did = [p.move.length && "기기 이동", s.daisy && "연속 연결 해제", s.dust && "먼지 청소", p.replace && "멀티탭 교체"].filter(Boolean);
+  $("planPanel").hidden = false;
+  $("planBody").innerHTML = `
+    <div class="plan">
+      <div class="keep"><h3>이 멀티탭에 남길 기기</h3>${p.stay.length ? `<ul>${li(p.stay.map(i => `${esc(i.name)} <small>${won(i.watts||0)}W</small>`))}</ul>` : "<small>남길 기기 없음</small>"}</div>
+      <div class="wall"><h3>벽 콘센트에 단독으로 꽂을 기기</h3>${p.move.length ? `<ul>${li(p.move.map(x => `${esc(x.item.name)} <small>${won(x.item.watts||0)}W, ${x.why}</small>`))}</ul>` : "<small>옮길 기기 없음</small>"}</div>
+    </div>
+    ${did.length ? `<div class="after"><span class="pill g-${r.grade.key}">${r.grade.label} ${r.total}점</span><span>→</span>${p.stay.length ? `<span class="pill g-${p.after.grade.key}">${p.after.grade.label} ${p.after.total}점</span>` : `<span class="pill g-safe">멀티탭 비움</span>`}<span>이 멀티탭 부하율 ${m.loadPct.toFixed(1)}% → ${p.after.metrics.loadPct.toFixed(1)}% (${did.join(", ")} 반영)</span></div>` : ""}
+    <ul class="advice">${adv.map(x => `<li><span class="k ${x.now ? "now" : ""}">${x.k}</span><span>${esc(x.t)}</span></li>`).join("")}</ul>`;
+}
+
+function renderBasis(){
+  const R = RISK, G = R.grades;
+  const rng = (g,i) => i < G.length-1 ? `${g.min}~${G[i+1].min-1}점` : `${g.min}점 이상`;
+  const L = (u,t) => `<a href="${u}" target="_blank" rel="noopener">${t}</a>`;
+  /* 판정 기준 */
+  $("basis").innerHTML = `
+    <div>
+      <h3 style="margin-top:0">점수 배점 (합계 100점)</h3>
+      <div class="tw"><table><tr><th>요인</th><th>배점</th><th>계산</th></tr>
+        <tr><td>부하율</td><td>${R.load.max}</td><td>${R.load.curve.slice(1).map(([x,y]) => `${x}% → ${y}점`).join(", ")} (사이는 비례)</td></tr>
+        <tr><td>사용 기간</td><td>${R.age.max}</td><td>${R.age.steps.map(([y,p]) => y ? `${y}년 이상 ${p}점` : `1년 미만 ${p}점`).join(", ")}</td></tr>
+        <tr><td>동시 사용 발열 기기</td><td>${R.heat.max}</td><td>${R.heat.byCount.map((p,n) => `${n}개${n === R.heat.byCount.length-1 ? " 이상" : ""} ${p}점`).join(", ")}</td></tr>
+        <tr><td>장시간 사용</td><td>${R.long.max}</td><td>발열 하루 ${R.long.heatHours}시간 이상 ${R.long.heatPts}점, 일반 ${R.long.normalHours}시간 이상 ${R.long.normalPts}점</td></tr>
+        <tr><td>구수 초과</td><td>${R.sockets.max}</td><td>연결 기기 수가 구수보다 많으면 ${R.sockets.max}점</td></tr>
+      </table></div>
+    </div>
+    <div>
+      <h3 style="margin-top:0">등급과 최소 등급</h3>
+      <ul><li>${G.map((g,i) => `${g.label} ${rng(g,i)}`).join(" / ")}</li>
+      ${["critical","danger","caution"].map(k => `<li>최소 ${G[gradeIndex(k)].label}: ${R.floors.filter(f => f.grade === k).map(f => f.text).join(", ")}</li>`).join("")}</ul>
+      <p class="hint" style="margin-top:8px">장시간 기준(6·12시간)과 배점은 팀이 정한 값입니다.</p>
+    </div>`;
+  /* 전기화재 원인 */
+  const bars = list => { const max = Math.max(...list.map(c => c[2])); return `<div class="cause num">${list.map(([n,c,p,f]) => `<span>${n}${f ? `<span class="fx">입력: ${f}</span>` : ""}</span><span class="b"><i style="width:${p/max*100}%"></i></span><span class="v">${c.toLocaleString()} (${p}%)</span>`).join("")}</div>`; };
+  $("causes").innerHTML = `
+    <div><h3 style="margin-top:0">멀티탭 화재 (2024년 스위치 멀티탭 337건)</h3>${bars(STRIP_CAUSES_2024)}
+      <p class="hint" style="margin-top:8px">소방청 통계, 한국화재보험협회 정리. 원인이 확인된 항목 중 과부하가 가장 많습니다.</p></div>
+    <div><h3 style="margin-top:0">전체 전기화재 (2025년 9,376건)</h3>${bars(FIRE_CAUSES_2025)}
+      <p class="hint" style="margin-top:8px">한국전기안전공사 첨부 자료. 멀티탭만이 아닌 모든 전기화재입니다.</p></div>`;
+  /* 근거 자료 */
+  $("evidence").innerHTML = `<table><tr><th>항목</th><th>내용</th><th>출처</th></tr>${EVIDENCE.map(([k,t,s,u]) => `<tr><td>${k}</td><td>${t}</td><td>${u ? L(u,s) : s}</td></tr>`).join("")}</table>`;
+  /* 기기 소비전력 출처 */
+  $("devSummary").textContent = `전체 ${DEVICE_DB.length}개: ` + ["kea","conv","est","est1"].map(k => `${KIND_LABEL[k]} ${DEVICE_DB.filter(d => d.kind === k).length}개`).join(", ") + ". 공단 값이 없는 기기는 판매 제품 표기로 추정했습니다.";
+  $("devTable").innerHTML = `<table><tr><th>기기</th><th>소비전력</th><th>발열</th><th>구분</th><th>출처</th></tr>${DEVICE_DB.map(d => `<tr><td>${d.name}</td><td class="num">${won(d.watts)}W</td><td>${d.heat ? "발열" : "-"}</td><td>${badge(d.kind)}</td><td>${L(d.url, esc(d.src))}</td></tr>`).join("")}</table>`;
+}
+
+
+/* ---------- 이벤트 ---------- */
+function clearScenario(){ document.querySelectorAll("#scen .btn").forEach(b => b.setAttribute("aria-pressed","false")); }
+function showPick(){ const d = DEVICE_DB.find(x => x.id === $("pick").value); $("pickInfo").innerHTML = `<b class="num">${won(d.watts)}W</b> ${d.heat ? "발열 기기" : "일반 기기"} ${badge(d.kind)} ${esc(d.src)}`; }
+
+function init(){
+  $("sockets").innerHTML = [1,2,3,4,5,6,8,10].map(n => `<option value="${n}">${n}구</option>`).join("");
+  const cats = [...new Set(DEVICE_DB.map(d => d.cat))];
+  $("pick").innerHTML = cats.map(c => `<optgroup label="${c}">${DEVICE_DB.filter(d => d.cat === c).map(d => `<option value="${d.id}">${d.name} (${won(d.watts)}W)</option>`).join("")}</optgroup>`).join("");
+  SCENARIOS.forEach(sc => {
+    const b = document.createElement("button"); b.className = "btn"; b.type = "button"; b.textContent = sc.name; b.setAttribute("aria-pressed","false");
+    b.onclick = () => { clearScenario(); b.setAttribute("aria-pressed","true"); AppState.load(sc); renderControls(); };
+    $("scen").append(b);
+  });
+  const rb = document.createElement("button"); rb.className = "btn"; rb.type = "button"; rb.textContent = "초기화";
+  rb.onclick = () => { clearScenario(); AppState.load({ strip:{}, items:[] }); renderControls(); };
+  $("scen").append(rb);
+
+  $("pick").onchange = showPick;
+  $("addBtn").onclick = () => { clearScenario(); AppState.addFromDb($("pick").value); };
+  $("cAdd").onclick = () => {
+    const name = $("cName").value.trim(), w = readNum($("cWatts"), 1, 10000);
+    if (!name || w === null){ $("cMsg").textContent = "기기 이름과 1~10,000W 사이의 소비전력을 입력해 주세요."; return; }
+    clearScenario(); AppState.addCustom(name, w, $("cHeat").checked);
+    $("cName").value = $("cWatts").value = ""; $("cHeat").checked = false; $("cMsg").textContent = `${josa(name, "을", "를")} 추가했습니다.`;
+  };
+  $("amps").onchange = e => { clearScenario(); AppState.setStrip({ amps:Number(e.target.value) }); };
+  $("sockets").onchange = e => { clearScenario(); AppState.setStrip({ sockets:Number(e.target.value) }); };
+  $("years").oninput = e => { const v = readNum(e.target, 0, 30); if (v !== null){ clearScenario(); AppState.setStrip({ years:v }); } };
+  $("years").onblur = () => renderControls();
+  ["dust","damage","overheat","daisy"].forEach(k => $(k).onchange = e => { clearScenario(); AppState.setStrip({ [k]:e.target.checked }); });
+
+  $("items").addEventListener("input", e => {
+    const row = e.target.closest(".item"), k = e.target.dataset.k; if (!row || !k) return;
+    const id = Number(row.dataset.uid); clearScenario();
+    if (k === "heat" || k === "simul") return AppState.updateItem(id, { [k]:e.target.checked });
+    if (k === "hours"){ const v = readNum(e.target, 0, 24); e.target.classList.toggle("need", v === null && !e.target.classList.contains("bad")); return AppState.updateItem(id, { hours:v }); }
+    const item = AppState.items.find(i => i.uid === id), w = readNum(e.target, 1, 10000), db = DEVICE_DB.find(d => d.id === item.dbId);
+    if (w === null) e.target.classList.add("bad");
+    const kind = !db ? "user" : w === db.watts ? db.kind : "edited";
+    row.querySelector(".kindBadge").innerHTML = badge(kind);
+    AppState.updateItem(id, { watts:w, kind, src: kind === "edited" ? "사용자 수정" : db ? db.src : "사용자 입력" });
+  });
+  $("items").addEventListener("click", e => { if (e.target.closest(".del")){ clearScenario(); AppState.removeItem(Number(e.target.closest(".item").dataset.uid)); } });
+
+  const tabs = [$("tab1"), $("tab2"), $("tab3")];
+  const openTab = n => tabs.forEach((t,i) => { t.setAttribute("aria-selected", i === n); t.tabIndex = i === n ? 0 : -1; $("panel" + (i+1)).hidden = i !== n; });
+  tabs.forEach((t,i) => { t.onclick = () => openTab(i); t.onkeydown = e => { const d = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0; if (d){ const n = (i + d + tabs.length) % tabs.length; openTab(n); tabs[n].focus(); } }; });
+
+  $("goBasis").onclick = () => { openTab(2); scrollTo(0, 0); tabs[2].focus(); };
+
+  AppState.subscribe(kind => { if (kind === "list") renderItems(); renderStrip(); renderResult(); });
+  /* ▶ 기능 2 화면은 여기서 AppState.subscribe(renderFeature2) 로 연결 */
+  renderControls(); renderItems(); renderStrip(); renderResult(); renderBasis(); showPick(); startSnow();
+}
+
+/* ---------- 겨울 배경: 눈 ---------- */
+function startSnow(){
+  const c = $("snow"), g = c.getContext("2d"), btn = $("snowBtn");
+  let on = !matchMedia("(prefers-reduced-motion: reduce)").matches, f = [];
+  const size = () => { c.width = c.offsetWidth; c.height = c.offsetHeight; f = Array.from({ length:Math.round(c.width / 12) }, () => ({ x:Math.random()*c.width, y:Math.random()*c.height, r:.8+Math.random()*2.2, v:.25+Math.random()*.7, p:Math.random()*6 })); draw(); };
+  const draw = () => { g.clearRect(0,0,c.width,c.height); g.fillStyle = "rgba(255,255,255,.85)"; f.forEach(o => { g.beginPath(); g.arc(o.x,o.y,o.r,0,7); g.fill(); }); };
+  const tick = () => { if (!on) return; f.forEach(o => { o.y += o.v; o.p += .012; o.x += Math.sin(o.p)*.3; if (o.y > c.height+4){ o.y = -4; o.x = Math.random()*c.width; } }); draw(); requestAnimationFrame(tick); };
+  const label = () => btn.textContent = on ? "눈 멈추기" : "눈 내리기";
+  btn.onclick = () => { on = !on; label(); if (on) tick(); };
+  addEventListener("resize", size); size(); label(); tick();
+}
+init();
+</script>
+</body>
+</html>
