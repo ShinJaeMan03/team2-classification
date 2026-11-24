@@ -1,0 +1,1001 @@
+﻿id,place,amps,capacity_w,sockets,age_years,dust,damage,overheat,daisy_chain,devices,hours,total_w,peak_w,peak_load_ratio,min_over80_per_day,min_over100_per_day,max_rise_k,label,source_type
+1,책상,16,3520,2,2,0,0,0,0,laptop|phone,6.0|2.1,91,91,0.026,0.00,0.00,0.0,0,synthetic_simulation
+2,화장대,16,3520,4,5,1,0,0,0,dryer|straight|iron,0.1|0.1|0.0,3443,1800,0.511,0.00,0.00,11.8,1,synthetic_simulation
+3,몰아 쓰기,16,3520,7,7,0,0,0,0,laptop|phone|stand|dryer|kettle|blanket|fanheater,5.4|2.1|3.2|0.1|0.1|4.8|1.6,5173,3793,1.078,2.96,1.75,50.4,2,synthetic_simulation
+4,침대 옆,16,3520,6,2,0,0,0,0,phone|humid_u|blanket,2.2|3.9|3.9,161,161,0.046,0.00,0.00,0.1,0,synthetic_simulation
+5,몰아 쓰기,16,3520,4,1,0,0,0,0,phone|stand,1.9|3.7,30,30,0.009,0.00,0.00,0.0,0,synthetic_simulation
+6,화장대,10,2200,3,0,0,0,0,0,dryer|straight|phone,0.1|0.1|2.0,1661,1643,0.747,0.00,0.00,24.8,0,synthetic_simulation
+7,주방,10,2200,5,2,0,0,0,0,microwave|kettle|rice6|airfryer|induction,0.1|0.1|0.3|0.1|0.2,7080,4700,2.136,15.39,2.54,155.6,3,synthetic_simulation
+8,몰아 쓰기,16,3520,4,2,0,0,0,0,laptop|phone|dryer|microwave,5.6|2.1|0.1|0.1,3041,1691,0.480,0.00,0.00,10.2,0,synthetic_simulation
+9,책상,16,3520,3,7,1,0,0,0,laptop|phone,5.5|2.0,91,91,0.026,0.00,0.00,0.0,1,synthetic_simulation
+10,주방,16,3520,5,1,0,0,0,0,fridge|microwave|airfryer|ramen,24.0|0.1|0.1|0.0,3739,2389,0.679,0.00,0.00,19.6,0,synthetic_simulation
+11,책상,16,3520,5,8,0,0,0,0,laptop|mon24|phone|stand|laser,4.6|4.7|1.8|3.0|0.0,888,870,0.247,0.00,0.00,2.2,1,synthetic_simulation
+12,화장대,10,2200,5,2,0,0,0,0,dryer|straight|phone|stand|iron,0.1|0.1|2.0|3.9|0.0,3473,3400,1.545,1.75,0.36,106.2,3,synthetic_simulation
+13,책상,16,3520,6,5,0,0,0,0,laptop|phone|stand,5.4|1.9|3.5,103,103,0.029,0.00,0.00,0.0,1,synthetic_simulation
+14,책상,16,3520,4,2,0,0,0,0,laptop|mon24|mon27|phone,5.7|4.9|4.4|2.1,127,112,0.032,0.00,0.00,0.0,0,synthetic_simulation
+15,책상,16,3520,4,1,0,0,0,0,laptop|mon27|phone|stand,5.0|4.6|2.1|2.9,124,106,0.030,0.00,0.00,0.0,0,synthetic_simulation
+16,침대 옆,16,3520,4,5,0,0,0,0,phone|laptop|stove,1.9|4.6|1.5,1291,1291,0.367,0.00,0.00,6.1,1,synthetic_simulation
+17,책상,16,3520,3,1,0,0,0,0,phone|stand,2.0|3.5,30,30,0.009,0.00,0.00,0.0,0,synthetic_simulation
+18,책상,16,3520,4,3,0,0,0,0,laptop|mon24|mon27|phone,5.4|4.6|4.7|2.2,127,127,0.036,0.00,0.00,0.1,0,synthetic_simulation
+19,침대 옆,10,2200,6,2,0,0,0,0,phone|stand|blanket|airclean,2.2|2.8|4.8|9.1,186,186,0.085,0.00,0.00,0.3,0,synthetic_simulation
+20,몰아 쓰기,10,2200,7,1,0,0,0,0,phone|stand|tv43|kettle|microwave|blanket|humid_u,2.0|3.1|2.0|0.1|0.1|4.4|4.1,2919,2712,1.233,0.36,0.36,59.9,2,synthetic_simulation
+21,침대 옆,16,3520,3,2,0,0,0,0,phone|humid_u|blanket|laptop,1.9|3.9|5.0|4.6,234,234,0.066,0.00,0.00,0.2,0,synthetic_simulation
+22,주방,16,3520,4,1,0,0,0,1,fridge|microwave|kettle,24.0|0.1|0.1,2769,1419,0.403,0.00,0.00,6.9,2,synthetic_simulation
+23,몰아 쓰기,10,2200,6,7,0,0,0,0,phone|tv43|dryer|kettle|microwave|blanket,2.0|1.8|0.1|0.1|0.1|3.9,4484,2950,1.341,0.21,0.14,67.2,2,synthetic_simulation
+24,책상,16,3520,6,1,0,0,0,0,laptop|mon24|mon27|phone|stand|airclean,6.1|4.8|4.5|2.0|3.2|9.6,175,157,0.045,0.00,0.00,0.1,0,synthetic_simulation
+25,주방,16,3520,6,3,0,0,0,0,fridge|microwave|rice6|airfryer,24.0|0.1|0.3|0.1,3799,2299,0.653,0.00,0.00,17.2,0,synthetic_simulation
+26,책상,10,2200,4,7,0,0,0,0,laptop|phone|humid_u,5.5|2.1|4.7,114,114,0.052,0.00,0.00,0.1,1,synthetic_simulation
+27,몰아 쓰기,10,2200,4,2,0,0,0,1,laptop|phone|fridge,5.3|2.0|24.0,160,160,0.073,0.00,0.00,0.2,2,synthetic_simulation
+28,화장대,16,3520,5,1,1,0,0,0,dryer|phone|stand,0.1|2.1|3.5,1630,1630,0.463,0.00,0.00,9.4,1,synthetic_simulation
+29,침대 옆,16,3520,6,7,0,0,0,0,phone|laptop,2.2|5.5,91,91,0.026,0.00,0.00,0.0,1,synthetic_simulation
+30,주방,16,3520,3,5,1,0,0,0,microwave|rice6|induction,0.1|0.3|0.1,4230,2000,0.568,0.00,0.00,14.5,1,synthetic_simulation
+31,침대 옆,10,2200,6,3,1,0,0,0,phone|blanket,1.9|4.3,138,138,0.063,0.00,0.00,0.2,1,synthetic_simulation
+32,책상,16,3520,4,3,0,0,0,1,laptop|phone,5.6|2.0,91,91,0.026,0.00,0.00,0.0,2,synthetic_simulation
+33,화장대,16,3520,5,4,0,0,0,0,dryer|phone|stand|iron,0.1|2.0|3.4|0.0,3430,1800,0.511,0.00,0.00,11.8,0,synthetic_simulation
+34,침대 옆,16,3520,6,1,0,0,0,0,phone|humid_h|laptop,2.0|3.3|5.5,691,691,0.196,0.00,0.00,1.7,0,synthetic_simulation
+35,침대 옆,16,3520,4,0,1,0,0,0,phone|humid_u|humid_h|blanket|airclean,2.0|3.8|4.1|4.3|8.4,797,779,0.221,0.00,0.00,2.2,1,synthetic_simulation
+36,침대 옆,10,2200,4,3,0,0,0,0,phone|stand|humid_u|laptop,2.1|3.5|4.8|5.4,126,126,0.057,0.00,0.00,0.1,0,synthetic_simulation
+37,책상,10,2200,2,5,0,0,0,0,laptop|phone|stand,5.6|2.0|3.3,103,103,0.047,0.00,0.00,0.1,1,synthetic_simulation
+38,주방,10,2200,3,1,0,0,0,0,kettle|rice6,0.1|0.3,2230,2230,1.014,0.25,0.25,40.8,1,synthetic_simulation
+39,책상,16,3520,4,2,0,0,0,0,laptop|phone,5.0|1.9,91,91,0.026,0.00,0.00,0.0,0,synthetic_simulation
+40,책상,16,3520,5,3,1,0,0,0,laptop|mon24|mon27|phone|stand,4.9|4.8|5.2|2.2|3.5,139,139,0.039,0.00,0.00,0.1,1,synthetic_simulation
+41,몰아 쓰기,10,2200,4,3,0,0,0,0,laptop|phone|microwave|fridge,4.9|2.1|0.1|24.0,1510,1492,0.678,0.00,0.00,19.0,0,synthetic_simulation
+42,화장대,16,3520,5,5,0,0,0,0,dryer|straight|phone|iron|vacuum,0.1|0.1|2.0|0.0|0.1,4715,1800,0.511,0.00,0.00,11.7,1,synthetic_simulation
+43,주방,16,3520,4,1,0,0,0,0,fridge|kettle|rice6|airfryer,24.0|0.1|0.3|0.1,3799,2449,0.696,0.00,0.00,21.8,0,synthetic_simulation
+44,몰아 쓰기,16,3520,9,1,0,0,0,0,laptop|phone|stand|tv43|dryer|kettle|blanket|fanheater|airfryer,4.9|1.9|4.0|1.8|0.1|0.1|3.7|1.5|0.1,6719,4862,1.381,3.39,2.11,80.7,3,synthetic_simulation
+45,책상,16,3520,4,5,0,0,0,0,laptop|phone,5.6|2.1,91,91,0.026,0.00,0.00,0.0,1,synthetic_simulation
+46,책상,16,3520,4,2,1,0,0,0,laptop|mon24|phone|humid_u,5.4|4.4|2.1|5.2,129,129,0.037,0.00,0.00,0.1,1,synthetic_simulation
+47,몰아 쓰기,16,3520,5,4,0,0,0,0,phone|tv43|kettle|microwave|fanheater|airfryer,2.1|1.9|0.1|0.1|1.7|0.1,6264,3500,0.994,2.29,0.00,44.5,1,synthetic_simulation
+48,침대 옆,16,3520,5,6,0,0,0,0,stand|blanket|laptop,3.5|4.6|5.6,205,205,0.058,0.00,0.00,0.2,1,synthetic_simulation
+49,책상,16,3520,4,3,1,0,0,0,laptop|mon27|phone|stand,4.9|4.5|2.0|2.9,124,124,0.035,0.00,0.00,0.1,1,synthetic_simulation
+50,화장대,16,3520,3,4,0,0,0,0,dryer|straight|phone,0.1|0.1|2.0,1661,1643,0.467,0.00,0.00,9.5,0,synthetic_simulation
+51,몰아 쓰기,16,3520,5,1,0,0,0,0,laptop|phone|tv43|humid_u,5.4|2.0|1.5|4.0,160,160,0.045,0.00,0.00,0.1,0,synthetic_simulation
+52,침대 옆,16,3520,5,1,0,0,0,0,phone|humid_h|blanket|laptop|airclean,2.2|3.0|4.0|5.3|6.1,847,811,0.230,0.00,0.00,2.4,0,synthetic_simulation
+53,주방,10,2200,6,4,0,0,0,0,fridge|microwave|kettle|rice6|ramen|coffee,24.0|0.1|0.1|0.2|0.1|0.0,5729,2769,1.259,0.50,0.50,59.0,2,synthetic_simulation
+54,책상,16,3520,4,5,0,0,0,0,laptop|stand,5.3|3.5,85,85,0.024,0.00,0.00,0.0,1,synthetic_simulation
+55,책상,16,3520,6,7,0,0,0,0,laptop|phone|stand,5.3|2.1|2.9,103,103,0.029,0.00,0.00,0.0,1,synthetic_simulation
+56,책상,10,2200,4,0,0,0,0,0,laptop|mon27|stand,4.8|4.7|3.4,106,106,0.048,0.00,0.00,0.1,0,synthetic_simulation
+57,화장대,16,3520,4,4,0,0,0,0,dryer|straight|phone|stand,0.1|0.1|2.1|3.6,1673,1643,0.467,0.00,0.00,9.6,0,synthetic_simulation
+58,책상,16,3520,4,0,1,1,0,1,laptop|mon24|mon27|stand,5.1|4.7|4.5|3.8,121,121,0.034,0.00,0.00,0.1,2,synthetic_simulation
+59,책상,16,3520,4,2,0,0,0,0,laptop|phone|stand,5.4|2.3|3.1,103,103,0.029,0.00,0.00,0.0,0,synthetic_simulation
+60,침대 옆,16,3520,4,2,1,0,0,0,phone|stand|humid_u|laptop,2.3|3.4|4.4|5.1,126,126,0.036,0.00,0.00,0.1,1,synthetic_simulation
+61,침대 옆,16,3520,3,3,0,0,0,0,phone|stand|laptop,2.1|2.7|5.7,103,103,0.029,0.00,0.00,0.0,0,synthetic_simulation
+62,몰아 쓰기,16,3520,6,2,0,0,0,0,stand|tv43|kettle|microwave|fridge|blanket,2.3|1.4|0.1|0.1|24.0|4.1,2947,1539,0.437,0.00,0.00,7.5,0,synthetic_simulation
+63,침대 옆,16,3520,3,6,0,0,0,0,phone|stand,2.0|3.5,30,30,0.009,0.00,0.00,0.0,1,synthetic_simulation
+64,책상,16,3520,3,6,0,0,0,0,laptop|mon24|phone,5.4|3.9|2.1,106,106,0.030,0.00,0.00,0.0,1,synthetic_simulation
+65,침대 옆,16,3520,4,1,0,0,0,0,phone|airclean,2.2|7.5,54,54,0.015,0.00,0.00,0.0,0,synthetic_simulation
+66,주방,16,3520,4,1,0,0,0,0,microwave|kettle|rice6|ramen,0.1|0.1|0.3|0.1,4400,2230,0.634,0.00,0.00,15.0,0,synthetic_simulation
+67,책상,16,3520,6,5,0,0,0,0,laptop|mon27|phone|stand,5.3|4.4|2.1|2.9,124,124,0.035,0.00,0.00,0.1,1,synthetic_simulation
+68,주방,10,2200,5,5,0,0,0,0,fridge|microwave|kettle|rice6,24.0|0.1|0.1|0.3,3649,2299,1.045,0.32,0.32,45.8,2,synthetic_simulation
+69,책상,16,3520,6,6,0,0,0,0,laptop|phone|stand|humid_u,5.6|2.0|3.3|3.1,126,126,0.036,0.00,0.00,0.1,1,synthetic_simulation
+70,책상,10,2200,3,7,0,0,0,0,laptop|mon27|phone,5.3|4.0|1.9,112,94,0.043,0.00,0.00,0.1,1,synthetic_simulation
+71,책상,16,3520,4,4,0,0,0,0,laptop|phone|stand,5.1|2.2|2.6,103,103,0.029,0.00,0.00,0.0,0,synthetic_simulation
+72,주방,16,3520,4,3,0,0,0,0,fridge|microwave|airfryer|ramen,24.0|0.1|0.1|0.1,3739,2919,0.829,0.14,0.00,26.5,0,synthetic_simulation
+73,책상,10,2200,6,3,0,0,0,0,laptop|phone|stand|ledbulb|laser,4.8|1.8|2.3|4.2|0.0,887,869,0.395,0.00,0.00,6.8,0,synthetic_simulation
+74,주방,16,3520,4,3,0,0,0,0,fridge|microwave|airfryer|ramen,24.0|0.1|0.2|0.1,3739,2239,0.636,0.00,0.00,11.4,0,synthetic_simulation
+75,주방,16,3520,5,0,0,0,0,0,fridge|kettle|airfryer|toaster|coffee,24.0|0.1|0.1|0.0|0.0,5079,2919,0.829,0.14,0.00,26.8,0,synthetic_simulation
+76,책상,16,3520,5,4,0,0,0,0,laptop|mon27|phone|humid_u|airclean,4.3|4.8|2.0|3.9|7.9,171,153,0.043,0.00,0.00,0.1,0,synthetic_simulation
+77,침대 옆,16,3520,4,7,1,0,0,0,phone|stand|humid_u|airclean,2.1|3.1|3.6|6.7,89,89,0.025,0.00,0.00,0.0,1,synthetic_simulation
+78,책상,16,3520,3,1,0,0,0,0,laptop|phone|stand,5.1|2.1|3.1,103,103,0.029,0.00,0.00,0.0,0,synthetic_simulation
+79,침대 옆,16,3520,4,2,0,0,0,0,phone|humid_h|beam,2.0|3.3|0.5,870,870,0.247,0.00,0.00,2.7,0,synthetic_simulation
+80,책상,16,3520,3,7,0,0,0,0,laptop|phone,5.1|1.9,91,91,0.026,0.00,0.00,0.0,1,synthetic_simulation
+81,침대 옆,16,3520,3,0,0,0,0,0,phone|airclean|tv43,2.1|6.7|1.7,100,100,0.028,0.00,0.00,0.0,0,synthetic_simulation
+82,침대 옆,16,3520,2,3,0,0,0,0,phone|blanket|laptop,2.0|3.8|5.6,211,211,0.060,0.00,0.00,0.2,0,synthetic_simulation
+83,책상,16,3520,4,7,0,0,0,0,laptop|mon24|phone,5.4|4.5|2.0,106,106,0.030,0.00,0.00,0.0,1,synthetic_simulation
+84,책상,16,3520,6,4,0,0,0,0,laptop|phone|stand|laser|airclean,4.3|2.0|2.9|0.0|8.3,909,855,0.243,0.00,0.00,2.2,0,synthetic_simulation
+85,화장대,16,3520,4,6,0,0,0,0,dryer|straight|phone|iron,0.1|0.1|2.0|0.0,3461,1800,0.511,0.00,0.00,11.8,1,synthetic_simulation
+86,주방,10,2200,3,3,0,0,0,0,fridge|microwave|rice6,24.0|0.1|0.3,2299,1419,0.645,0.00,0.00,17.2,0,synthetic_simulation
+87,책상,16,3520,4,3,0,0,0,0,laptop|phone|stand,5.3|2.0|3.1,103,103,0.029,0.00,0.00,0.0,0,synthetic_simulation
+88,주방,16,3520,4,3,0,0,0,0,fridge|microwave|kettle|rice6,24.0|0.1|0.1|0.2,3649,2299,0.653,0.00,0.00,8.7,0,synthetic_simulation
+89,주방,16,3520,6,3,0,0,1,0,fridge|microwave|kettle|ramen,24.0|0.1|0.1|0.1,3589,1419,0.403,0.00,0.00,6.9,2,synthetic_simulation
+90,주방,16,3520,2,4,1,0,0,0,fridge|ramen|toaster,24.0|0.1|0.0,1789,969,0.275,0.00,0.00,3.0,1,synthetic_simulation
+91,화장대,16,3520,4,2,0,0,0,0,dryer|phone|stand,0.1|2.1|2.9,1630,1630,0.463,0.00,0.00,9.4,0,synthetic_simulation
+92,몰아 쓰기,16,3520,5,5,0,0,0,0,laptop|phone|kettle|fanheater|humid_u,5.1|2.0|0.1|1.7|3.9,3464,3350,0.952,0.21,0.00,33.2,1,synthetic_simulation
+93,화장대,16,3520,1,4,0,0,0,0,dryer|phone,0.1|1.9,1618,1618,0.460,0.00,0.00,9.3,0,synthetic_simulation
+94,몰아 쓰기,16,3520,6,1,0,0,0,0,laptop|phone|stand|tv43|dryer|kettle,5.2|1.9|3.1|2.2|0.1|0.1,3099,1737,0.493,0.00,0.00,10.8,0,synthetic_simulation
+95,책상,16,3520,4,1,0,0,0,0,laptop|phone|stand,5.2|2.0|2.9,103,103,0.029,0.00,0.00,0.0,0,synthetic_simulation
+96,침대 옆,16,3520,4,2,0,0,0,0,stand|humid_u|blanket|stove,3.0|4.4|3.9|1.6,1355,1355,0.385,0.00,0.00,6.7,0,synthetic_simulation
+97,침대 옆,16,3520,4,1,0,0,0,0,phone|blanket,2.0|3.9,138,138,0.039,0.00,0.00,0.1,0,synthetic_simulation
+98,책상,16,3520,5,5,0,0,0,0,laptop|stand,5.3|2.7,85,85,0.024,0.00,0.00,0.0,1,synthetic_simulation
+99,책상,16,3520,5,3,0,0,0,0,laptop|mon24|phone|laser|airclean,5.1|4.6|1.9|0.0|8.5,912,858,0.244,0.00,0.00,2.6,0,synthetic_simulation
+100,책상,16,3520,4,1,0,0,0,0,laptop|mon27|phone|stand,5.9|4.6|2.1|3.0,124,124,0.035,0.00,0.00,0.1,0,synthetic_simulation
+101,책상,16,3520,3,4,1,0,0,0,laptop|phone|ledbulb,5.3|2.2|4.4,105,105,0.030,0.00,0.00,0.0,1,synthetic_simulation
+102,책상,16,3520,4,2,0,0,0,0,laptop|mon27|phone,5.9|4.6|1.9,112,112,0.032,0.00,0.00,0.0,0,synthetic_simulation
+103,책상,16,3520,3,2,0,0,0,0,laptop|mon27|phone,5.4|4.0|2.0,112,112,0.032,0.00,0.00,0.0,0,synthetic_simulation
+104,책상,16,3520,3,2,0,0,0,0,laptop|mon24|phone,5.0|4.2|2.2,106,106,0.030,0.00,0.00,0.0,0,synthetic_simulation
+105,침대 옆,16,3520,6,6,1,1,0,0,phone|stand|humid_u|blanket|airclean|tv43,2.1|3.2|3.6|5.0|7.8|2.0,255,232,0.066,0.00,0.00,0.2,2,synthetic_simulation
+106,몰아 쓰기,16,3520,5,6,1,0,0,0,laptop|phone|tv43|dryer|microwave,4.9|2.2|2.0|0.1|0.1,3087,1719,0.488,0.00,0.00,10.7,1,synthetic_simulation
+107,주방,16,3520,3,5,0,0,0,0,microwave|kettle|rice6,0.1|0.1|0.3,3580,2230,0.634,0.00,0.00,16.8,1,synthetic_simulation
+108,주방,16,3520,5,6,1,0,0,0,fridge|kettle|toaster,24.0|0.1|0.0,2319,1419,0.403,0.00,0.00,6.7,1,synthetic_simulation
+109,책상,16,3520,4,2,0,0,0,0,laptop|phone,5.4|2.0,91,91,0.026,0.00,0.00,0.0,0,synthetic_simulation
+110,책상,16,3520,3,6,0,0,0,0,laptop|phone|stand,4.3|2.2|3.2,103,103,0.029,0.00,0.00,0.0,1,synthetic_simulation
+111,주방,10,2200,5,3,0,0,0,0,fridge|microwave|rice6|coffee,24.0|0.1|0.4|0.0,3559,2299,1.045,0.25,0.25,44.1,1,synthetic_simulation
+112,몰아 쓰기,16,3520,4,2,0,0,0,0,laptop|dryer|kettle|fridge,4.6|0.1|0.1|24.0,3092,1742,0.495,0.00,0.00,10.9,0,synthetic_simulation
+113,화장대,16,3520,3,4,0,1,0,0,dryer|straight|iron,0.1|0.1|0.0,3443,1843,0.524,0.00,0.00,12.2,2,synthetic_simulation
+114,주방,16,3520,6,0,1,0,0,0,fridge|microwave|kettle,24.0|0.1|0.1,2769,1419,0.403,0.00,0.00,6.9,1,synthetic_simulation
+115,침대 옆,16,3520,4,2,0,0,0,0,phone|blanket,1.9|3.2,138,138,0.039,0.00,0.00,0.1,0,synthetic_simulation
+116,화장대,16,3520,5,0,0,0,0,0,dryer|straight|phone,0.1|0.1|2.2,1661,1618,0.460,0.00,0.00,9.4,0,synthetic_simulation
+117,책상,16,3520,5,3,0,0,0,0,laptop|mon27|phone|stand,6.0|4.8|2.0|2.9,124,124,0.035,0.00,0.00,0.1,0,synthetic_simulation
+118,주방,16,3520,4,4,0,0,0,0,microwave|kettle|rice6|airfryer,0.1|0.1|0.2|0.1,5080,2850,0.810,0.07,0.00,20.6,0,synthetic_simulation
+119,침대 옆,16,3520,4,6,0,0,0,0,phone|humid_u|blanket|tv43,2.1|4.6|4.2|1.9,207,207,0.059,0.00,0.00,0.2,1,synthetic_simulation
+120,책상,16,3520,6,5,0,0,0,0,laptop|mon24|stand,5.6|4.6|2.9,100,100,0.028,0.00,0.00,0.0,1,synthetic_simulation
+121,책상,16,3520,3,0,0,0,0,0,laptop|phone|stand,5.5|2.2|2.8,103,103,0.029,0.00,0.00,0.0,0,synthetic_simulation
+122,책상,16,3520,4,3,0,0,0,1,laptop|mon24|phone|stand,5.2|4.6|2.0|2.6,118,118,0.034,0.00,0.00,0.1,2,synthetic_simulation
+123,책상,16,3520,4,1,0,0,0,1,laptop|mon24|phone|stand|humid_u,5.5|4.4|1.9|3.1|3.7,141,129,0.037,0.00,0.00,0.1,2,synthetic_simulation
+124,주방,16,3520,5,2,0,0,0,0,fridge|microwave|kettle|rice6|toaster,24.0|0.1|0.1|0.3|0.0,4549,2299,0.653,0.00,0.00,17.2,0,synthetic_simulation
+125,몰아 쓰기,16,3520,4,3,0,0,0,0,phone|tv43|kettle|fanheater,2.0|1.9|0.1|1.7,3414,3396,0.965,1.18,0.00,38.6,1,synthetic_simulation
+126,침대 옆,16,3520,4,4,0,0,0,0,phone|stand|humid_u,2.0|2.8|3.2,53,41,0.012,0.00,0.00,0.0,0,synthetic_simulation
+127,침대 옆,16,3520,3,5,0,0,0,0,phone|stand|humid_u,2.0|2.8|3.4,53,53,0.015,0.00,0.00,0.0,1,synthetic_simulation
+128,책상,10,2200,6,1,0,0,0,0,laptop|mon24|phone|stand,5.4|4.8|2.2|3.1,118,118,0.054,0.00,0.00,0.1,0,synthetic_simulation
+129,침대 옆,10,2200,4,1,0,0,0,0,phone|stand|humid_u|stove,1.8|2.9|4.7|1.6,1253,1253,0.570,0.00,0.00,14.6,0,synthetic_simulation
+130,책상,16,3520,4,0,0,0,0,0,laptop|phone|stand,5.4|2.1|2.9,103,103,0.029,0.00,0.00,0.0,0,synthetic_simulation
+131,주방,16,3520,6,0,0,0,0,0,fridge|microwave|kettle|rice6|ramen,24.0|0.1|0.1|0.4|0.1,4469,2299,0.653,0.00,0.00,14.6,0,synthetic_simulation
+132,화장대,16,3520,5,3,0,0,0,0,dryer|straight|phone,0.1|0.1|2.1,1661,1643,0.467,0.00,0.00,9.4,0,synthetic_simulation
+133,책상,16,3520,6,4,0,0,0,0,laptop|mon24|phone,4.8|4.4|1.9,106,106,0.030,0.00,0.00,0.0,0,synthetic_simulation
+134,화장대,10,2200,4,0,0,0,0,0,dryer|straight|stand,0.1|0.1|3.3,1655,1643,0.747,0.00,0.00,24.0,0,synthetic_simulation
+135,침대 옆,16,3520,6,5,0,0,0,0,phone|stand|humid_u|humid_h|airclean,2.1|3.3|4.6|3.9|9.2,689,689,0.196,0.00,0.00,1.7,1,synthetic_simulation
+136,책상,10,2200,3,1,0,0,0,0,laptop|phone,5.9|2.2,91,91,0.041,0.00,0.00,0.1,0,synthetic_simulation
+137,책상,16,3520,4,1,0,0,0,1,laptop|phone|stand|airclean,5.5|1.9|3.3|9.6,139,127,0.036,0.00,0.00,0.1,2,synthetic_simulation
+138,주방,10,2200,3,6,0,0,0,0,fridge|microwave|kettle|coffee,24.0|0.1|0.1|0.0,4029,2679,1.218,0.25,0.25,49.4,2,synthetic_simulation
+139,몰아 쓰기,16,3520,5,2,1,0,0,0,phone|stand|dryer|microwave|airfryer,2.1|3.3|0.1|0.1|0.1,4480,2850,0.810,0.11,0.00,20.2,1,synthetic_simulation
+140,책상,16,3520,3,1,0,0,0,1,laptop|mon27|phone|stand,5.1|4.3|2.1|3.3,124,124,0.035,0.00,0.00,0.1,2,synthetic_simulation
+141,책상,16,3520,5,3,0,0,0,0,laptop|phone|stand,5.0|2.0|3.4,103,103,0.029,0.00,0.00,0.0,0,synthetic_simulation
+142,화장대,16,3520,2,1,0,0,0,1,dryer|straight|phone,0.1|0.1|2.1,1661,1618,0.460,0.00,0.00,9.4,2,synthetic_simulation
+143,책상,16,3520,3,1,0,0,0,0,laptop|phone|stand,5.3|2.0|3.0,103,103,0.029,0.00,0.00,0.0,0,synthetic_simulation
+144,침대 옆,16,3520,4,6,0,0,0,1,phone|airclean,2.2|8.7,54,54,0.015,0.00,0.00,0.0,2,synthetic_simulation
+145,주방,16,3520,5,4,0,0,0,0,fridge|microwave|kettle|rice6|airfryer,24.0|0.1|0.1|0.2|0.1,5149,2919,0.829,0.18,0.00,23.9,0,synthetic_simulation
+146,주방,16,3520,5,3,0,0,0,0,fridge|microwave|kettle|airfryer|ramen,24.0|0.1|0.1|0.1|0.1,5089,3589,1.020,0.36,0.04,29.1,1,synthetic_simulation
+147,몰아 쓰기,16,3520,4,1,0,0,0,0,phone|stand|dryer|kettle,2.2|3.5|0.1|0.1,2980,1630,0.463,0.00,0.00,9.6,0,synthetic_simulation
+148,책상,10,2200,4,5,0,0,0,0,laptop|mon27|phone,5.1|4.5|2.0,112,112,0.051,0.00,0.00,0.1,1,synthetic_simulation
+149,몰아 쓰기,16,3520,6,5,0,0,0,0,laptop|phone|kettle|microwave|fridge|blanket,5.3|1.9|0.1|0.1|24.0|5.1,2980,1539,0.437,0.00,0.00,7.8,1,synthetic_simulation
+150,책상,16,3520,6,0,0,0,0,0,laptop|phone|stand,5.3|1.9|3.4,103,103,0.029,0.00,0.00,0.0,0,synthetic_simulation
+151,몰아 쓰기,16,3520,5,0,0,0,0,0,laptop|phone|dryer|kettle|fanheater,5.3|2.2|0.1|0.1|1.0,5041,3673,1.043,2.68,1.64,48.2,2,synthetic_simulation
+152,침대 옆,16,3520,5,0,0,0,0,0,phone|humid_h|blanket,2.0|3.7|4.8,738,738,0.210,0.00,0.00,2.0,0,synthetic_simulation
+153,침대 옆,10,2200,3,1,0,0,0,0,phone|stand|laptop,2.0|3.3|5.2,103,103,0.047,0.00,0.00,0.1,0,synthetic_simulation
+154,주방,16,3520,5,1,0,0,0,0,fridge|kettle|rice6|ramen,24.0|0.1|0.3|0.1,3119,2299,0.653,0.00,0.00,15.3,0,synthetic_simulation
+155,책상,16,3520,3,1,0,0,0,0,laptop|phone|stand,4.9|2.2|3.6,103,103,0.029,0.00,0.00,0.0,0,synthetic_simulation
+156,책상,16,3520,3,2,0,0,0,0,laptop|mon24|phone,5.7|5.0|2.2,106,106,0.030,0.00,0.00,0.0,0,synthetic_simulation
+157,몰아 쓰기,16,3520,5,5,0,0,0,0,laptop|phone|kettle,5.5|1.9|0.1,1441,1423,0.404,0.00,0.00,6.8,1,synthetic_simulation
+158,책상,10,2200,4,2,0,0,0,0,laptop|mon27|phone,4.9|4.1|2.0,112,112,0.051,0.00,0.00,0.1,0,synthetic_simulation
+159,책상,16,3520,3,0,0,0,0,0,laptop|phone,5.2|2.1,91,91,0.026,0.00,0.00,0.0,0,synthetic_simulation
+160,주방,16,3520,5,7,0,0,0,0,fridge|microwave|rice6|airfryer,24.0|0.1|0.3|0.1,3799,2299,0.653,0.00,0.00,16.2,1,synthetic_simulation
+161,책상,10,2200,2,4,0,0,0,0,laptop|phone|airclean,4.8|2.0|8.3,127,127,0.058,0.00,0.00,0.1,0,synthetic_simulation
+162,책상,16,3520,5,4,0,0,0,0,laptop|phone,5.8|2.0,91,91,0.026,0.00,0.00,0.0,0,synthetic_simulation
+163,화장대,10,2200,6,8,0,0,0,0,dryer|straight|phone|stand|iron|vacuum,0.1|0.1|2.1|3.1|0.0|0.0,4727,1800,0.818,1.75,0.00,30.1,1,synthetic_simulation
+164,책상,16,3520,3,3,0,0,0,0,laptop|mon27|phone,4.9|4.8|1.9,112,94,0.027,0.00,0.00,0.0,0,synthetic_simulation
+165,책상,16,3520,5,2,0,0,0,0,laptop|phone|stand|humid_u|airclean,5.2|2.1|3.5|3.3|7.1,162,162,0.046,0.00,0.00,0.1,0,synthetic_simulation
+166,침대 옆,16,3520,6,1,0,0,0,0,phone|humid_u,2.2|3.8,41,41,0.012,0.00,0.00,0.0,0,synthetic_simulation
+167,주방,10,2200,5,6,1,0,0,0,microwave|rice6,0.1|0.3,2230,1350,0.614,0.00,0.00,15.6,1,synthetic_simulation
+168,책상,10,2200,5,3,0,0,0,0,laptop|phone|stand,5.0|2.0|3.0,103,103,0.047,0.00,0.00,0.1,0,synthetic_simulation
+169,몰아 쓰기,10,2200,5,0,0,0,0,0,laptop|phone|dryer|microwave|blanket,5.4|2.1|0.1|0.1|4.4,3161,1793,0.815,0.36,0.00,29.4,1,synthetic_simulation
+170,침대 옆,16,3520,5,2,0,0,0,0,phone|laptop,2.2|5.5,91,91,0.026,0.00,0.00,0.0,0,synthetic_simulation
+171,주방,16,3520,6,0,0,0,0,0,fridge|microwave|kettle|airfryer,24.0|0.1|0.1|0.1,4269,2919,0.829,0.39,0.00,29.0,1,synthetic_simulation
+172,주방,16,3520,5,1,0,0,0,0,fridge|microwave|kettle|rice6|toaster,24.0|0.1|0.1|0.2|0.0,4549,2319,0.659,0.00,0.00,16.2,0,synthetic_simulation
+173,몰아 쓰기,16,3520,7,3,0,0,0,0,laptop|phone|stand|dryer|kettle|fridge|humid_u,5.6|2.1|3.5|0.1|0.1|24.0|4.6,3145,3019,0.858,0.07,0.00,23.0,0,synthetic_simulation
+174,책상,16,3520,5,6,0,0,0,0,laptop|phone,5.4|2.2,91,91,0.026,0.00,0.00,0.0,1,synthetic_simulation
+175,주방,16,3520,3,5,0,0,0,0,microwave|rice6|toaster,0.1|0.3|0.0,3130,1350,0.384,0.00,0.00,6.1,1,synthetic_simulation
+176,책상,16,3520,6,2,0,0,0,0,laptop|phone|stand,5.3|2.1|3.4,103,103,0.029,0.00,0.00,0.0,0,synthetic_simulation
+177,주방,16,3520,5,2,0,0,0,0,fridge|microwave|kettle|rice6|toaster,24.0|0.1|0.1|0.3|0.0,4549,2299,0.653,0.00,0.00,17.1,0,synthetic_simulation
+178,몰아 쓰기,16,3520,7,6,0,0,0,0,laptop|phone|stand|tv43|dryer|fridge|blanket|humid_u,5.3|2.2|2.8|2.0|0.1|24.0|4.5|4.6,1961,1920,0.545,0.00,0.00,13.1,1,synthetic_simulation
+179,화장대,16,3520,3,4,0,0,0,0,dryer|phone|iron,0.1|1.8|0.0,3418,1800,0.511,0.00,0.00,11.8,0,synthetic_simulation
+180,책상,16,3520,4,0,0,0,0,0,laptop|mon24|mon27|phone,5.3|4.9|4.7|2.0,127,127,0.036,0.00,0.00,0.1,0,synthetic_simulation
+181,주방,16,3520,4,2,0,0,0,0,fridge|microwave,24.0|0.1,1419,1419,0.403,0.00,0.00,6.7,0,synthetic_simulation
+182,책상,16,3520,4,2,0,0,0,0,laptop|phone|stand,5.9|2.0|2.6,103,103,0.029,0.00,0.00,0.0,0,synthetic_simulation
+183,책상,16,3520,3,1,0,0,0,0,laptop|phone|airclean,5.8|2.0|7.1,127,127,0.036,0.00,0.00,0.1,0,synthetic_simulation
+184,침대 옆,10,2200,6,3,0,0,0,0,phone|stand|humid_u|blanket,2.0|3.3|4.0|4.6,173,161,0.073,0.00,0.00,0.2,0,synthetic_simulation
+185,주방,16,3520,5,2,0,1,0,0,fridge|kettle|rice6,24.0|0.1|0.3,2299,2299,0.653,0.00,0.00,16.2,2,synthetic_simulation
+186,주방,16,3520,6,3,0,0,0,0,microwave|rice6|coffee,0.1|0.3|0.0,3490,2230,0.634,0.00,0.00,13.7,0,synthetic_simulation
+187,책상,16,3520,6,2,0,0,0,0,laptop|mon24|phone|stand|airclean,5.0|4.8|2.1|2.8|8.9,154,154,0.044,0.00,0.00,0.1,0,synthetic_simulation
+188,침대 옆,16,3520,2,2,0,0,0,0,phone|stand,1.9|3.3,30,30,0.009,0.00,0.00,0.0,0,synthetic_simulation
+189,주방,16,3520,5,2,0,0,0,0,microwave|kettle|rice6|airfryer|ramen,0.1|0.1|0.3|0.1|0.1,5900,2700,0.767,0.00,0.00,18.9,0,synthetic_simulation
+190,침대 옆,10,2200,3,4,0,0,0,0,phone|stand,2.1|3.3,30,30,0.014,0.00,0.00,0.0,0,synthetic_simulation
+191,주방,10,2200,4,5,0,0,0,0,microwave|ramen,0.1|0.0,2170,1350,0.614,0.00,0.00,15.6,1,synthetic_simulation
+192,책상,16,3520,6,0,1,0,0,0,laptop|phone|stand,4.6|2.0|3.3,103,103,0.029,0.00,0.00,0.0,1,synthetic_simulation
+193,화장대,16,3520,4,5,0,0,0,0,dryer|straight|stand,0.1|0.1|3.0,1655,1643,0.467,0.00,0.00,9.4,1,synthetic_simulation
+194,주방,16,3520,5,2,0,0,0,0,fridge|microwave|kettle|airfryer,24.0|0.1|0.1|0.1,4269,1569,0.446,0.00,0.00,8.9,0,synthetic_simulation
+195,침대 옆,16,3520,4,0,0,0,0,0,stand|blanket,3.4|3.8,132,132,0.037,0.00,0.00,0.1,0,synthetic_simulation
+196,주방,10,2200,4,1,0,0,0,0,fridge|kettle|rice6|coffee,24.0|0.1|0.2|0.0,3559,2679,1.218,0.57,0.57,44.1,1,synthetic_simulation
+197,침대 옆,16,3520,6,1,0,0,0,0,phone|stand|humid_u,2.2|3.3|3.5,53,53,0.015,0.00,0.00,0.0,0,synthetic_simulation
+198,침대 옆,16,3520,2,7,0,0,0,0,phone|blanket,1.8|4.3,138,138,0.039,0.00,0.00,0.1,1,synthetic_simulation
+199,주방,16,3520,2,3,0,0,0,0,fridge|kettle,24.0|0.1,1419,1419,0.403,0.00,0.00,6.7,0,synthetic_simulation
+200,몰아 쓰기,10,2200,4,4,0,0,0,0,phone|dryer,2.0|0.1,1618,1618,0.735,0.00,0.00,24.0,0,synthetic_simulation
+201,침대 옆,16,3520,2,2,0,0,0,0,phone|stand|fanheater,2.2|3.1|2.1,2030,2030,0.577,0.00,0.00,15.0,0,synthetic_simulation
+202,책상,16,3520,6,1,0,0,0,0,laptop|mon24|mon27|phone|stand|airclean,5.3|4.8|4.5|2.0|3.6|9.0,175,157,0.045,0.00,0.00,0.1,0,synthetic_simulation
+203,책상,16,3520,3,1,0,0,0,0,laptop|phone|stand,5.4|2.2|3.0,103,103,0.029,0.00,0.00,0.0,0,synthetic_simulation
+204,책상,10,2200,3,5,0,0,0,0,laptop|mon27|phone,5.6|4.6|2.1,112,112,0.051,0.00,0.00,0.1,1,synthetic_simulation
+205,화장대,16,3520,3,2,1,0,0,0,dryer|straight|phone|stand,0.1|0.1|2.0|3.3,1673,1630,0.463,0.00,0.00,9.4,1,synthetic_simulation
+206,책상,16,3520,6,1,1,0,0,0,laptop|mon24|phone|ledbulb,5.0|4.1|1.9|4.3,120,120,0.034,0.00,0.00,0.1,1,synthetic_simulation
+207,주방,16,3520,4,5,0,0,0,0,microwave|kettle|rice6|airfryer,0.1|0.1|0.3|0.2,5080,2850,0.810,0.36,0.00,24.6,1,synthetic_simulation
+208,침대 옆,10,2200,5,3,0,0,0,0,phone|blanket|fanheater,2.1|4.2|1.6,2138,2138,0.972,94.89,0.00,42.5,1,synthetic_simulation
+209,침대 옆,16,3520,6,3,0,0,0,0,phone|humid_h|blanket|tv43,2.0|2.9|3.4|1.9,784,784,0.223,0.00,0.00,2.2,0,synthetic_simulation
+210,침대 옆,16,3520,4,6,0,0,0,0,phone|blanket|airclean|stove,2.0|5.1|7.8|1.2,1374,1374,0.390,0.00,0.00,6.9,1,synthetic_simulation
+211,몰아 쓰기,10,2200,6,1,0,0,0,0,laptop|phone|dryer|microwave,5.1|2.0|0.2|0.1,3041,1691,0.769,0.00,0.00,26.2,0,synthetic_simulation
+212,책상,16,3520,3,2,0,0,0,0,mon27|phone|stand,4.4|1.9|3.0,51,51,0.014,0.00,0.00,0.0,0,synthetic_simulation
+213,책상,16,3520,5,3,0,0,0,0,laptop|phone|stand|humid_u,5.2|2.1|2.9|4.0,126,126,0.036,0.00,0.00,0.1,0,synthetic_simulation
+214,주방,16,3520,6,5,0,0,0,0,kettle|airfryer|induction,0.1|0.1|0.1,4850,3500,0.994,0.86,0.00,44.4,1,synthetic_simulation
+215,책상,10,2200,6,2,0,0,0,0,laptop|phone|stand|airclean,5.0|2.1|2.9|6.8,139,139,0.063,0.00,0.00,0.2,0,synthetic_simulation
+216,몰아 쓰기,16,3520,6,6,0,0,0,0,laptop|stand|dryer|humid_u,4.7|2.4|0.1|4.6,1708,1708,0.485,0.00,0.00,10.3,1,synthetic_simulation
+217,책상,10,2200,3,0,0,0,0,0,laptop|mon27|phone|humid_u,5.2|3.9|2.0|3.6,135,135,0.061,0.00,0.00,0.2,0,synthetic_simulation
+218,침대 옆,16,3520,4,3,0,0,0,0,phone|airclean,2.1|9.5,54,54,0.015,0.00,0.00,0.0,0,synthetic_simulation
+219,책상,16,3520,3,3,0,0,1,0,laptop|mon27|phone,5.0|4.5|2.1,112,112,0.032,0.00,0.00,0.0,2,synthetic_simulation
+220,책상,16,3520,4,0,0,0,0,0,laptop|stand,5.2|3.6,85,85,0.024,0.00,0.00,0.0,0,synthetic_simulation
+221,몰아 쓰기,16,3520,6,1,0,0,0,0,laptop|phone|stand|tv43|dryer|blanket,5.5|2.0|3.3|1.6|0.1|3.0,1869,1750,0.497,0.00,0.00,10.6,0,synthetic_simulation
+222,몰아 쓰기,16,3520,6,4,1,0,0,0,laptop|phone|dryer|microwave|airfryer,5.2|1.8|0.1|0.1|0.1,4541,2850,0.810,0.07,0.00,19.0,1,synthetic_simulation
+223,침대 옆,10,2200,4,4,0,0,0,0,phone|blanket|laptop|beam,2.1|3.6|5.4|0.4,463,445,0.202,0.00,0.00,1.8,0,synthetic_simulation
+224,침대 옆,16,3520,5,1,1,0,0,0,phone|humid_h|blanket|airclean|tv43,2.0|3.4|4.1|6.8|1.0,820,820,0.233,0.00,0.00,2.4,1,synthetic_simulation
+225,몰아 쓰기,16,3520,8,7,1,0,0,0,laptop|phone|stand|tv43|dryer|kettle|microwave|fridge,6.0|2.0|3.3|2.4|0.1|0.1|0.1|24.0,4518,3019,0.858,0.14,0.00,27.3,1,synthetic_simulation
+226,주방,10,2200,3,1,0,0,0,0,microwave|kettle,0.1|0.1,2700,2700,1.227,0.07,0.07,44.3,1,synthetic_simulation
+227,주방,10,2200,3,8,0,0,0,0,fridge|microwave|kettle,24.0|0.1|0.1,2769,2769,1.259,0.14,0.14,46.9,2,synthetic_simulation
+228,책상,10,2200,6,3,0,0,0,0,laptop|mon24|phone|ledbulb,4.9|5.0|1.9|4.4,120,120,0.055,0.00,0.00,0.1,0,synthetic_simulation
+229,주방,16,3520,4,1,1,0,0,1,microwave|kettle|rice6|airfryer,0.1|0.1|0.3|0.1,5080,3730,1.060,0.18,0.14,44.8,2,synthetic_simulation
+230,책상,16,3520,4,6,0,0,0,0,laptop|mon24|phone,5.8|4.2|2.1,106,106,0.030,0.00,0.00,0.0,1,synthetic_simulation
+231,침대 옆,16,3520,4,0,0,0,0,0,phone|blanket|laptop,2.1|4.1|5.2,211,211,0.060,0.00,0.00,0.2,0,synthetic_simulation
+232,책상,16,3520,6,7,0,0,0,0,laptop|mon24|mon27|phone|stand|ledbulb,4.6|4.4|4.3|2.0|3.7|4.2,153,135,0.038,0.00,0.00,0.1,1,synthetic_simulation
+233,책상,16,3520,5,0,0,0,0,0,laptop|phone|stand|airclean,5.0|2.0|3.0|6.0,139,139,0.039,0.00,0.00,0.1,0,synthetic_simulation
+234,침대 옆,10,2200,6,3,0,0,0,0,phone|stand|airclean|stove,2.0|3.7|7.2|1.0,1266,1266,0.575,0.00,0.00,14.9,0,synthetic_simulation
+235,책상,16,3520,4,4,0,0,0,0,laptop|mon24|phone|stand,6.1|3.9|2.0|3.1,118,118,0.034,0.00,0.00,0.1,0,synthetic_simulation
+236,화장대,10,2200,4,3,0,0,0,0,dryer|phone|stand|vacuum,0.1|1.9|3.3|0.1,2884,1630,0.741,0.00,0.00,24.0,0,synthetic_simulation
+237,화장대,16,3520,3,0,0,0,0,0,dryer|straight|phone,0.2|0.1|2.2,1661,1643,0.467,0.00,0.00,9.4,0,synthetic_simulation
+238,화장대,16,3520,4,2,0,0,0,0,dryer|straight,0.1|0.1,1643,1643,0.467,0.00,0.00,9.7,0,synthetic_simulation
+239,주방,16,3520,6,1,0,0,0,0,fridge|rice6,24.0|0.2,949,949,0.270,0.00,0.00,3.3,0,synthetic_simulation
+240,책상,16,3520,4,1,0,0,0,0,laptop|phone|stand,5.5|2.0|3.8,103,103,0.029,0.00,0.00,0.0,0,synthetic_simulation
+241,책상,16,3520,4,1,0,0,0,0,laptop|phone,4.9|2.1,91,91,0.026,0.00,0.00,0.0,0,synthetic_simulation
+242,주방,16,3520,5,4,0,0,0,0,microwave|kettle|rice6|induction,0.1|0.1|0.4|0.2,5580,4230,1.202,0.61,0.07,49.6,2,synthetic_simulation
+243,몰아 쓰기,16,3520,7,2,0,0,0,0,phone|tv43|dryer|kettle|microwave|fridge|blanket,1.9|2.1|0.1|0.1|0.1|24.0|4.6,4553,2815,0.800,0.00,0.00,19.0,0,synthetic_simulation
+244,책상,10,2200,2,2,0,0,0,0,laptop|phone|stand,4.9|2.0|3.1,103,103,0.047,0.00,0.00,0.1,0,synthetic_simulation
+245,몰아 쓰기,16,3520,4,3,0,0,0,0,laptop|phone|dryer|microwave,5.3|2.2|0.1|0.1,3041,2950,0.838,0.07,0.00,21.1,0,synthetic_simulation
+246,주방,10,2200,4,1,0,0,0,0,fridge|microwave|kettle|airfryer,24.0|0.1|0.1|0.1,4269,2919,1.327,0.11,0.11,53.5,2,synthetic_simulation
+247,주방,16,3520,4,5,0,0,0,0,microwave|rice6|airfryer,0.1|0.3|0.1,3730,2850,0.810,0.18,0.00,26.2,1,synthetic_simulation
+248,책상,16,3520,6,2,0,0,0,1,laptop|mon24|phone|stand,5.1|4.5|2.2|3.5,118,118,0.034,0.00,0.00,0.1,2,synthetic_simulation
+249,몰아 쓰기,16,3520,7,1,0,0,0,0,laptop|phone|stand|dryer|kettle|microwave|fridge,5.5|1.9|3.2|0.1|0.1|0.1|24.0,4472,1772,0.503,0.00,0.00,11.1,0,synthetic_simulation
+250,침대 옆,16,3520,5,1,0,0,0,0,phone|stand|humid_h|laptop|airclean,1.8|3.3|3.3|4.6|6.4,739,727,0.207,0.00,0.00,1.9,0,synthetic_simulation
+251,침대 옆,16,3520,4,8,0,0,0,0,phone|stand|humid_u|laptop,2.2|3.3|3.9|5.2,126,126,0.036,0.00,0.00,0.1,1,synthetic_simulation
+252,몰아 쓰기,16,3520,7,4,0,0,0,0,laptop|phone|stand|dryer|fridge|blanket|fanheater,5.4|2.0|2.8|0.1|24.0|5.0|1.6,3892,3807,1.082,1.32,1.32,52.1,2,synthetic_simulation
+253,주방,16,3520,4,2,0,0,0,1,microwave|airfryer,0.1|0.1,2850,1500,0.426,0.00,0.00,8.2,2,synthetic_simulation
+254,침대 옆,16,3520,6,2,0,0,0,0,phone|stand|beam,2.1|3.4|0.4,282,282,0.080,0.00,0.00,0.3,0,synthetic_simulation
+255,책상,16,3520,4,5,0,0,0,0,laptop|mon27|phone|stand,4.8|4.8|2.1|3.4,124,124,0.035,0.00,0.00,0.1,1,synthetic_simulation
+256,주방,16,3520,6,4,0,0,0,0,microwave|kettle|rice6|airfryer|coffee,0.1|0.1|0.3|0.1|0.0,6340,3730,1.060,0.11,0.11,40.5,1,synthetic_simulation
+257,몰아 쓰기,16,3520,4,2,0,0,0,0,laptop|phone|tv43|dryer|blanket,5.3|2.0|1.5|0.1|3.8,1857,1738,0.494,0.00,0.00,10.9,0,synthetic_simulation
+258,주방,16,3520,5,7,0,0,0,0,fridge|microwave|kettle|rice6|coffee,24.0|0.1|0.1|0.4|0.0,4909,2679,0.761,0.00,0.00,16.5,1,synthetic_simulation
+259,침대 옆,10,2200,4,6,0,0,0,0,phone|airclean|tv43|beam,2.0|6.0|2.6|0.2,352,352,0.160,0.00,0.00,1.2,1,synthetic_simulation
+260,책상,16,3520,5,4,0,0,0,0,laptop|mon24|stand,5.3|4.6|3.1,100,100,0.028,0.00,0.00,0.0,0,synthetic_simulation
+261,침대 옆,16,3520,6,0,0,0,0,0,phone|humid_u|blanket|laptop|fanheater,2.0|4.8|3.6|4.9|1.3,2234,2216,0.630,0.00,0.00,17.8,0,synthetic_simulation
+262,책상,10,2200,4,7,1,0,0,0,laptop|mon24|mon27|phone|stand,5.2|4.8|4.5|2.1|2.7,139,139,0.063,0.00,0.00,0.2,1,synthetic_simulation
+263,침대 옆,16,3520,3,2,0,0,0,0,phone|humid_u|laptop,2.0|5.3|5.4,114,114,0.032,0.00,0.00,0.0,0,synthetic_simulation
+264,책상,16,3520,4,3,0,0,0,0,laptop|mon27|phone|stand,5.2|4.6|2.0|2.7,124,124,0.035,0.00,0.00,0.1,0,synthetic_simulation
+265,책상,16,3520,3,1,0,0,1,0,laptop|mon27|phone,5.1|4.7|2.1,112,112,0.032,0.00,0.00,0.0,2,synthetic_simulation
+266,화장대,16,3520,1,4,0,0,0,0,dryer|straight,0.1|0.1,1643,1600,0.455,0.00,0.00,9.2,0,synthetic_simulation
+267,책상,16,3520,5,2,0,0,0,0,laptop|phone|stand,6.1|2.0|2.8,103,103,0.029,0.00,0.00,0.0,0,synthetic_simulation
+268,책상,10,2200,4,0,0,0,0,0,laptop|phone,5.1|2.0,91,91,0.041,0.00,0.00,0.1,0,synthetic_simulation
+269,주방,10,2200,6,3,0,0,0,0,fridge|microwave|kettle|rice6|airfryer|toaster,24.0|0.1|0.1|0.2|0.1|0.0,6049,2919,1.327,0.29,0.29,54.6,2,synthetic_simulation
+270,책상,10,2200,4,0,0,0,0,0,laptop|mon27|phone|stand,5.0|4.6|2.1|3.7,124,106,0.048,0.00,0.00,0.1,0,synthetic_simulation
+271,침대 옆,10,2200,4,5,0,0,0,0,phone|stand|blanket,2.0|3.3|4.2,150,150,0.068,0.00,0.00,0.2,1,synthetic_simulation
+272,화장대,10,2200,6,0,0,0,0,0,dryer|phone|vacuum,0.1|2.0|0.1,2872,1618,0.735,0.00,0.00,24.1,0,synthetic_simulation
+273,책상,10,2200,4,2,0,0,0,0,laptop|phone|stand|ledbulb,5.3|2.2|3.0|3.6,117,117,0.053,0.00,0.00,0.1,0,synthetic_simulation
+274,주방,16,3520,5,4,0,0,0,0,fridge|kettle|airfryer|induction|ramen,24.0|0.1|0.1|0.2|0.1,5739,3569,1.014,0.89,0.89,46.1,2,synthetic_simulation
+275,주방,10,2200,4,7,0,0,0,0,fridge|microwave|rice6|coffee,24.0|0.1|0.3|0.0,3559,2209,1.004,0.11,0.11,34.8,1,synthetic_simulation
+276,주방,16,3520,5,8,0,0,0,0,fridge|microwave|kettle|rice6|ramen,24.0|0.1|0.1|0.2|0.0,4469,2769,0.787,0.00,0.00,21.4,1,synthetic_simulation
+277,주방,16,3520,6,4,1,0,0,0,fridge|kettle,24.0|0.1,1419,1419,0.403,0.00,0.00,6.7,1,synthetic_simulation
+278,화장대,16,3520,6,1,0,0,0,0,dryer|straight|phone|stand,0.1|0.0|2.1|3.8,1673,1630,0.463,0.00,0.00,9.6,0,synthetic_simulation
+279,책상,16,3520,3,3,1,0,0,0,laptop|phone|stand,5.2|2.2|3.0,103,103,0.029,0.00,0.00,0.0,1,synthetic_simulation
+280,침대 옆,16,3520,6,6,0,0,0,1,phone|stand|humid_u,2.1|3.1|4.1,53,53,0.015,0.00,0.00,0.0,2,synthetic_simulation
+281,화장대,16,3520,6,5,1,0,0,0,dryer|phone,0.2|2.0,1618,1618,0.460,0.00,0.00,9.4,1,synthetic_simulation
+282,책상,16,3520,4,4,0,0,0,0,laptop|phone,5.4|2.2,91,91,0.026,0.00,0.00,0.0,0,synthetic_simulation
+283,책상,16,3520,4,2,0,0,0,0,laptop|phone,5.1|2.1,91,91,0.026,0.00,0.00,0.0,0,synthetic_simulation
+284,화장대,16,3520,3,2,0,0,0,0,dryer|straight|phone,0.1|0.1|1.9,1661,1618,0.460,0.00,0.00,9.4,0,synthetic_simulation
+285,주방,10,2200,4,8,0,0,0,0,fridge|microwave|kettle|ramen,24.0|0.1|0.1|0.1,3589,2239,1.018,0.29,0.29,43.3,1,synthetic_simulation
+286,주방,16,3520,4,0,0,0,0,0,kettle|rice6|airfryer,0.1|0.3|0.2,3730,2850,0.810,0.18,0.00,26.7,0,synthetic_simulation
+287,주방,16,3520,3,2,1,0,0,0,fridge|microwave|rice6,24.0|0.1|0.4,2299,2299,0.653,0.00,0.00,17.9,1,synthetic_simulation
+288,책상,16,3520,2,3,1,0,0,0,laptop|stand|airclean,5.0|3.4|8.1,121,121,0.034,0.00,0.00,0.1,1,synthetic_simulation
+289,책상,16,3520,4,5,0,0,0,0,laptop|mon24|phone|stand,4.8|4.8|2.2|3.2,118,118,0.034,0.00,0.00,0.1,1,synthetic_simulation
+290,몰아 쓰기,10,2200,6,0,0,0,0,0,phone|stand|dryer|microwave|blanket|airfryer,2.3|3.6|0.1|0.1|4.6|0.2,4600,2862,1.301,0.14,0.14,64.0,2,synthetic_simulation
+291,몰아 쓰기,10,2200,5,5,0,0,0,0,laptop|phone|tv43,5.0|2.0|1.8,137,137,0.062,0.00,0.00,0.2,1,synthetic_simulation
+292,책상,16,3520,6,3,0,0,0,0,laptop|mon27|phone,5.2|4.9|2.2,112,112,0.032,0.00,0.00,0.0,0,synthetic_simulation
+293,침대 옆,16,3520,4,1,0,0,0,0,phone|humid_h|blanket,1.9|2.8|3.8,738,738,0.210,0.00,0.00,2.0,0,synthetic_simulation
+294,침대 옆,16,3520,6,4,0,0,0,0,phone|stand,2.0|3.5,30,30,0.009,0.00,0.00,0.0,0,synthetic_simulation
+295,책상,16,3520,1,4,0,0,0,0,laptop|mon27,4.8|3.9,94,94,0.027,0.00,0.00,0.0,0,synthetic_simulation
+296,화장대,16,3520,3,7,0,0,0,0,dryer|straight,0.1|0.1,1643,1643,0.467,0.00,0.00,9.2,1,synthetic_simulation
+297,몰아 쓰기,16,3520,4,0,0,0,0,0,phone|stand|kettle,1.8|3.0|0.1,1380,1362,0.387,0.00,0.00,6.5,0,synthetic_simulation
+298,책상,16,3520,4,6,1,0,0,0,laptop|mon24|phone|humid_u,5.5|4.9|2.3|3.6,129,129,0.037,0.00,0.00,0.1,1,synthetic_simulation
+299,책상,10,2200,3,2,0,0,0,0,laptop|mon27|phone,4.6|4.9|2.1,112,112,0.051,0.00,0.00,0.1,0,synthetic_simulation
+300,책상,10,2200,5,2,0,0,0,0,laptop|mon24|phone,5.7|4.2|2.1,106,106,0.048,0.00,0.00,0.1,0,synthetic_simulation
+301,화장대,10,2200,3,2,0,0,0,0,dryer|straight|phone,0.1|0.1|2.0,1661,1643,0.747,0.00,0.00,24.1,0,synthetic_simulation
+302,몰아 쓰기,10,2200,4,1,0,0,0,1,stand|dryer|microwave,3.7|0.1|0.1,2962,1612,0.733,0.00,0.00,23.9,2,synthetic_simulation
+303,침대 옆,16,3520,4,3,0,0,0,0,phone|stand|airclean|tv43,2.1|3.4|7.8|1.7,112,112,0.032,0.00,0.00,0.0,0,synthetic_simulation
+304,책상,16,3520,4,1,0,0,0,0,laptop|mon24|airclean,5.3|4.5|8.3,124,124,0.035,0.00,0.00,0.1,0,synthetic_simulation
+305,책상,16,3520,4,5,0,0,0,0,laptop|phone|stand|humid_u,5.0|2.0|2.5|3.5,126,114,0.032,0.00,0.00,0.0,1,synthetic_simulation
+306,책상,16,3520,4,1,1,0,0,0,laptop|phone,5.6|2.1,91,91,0.026,0.00,0.00,0.0,1,synthetic_simulation
+307,몰아 쓰기,10,2200,9,0,0,0,0,0,laptop|phone|stand|tv43|dryer|kettle|microwave|fridge|humid_u,4.9|2.0|3.1|2.2|0.1|0.1|0.1|24.0|4.5,4541,3019,1.372,2.14,0.07,57.0,2,synthetic_simulation
+308,책상,16,3520,5,1,0,0,0,0,laptop|mon24|mon27|phone|stand,5.2|4.4|4.9|2.0|3.7,139,127,0.036,0.00,0.00,0.1,0,synthetic_simulation
+309,책상,16,3520,6,4,0,0,0,0,laptop|mon24|mon27|phone|stand|humid_u,5.2|5.1|4.0|2.1|3.0|4.3,162,129,0.037,0.00,0.00,0.1,0,synthetic_simulation
+310,책상,10,2200,5,5,0,0,0,0,laptop|mon24|phone|stand|ledbulb,5.4|4.5|2.1|3.9|3.9,132,132,0.060,0.00,0.00,0.2,1,synthetic_simulation
+311,침대 옆,10,2200,4,5,0,0,0,0,phone|blanket|tv43|beam,1.9|4.6|1.3|0.3,436,436,0.198,0.00,0.00,1.8,1,synthetic_simulation
+312,침대 옆,16,3520,2,5,0,0,0,0,phone|humid_u|laptop,2.0|5.7|5.0,114,114,0.032,0.00,0.00,0.0,1,synthetic_simulation
+313,책상,16,3520,5,4,0,0,0,0,laptop|mon24|mon27|phone|stand,5.8|4.1|4.8|1.9|3.6,139,124,0.035,0.00,0.00,0.1,0,synthetic_simulation
+314,침대 옆,16,3520,5,4,0,0,0,0,phone|blanket|tv43,2.2|4.6|1.5,184,184,0.052,0.00,0.00,0.1,0,synthetic_simulation
+315,화장대,16,3520,4,2,0,0,0,0,dryer|stand,0.1|3.4,1612,1612,0.458,0.00,0.00,9.3,0,synthetic_simulation
+316,몰아 쓰기,16,3520,5,8,0,0,0,0,laptop|phone|blanket|fanheater|humid_u,5.0|2.2|4.5|1.8|3.6,2234,2234,0.635,0.00,0.00,18.1,1,synthetic_simulation
+317,주방,16,3520,4,7,0,0,0,0,microwave|kettle|ramen,0.1|0.1|0.1,3520,2700,0.767,0.00,0.00,16.6,1,synthetic_simulation
+318,주방,16,3520,2,0,0,0,0,0,microwave|rice6|airfryer,0.1|0.3|0.1,3730,2850,0.810,0.07,0.00,20.4,0,synthetic_simulation
+319,주방,16,3520,6,0,0,0,0,0,fridge|kettle|rice6|airfryer|induction,24.0|0.1|0.3|0.1|0.2,5799,3569,1.014,0.86,0.18,42.4,1,synthetic_simulation
+320,주방,16,3520,4,0,0,0,0,0,fridge|microwave|kettle|rice6,24.0|0.1|0.1|0.4,3649,2769,0.787,0.00,0.00,20.6,0,synthetic_simulation
+321,주방,16,3520,4,4,0,0,0,0,fridge|microwave|kettle|rice6,24.0|0.1|0.1|0.3,3649,2299,0.653,0.00,0.00,14.6,0,synthetic_simulation
+322,몰아 쓰기,16,3520,7,2,0,0,0,0,laptop|phone|tv43|dryer|microwave|fridge|blanket,5.0|2.1|2.2|0.1|0.1|24.0|4.2,3276,1880,0.534,0.00,0.00,12.6,0,synthetic_simulation
+323,책상,16,3520,4,0,0,0,0,0,laptop|mon24|mon27|phone,5.6|5.2|5.3|2.1,127,112,0.032,0.00,0.00,0.0,0,synthetic_simulation
+324,책상,16,3520,4,6,1,0,0,0,laptop|mon27|phone|stand,5.3|4.6|2.0|3.8,124,124,0.035,0.00,0.00,0.1,1,synthetic_simulation
+325,몰아 쓰기,16,3520,4,1,0,0,0,0,laptop|phone|microwave|airfryer,5.6|1.9|0.1|0.1,2941,1573,0.447,0.00,0.00,9.0,0,synthetic_simulation
+326,책상,10,2200,2,3,0,0,0,0,laptop|mon27|phone,5.1|4.6|2.0,112,112,0.051,0.00,0.00,0.1,0,synthetic_simulation
+327,침대 옆,16,3520,3,1,0,0,0,0,phone|laptop,1.8|4.4,91,91,0.026,0.00,0.00,0.0,0,synthetic_simulation
+328,주방,16,3520,6,0,0,0,0,0,fridge|microwave|kettle|airfryer|induction|ramen,24.0|0.1|0.1|0.1|0.2|0.1,7089,3419,0.971,0.50,0.00,37.4,1,synthetic_simulation
+329,책상,10,2200,6,4,0,0,0,0,laptop|phone|airclean,4.6|1.9|8.1,127,127,0.058,0.00,0.00,0.1,0,synthetic_simulation
+330,화장대,16,3520,5,2,0,0,0,0,dryer|straight|phone|stand|vacuum,0.1|0.1|2.0|2.7|0.1,2927,1630,0.463,0.00,0.00,9.6,0,synthetic_simulation
+331,주방,16,3520,3,0,0,0,1,0,fridge|kettle|rice6,24.0|0.1|0.2,2299,1419,0.403,0.00,0.00,7.1,2,synthetic_simulation
+332,주방,16,3520,4,3,0,0,0,0,fridge|microwave,24.0|0.1,1419,1419,0.403,0.00,0.00,6.7,0,synthetic_simulation
+333,침대 옆,10,2200,4,5,1,0,0,0,phone|stand|laptop,2.2|3.8|4.8,103,103,0.047,0.00,0.00,0.1,1,synthetic_simulation
+334,몰아 쓰기,16,3520,6,1,1,0,0,0,laptop|phone|stand|dryer|kettle|fridge,5.5|2.1|3.0|0.1|0.1|24.0,3122,3019,0.858,0.14,0.00,26.9,1,synthetic_simulation
+335,책상,16,3520,3,4,0,0,0,0,laptop|mon24|stand,4.9|5.0|3.6,100,100,0.028,0.00,0.00,0.0,0,synthetic_simulation
+336,책상,16,3520,5,2,0,0,0,0,laptop|phone|stand|humid_u,5.0|2.2|2.7|3.1,126,126,0.036,0.00,0.00,0.1,0,synthetic_simulation
+337,책상,16,3520,4,2,1,0,0,0,laptop|phone|stand,5.9|2.1|2.9,103,103,0.029,0.00,0.00,0.0,1,synthetic_simulation
+338,책상,16,3520,4,7,0,0,0,0,laptop|mon24|phone|stand,5.0|4.4|2.1|3.4,118,118,0.034,0.00,0.00,0.1,1,synthetic_simulation
+339,책상,10,2200,3,1,0,0,0,0,laptop|mon24|phone,4.9|4.6|2.0,106,106,0.048,0.00,0.00,0.1,0,synthetic_simulation
+340,책상,10,2200,4,2,0,0,0,0,laptop|mon27|phone|stand,5.6|4.8|2.2|3.4,124,124,0.056,0.00,0.00,0.1,0,synthetic_simulation
+341,책상,16,3520,5,2,0,0,0,0,laptop|phone|stand|ledbulb|airclean,5.0|2.1|3.3|4.0|6.0,153,153,0.043,0.00,0.00,0.1,0,synthetic_simulation
+342,몰아 쓰기,16,3520,4,2,0,0,0,0,dryer|kettle|microwave,0.2|0.1|0.1,4300,2950,0.838,0.14,0.00,23.9,0,synthetic_simulation
+343,주방,10,2200,1,1,0,0,0,0,kettle|airfryer,0.1|0.1,2850,1500,0.682,0.00,0.00,20.9,0,synthetic_simulation
+344,화장대,16,3520,6,6,0,0,0,0,dryer|straight|phone|stand,0.1|0.1|2.1|3.5,1673,1630,0.463,0.00,0.00,9.4,1,synthetic_simulation
+345,침대 옆,10,2200,4,2,0,0,0,0,phone|stand|blanket|tv43,2.0|3.4|5.0|1.6,196,196,0.089,0.00,0.00,0.4,0,synthetic_simulation
+346,책상,16,3520,5,1,0,0,0,0,laptop|mon24|mon27|phone|stand|humid_u,5.1|4.5|4.2|2.0|3.2|4.0,162,144,0.041,0.00,0.00,0.1,0,synthetic_simulation
+347,주방,10,2200,5,1,0,1,0,0,rice6|airfryer,0.3|0.1,2380,2380,1.082,0.07,0.07,38.9,2,synthetic_simulation
+348,책상,10,2200,6,6,0,0,0,0,laptop|mon24|phone|stand,5.3|4.3|2.0|3.4,118,118,0.054,0.00,0.00,0.1,1,synthetic_simulation
+349,책상,16,3520,4,4,0,0,0,1,laptop|mon24|stand|humid_u,5.0|4.2|2.6|4.4,123,123,0.035,0.00,0.00,0.1,2,synthetic_simulation
+350,몰아 쓰기,16,3520,1,7,1,0,0,0,laptop|phone,5.1|2.0,91,91,0.026,0.00,0.00,0.0,1,synthetic_simulation
+351,책상,16,3520,6,4,1,0,0,0,laptop|mon27|phone,5.4|4.2|1.9,112,112,0.032,0.00,0.00,0.0,1,synthetic_simulation
+352,몰아 쓰기,16,3520,5,1,0,0,0,0,laptop|phone|dryer|kettle|fridge,5.7|2.0|0.1|0.1|24.0,3110,1760,0.500,0.00,0.00,10.9,0,synthetic_simulation
+353,책상,16,3520,4,4,0,0,0,0,laptop|phone|stand,5.8|2.0|3.6,103,103,0.029,0.00,0.00,0.0,0,synthetic_simulation
+354,침대 옆,10,2200,6,2,0,0,0,0,phone|humid_u|blanket,2.2|4.8|4.6,161,161,0.073,0.00,0.00,0.2,0,synthetic_simulation
+355,몰아 쓰기,16,3520,6,0,1,0,0,0,laptop|phone|dryer,5.6|1.9|0.1,1691,1691,0.480,0.00,0.00,10.0,1,synthetic_simulation
+356,책상,16,3520,4,4,1,0,0,0,laptop|mon24|phone|stand,5.0|4.3|2.1|3.3,118,103,0.029,0.00,0.00,0.0,1,synthetic_simulation
+357,침대 옆,16,3520,4,4,0,0,0,0,phone|laptop,1.9|5.2,91,91,0.026,0.00,0.00,0.0,0,synthetic_simulation
+358,화장대,10,2200,4,6,1,0,0,0,dryer|straight|phone|stand,0.1|0.0|2.1|3.5,1673,1630,0.741,0.00,0.00,24.3,1,synthetic_simulation
+359,몰아 쓰기,16,3520,4,4,0,0,0,0,laptop|phone|blanket,5.0|2.1|4.7,211,211,0.060,0.00,0.00,0.2,0,synthetic_simulation
+360,책상,16,3520,5,6,0,0,1,0,laptop|mon24|phone|stand|humid_u,5.1|3.8|2.0|3.1|3.5,141,126,0.036,0.00,0.00,0.1,2,synthetic_simulation
+361,몰아 쓰기,16,3520,5,0,0,0,0,0,laptop|phone|dryer|fridge|fanheater,5.1|2.0|0.1|24.0|1.6,3760,3742,1.063,2.18,2.18,48.7,2,synthetic_simulation
+362,침대 옆,16,3520,2,1,0,0,0,0,phone|humid_h,2.0|2.8,618,618,0.176,0.00,0.00,1.4,0,synthetic_simulation
+363,몰아 쓰기,16,3520,5,3,0,0,0,0,laptop|phone|microwave|fridge,5.1|2.2|0.1|24.0,1510,1492,0.424,0.00,0.00,7.4,0,synthetic_simulation
+364,책상,10,2200,4,2,0,0,0,0,laptop|phone|stand|laser,5.1|2.0|3.3|0.0,873,855,0.389,0.00,0.00,6.0,0,synthetic_simulation
+365,책상,16,3520,5,8,0,0,0,0,laptop|mon24|phone|stand,4.9|4.9|2.2|3.0,118,118,0.034,0.00,0.00,0.1,1,synthetic_simulation
+366,침대 옆,16,3520,5,5,0,0,0,0,phone|humid_u|fanheater,1.9|2.6|1.5,2041,2041,0.580,0.00,0.00,15.1,1,synthetic_simulation
+367,침대 옆,16,3520,6,4,0,0,0,0,phone|tv43,1.9|2.0,64,64,0.018,0.00,0.00,0.0,0,synthetic_simulation
+368,책상,16,3520,3,7,0,0,0,0,laptop|mon24|phone|stand,5.8|4.1|2.2|2.9,118,118,0.034,0.00,0.00,0.1,1,synthetic_simulation
+369,화장대,16,3520,4,1,0,0,0,0,dryer|straight|stand,0.1|0.1|3.6,1655,1612,0.458,0.00,0.00,9.4,0,synthetic_simulation
+370,주방,16,3520,6,5,0,0,0,0,microwave|ramen,0.1|0.1,2170,2170,0.616,0.00,0.00,7.4,1,synthetic_simulation
+371,책상,16,3520,4,3,0,0,0,0,laptop|phone|stand,5.1|2.1|3.7,103,103,0.029,0.00,0.00,0.0,0,synthetic_simulation
+372,침대 옆,16,3520,5,3,0,0,0,0,phone|stand|blanket|tv43|stove,2.0|3.2|5.0|1.6|1.4,1396,1396,0.397,0.00,0.00,7.1,0,synthetic_simulation
+373,화장대,16,3520,5,3,0,0,0,0,straight|phone|stand|iron,0.1|2.0|3.5|0.0,1873,1812,0.515,0.00,0.00,11.9,0,synthetic_simulation
+374,책상,16,3520,4,5,0,0,0,0,laptop|mon24|phone|stand|laser,5.1|3.9|2.0|3.2|0.0,888,770,0.219,0.00,0.00,2.0,1,synthetic_simulation
+375,주방,16,3520,5,0,0,0,0,0,fridge|microwave|rice6,24.0|0.1|0.3,2299,2299,0.653,0.00,0.00,17.9,0,synthetic_simulation
+376,침대 옆,16,3520,2,4,0,0,0,0,phone|humid_u,1.9|4.1,41,41,0.012,0.00,0.00,0.0,0,synthetic_simulation
+377,몰아 쓰기,16,3520,5,1,0,0,0,0,laptop|phone|stand|dryer|microwave,5.3|2.0|2.8|0.1|0.1,3053,1691,0.480,0.00,0.00,10.1,0,synthetic_simulation
+378,책상,16,3520,4,0,0,0,0,0,laptop|phone,4.6|2.0,91,91,0.026,0.00,0.00,0.0,0,synthetic_simulation
+379,침대 옆,10,2200,3,7,0,0,1,0,phone|stand|airclean,2.2|3.4|7.6,66,66,0.030,0.00,0.00,0.0,2,synthetic_simulation
+380,주방,16,3520,5,5,0,0,0,0,fridge|microwave|kettle|ramen,24.0|0.1|0.1|0.1,3589,2239,0.636,0.00,0.00,15.2,1,synthetic_simulation
+381,몰아 쓰기,16,3520,7,2,0,0,0,0,phone|tv43|dryer|kettle|fridge|blanket|humid_u,2.0|1.8|0.1|0.1|24.0|4.1|5.4,3226,1830,0.520,0.00,0.00,11.5,0,synthetic_simulation
+382,주방,16,3520,4,4,0,0,0,0,microwave|kettle|induction,0.1|0.1|0.2,4700,2700,0.767,0.00,0.00,14.5,0,synthetic_simulation
+383,책상,16,3520,6,5,0,0,0,0,laptop|phone|stand,5.4|2.1|3.7,103,103,0.029,0.00,0.00,0.0,1,synthetic_simulation
+384,책상,16,3520,4,2,0,0,0,0,laptop|phone,5.5|2.1,91,91,0.026,0.00,0.00,0.0,0,synthetic_simulation
+385,주방,16,3520,5,6,1,0,1,0,fridge|microwave|kettle|rice6|airfryer,24.0|0.1|0.1|0.3|0.1,5149,2449,0.696,0.00,0.00,21.5,2,synthetic_simulation
+386,책상,16,3520,4,3,0,0,0,0,laptop|phone|humid_u,5.0|1.9|2.7,114,114,0.032,0.00,0.00,0.0,0,synthetic_simulation
+387,책상,16,3520,6,8,0,0,0,0,laptop|mon24|mon27|phone|airclean,5.4|4.6|4.8|1.9|8.1,163,148,0.042,0.00,0.00,0.1,1,synthetic_simulation
+388,침대 옆,16,3520,4,3,1,0,0,0,phone|humid_u,2.1|4.6,41,41,0.012,0.00,0.00,0.0,1,synthetic_simulation
+389,침대 옆,16,3520,5,6,0,0,0,0,phone|beam,2.1|0.4,270,270,0.077,0.00,0.00,0.3,1,synthetic_simulation
+390,침대 옆,16,3520,5,3,1,1,0,0,phone|stand|laptop|tv43|fanheater,2.1|3.3|5.3|2.2|1.7,2149,2131,0.605,0.00,0.00,16.5,2,synthetic_simulation
+391,주방,10,2200,6,1,0,0,0,0,microwave|rice6,0.1|0.3,2230,1350,0.614,0.00,0.00,15.6,0,synthetic_simulation
+392,화장대,10,2200,6,0,0,0,0,0,dryer|straight|stand,0.1|0.1|3.1,1655,1612,0.733,0.00,0.00,24.0,0,synthetic_simulation
+393,책상,10,2200,3,2,0,0,0,0,laptop|mon27|phone,5.9|3.9|1.9,112,112,0.051,0.00,0.00,0.1,0,synthetic_simulation
+394,침대 옆,16,3520,3,1,1,0,0,0,phone|blanket|stove,2.1|4.0|1.8,1338,1320,0.375,0.00,0.00,6.3,1,synthetic_simulation
+395,몰아 쓰기,16,3520,6,2,0,0,0,0,laptop|phone|tv43|kettle|fridge|fanheater,5.6|2.1|1.5|0.1|24.0|1.1,3556,3419,0.971,0.21,0.00,40.2,1,synthetic_simulation
+396,몰아 쓰기,10,2200,5,7,0,0,0,1,laptop|phone|stand|dryer|kettle,5.0|1.9|3.2|0.1|0.1,3053,3035,1.380,0.14,0.14,74.3,3,synthetic_simulation
+397,침대 옆,16,3520,5,3,0,0,0,0,phone|stand|humid_h|blanket|fanheater,1.9|3.2|2.5|4.9|1.0,2750,2618,0.744,0.00,0.00,24.9,0,synthetic_simulation
+398,책상,16,3520,4,2,0,0,0,1,phone|stand,2.1|3.4,30,30,0.009,0.00,0.00,0.0,2,synthetic_simulation
+399,침대 옆,16,3520,5,4,0,0,0,0,phone|stand|humid_u|blanket|laptop,2.2|2.6|4.6|4.6|4.3,246,246,0.070,0.00,0.00,0.2,0,synthetic_simulation
+400,침대 옆,16,3520,2,0,0,0,0,0,phone|humid_u,2.1|4.9,41,41,0.012,0.00,0.00,0.0,0,synthetic_simulation
+401,침대 옆,16,3520,1,2,0,0,0,0,phone|humid_h,2.3|4.4,618,618,0.176,0.00,0.00,1.4,0,synthetic_simulation
+402,침대 옆,10,2200,6,1,1,0,0,0,phone|stand,2.0|3.0,30,30,0.014,0.00,0.00,0.0,1,synthetic_simulation
+403,화장대,10,2200,4,3,0,0,0,0,dryer|phone,0.1|2.0,1618,1618,0.735,0.00,0.00,24.2,0,synthetic_simulation
+404,책상,16,3520,4,6,0,0,0,0,laptop|phone,5.3|2.1,91,91,0.026,0.00,0.00,0.0,1,synthetic_simulation
+405,몰아 쓰기,16,3520,6,2,1,0,0,0,laptop|phone|tv43|dryer|microwave|humid_u,5.2|1.9|1.7|0.1|0.1|3.6,3110,1742,0.495,0.00,0.00,10.9,1,synthetic_simulation
+406,주방,16,3520,6,1,0,0,0,0,fridge|microwave|kettle|rice6|airfryer|induction,24.0|0.1|0.1|0.3|0.1|0.2,7149,3419,0.971,0.54,0.00,34.7,1,synthetic_simulation
+407,책상,10,2200,2,5,0,0,0,0,laptop|mon27,5.3|4.0,94,94,0.043,0.00,0.00,0.1,1,synthetic_simulation
+408,침대 옆,16,3520,5,1,0,0,0,0,phone|stand|humid_u|laptop|stove,2.2|3.1|2.6|5.2|1.6,1326,1314,0.373,0.00,0.00,6.3,0,synthetic_simulation
+409,화장대,16,3520,5,8,0,0,0,0,dryer|straight|phone,0.1|0.1|2.1,1661,1643,0.467,0.00,0.00,9.6,1,synthetic_simulation
+410,책상,10,2200,4,1,0,0,0,0,laptop|mon27|phone|stand,5.6|4.5|2.3|2.8,124,124,0.056,0.00,0.00,0.1,0,synthetic_simulation
+411,주방,16,3520,4,5,0,0,0,0,fridge|microwave|kettle|ramen,24.0|0.1|0.1|0.1,3589,2769,0.787,0.00,0.00,21.4,1,synthetic_simulation
+412,화장대,16,3520,6,7,0,0,0,0,dryer|straight|phone|stand,0.1|0.1|2.1|3.1,1673,1630,0.463,0.00,0.00,9.5,1,synthetic_simulation
+413,침대 옆,16,3520,4,4,0,0,0,0,phone|stand|humid_u|stove,2.0|3.4|4.4|1.6,1253,1241,0.353,0.00,0.00,5.6,0,synthetic_simulation
+414,화장대,16,3520,4,5,0,0,0,0,dryer|straight|stand,0.1|0.1|2.3,1655,1612,0.458,0.00,0.00,9.3,1,synthetic_simulation
+415,책상,16,3520,3,3,0,0,0,0,laptop|mon27|phone|stand,5.2|4.1|2.1|3.4,124,124,0.035,0.00,0.00,0.1,0,synthetic_simulation
+416,화장대,16,3520,4,3,1,0,0,1,dryer|straight|phone|iron,0.1|0.1|2.1|0.0,3461,1618,0.460,0.00,0.00,9.4,2,synthetic_simulation
+417,책상,10,2200,3,1,0,0,0,0,laptop|phone|stand|ledbulb,5.4|2.1|3.1|3.9,117,117,0.053,0.00,0.00,0.1,0,synthetic_simulation
+418,침대 옆,16,3520,5,5,0,0,0,0,phone|humid_u|laptop|stove,2.2|4.6|5.2|1.4,1314,1314,0.373,0.00,0.00,6.3,1,synthetic_simulation
+419,책상,16,3520,3,1,0,0,0,0,laptop|phone|stand,5.5|2.0|3.4,103,103,0.029,0.00,0.00,0.0,0,synthetic_simulation
+420,몰아 쓰기,16,3520,6,2,0,0,0,0,laptop|phone|kettle|microwave|fridge|blanket,4.7|2.1|0.1|0.1|24.0|4.0,2980,2769,0.787,0.00,0.00,18.0,0,synthetic_simulation
+421,책상,16,3520,4,3,0,0,0,0,laptop|mon27|phone,5.6|4.0|2.1,112,112,0.032,0.00,0.00,0.0,0,synthetic_simulation
+422,책상,16,3520,6,1,0,0,0,0,laptop|mon27|phone|stand|humid_u,5.6|4.3|2.1|3.4|4.4,147,147,0.042,0.00,0.00,0.1,0,synthetic_simulation
+423,책상,16,3520,6,2,0,0,0,0,laptop|mon24|mon27|phone|stand|humid_u,5.9|4.1|4.3|1.9|3.4|4.1,162,162,0.046,0.00,0.00,0.1,0,synthetic_simulation
+424,책상,16,3520,6,0,0,0,0,0,laptop|mon27|phone,5.2|5.0|2.0,112,112,0.032,0.00,0.00,0.0,0,synthetic_simulation
+425,주방,16,3520,6,0,0,0,1,0,fridge|microwave|kettle|airfryer,24.0|0.1|0.1|0.2,4269,2919,0.829,0.54,0.00,29.3,2,synthetic_simulation
+426,몰아 쓰기,16,3520,5,4,1,0,0,0,laptop|phone|stand|dryer|fanheater,4.8|2.0|3.1|0.1|1.2,3703,3685,1.047,0.50,0.50,46.6,2,synthetic_simulation
+427,주방,16,3520,3,5,0,0,0,0,fridge|microwave|induction,24.0|0.1|0.1,3419,3419,0.971,0.32,0.00,39.1,1,synthetic_simulation
+428,책상,16,3520,6,2,0,0,0,1,laptop|phone|stand,5.5|2.1|3.1,103,103,0.029,0.00,0.00,0.0,2,synthetic_simulation
+429,책상,10,2200,4,2,0,0,0,0,laptop|mon24|mon27|phone|stand,4.5|4.3|4.6|2.1|3.1,139,124,0.056,0.00,0.00,0.1,0,synthetic_simulation
+430,주방,16,3520,4,3,0,0,1,0,microwave|kettle|rice6|ramen,0.1|0.1|0.3|0.1,4400,2230,0.634,0.00,0.00,13.7,2,synthetic_simulation
+431,책상,16,3520,6,2,0,0,0,0,laptop|phone|stand,5.2|2.0|3.6,103,103,0.029,0.00,0.00,0.0,0,synthetic_simulation
+432,화장대,10,2200,2,5,0,0,0,0,dryer|straight|phone,0.1|0.1|2.0,1661,1618,0.735,0.00,0.00,23.6,1,synthetic_simulation
+433,몰아 쓰기,16,3520,4,0,0,0,0,0,phone|stand|kettle|fridge,2.2|3.5|0.1|24.0,1449,1431,0.407,0.00,0.00,7.1,0,synthetic_simulation
+434,침대 옆,16,3520,6,0,0,0,0,0,humid_u|blanket|laptop|fanheater,4.2|3.4|5.7|1.6,2216,2193,0.623,0.00,0.00,17.5,0,synthetic_simulation
+435,침대 옆,16,3520,6,2,1,0,0,0,phone|stand|airclean,1.9|3.1|5.7,66,66,0.019,0.00,0.00,0.0,1,synthetic_simulation
+436,주방,16,3520,3,4,0,0,0,0,microwave|rice6|induction,0.1|0.3|0.2,4230,3350,0.952,1.11,0.00,37.8,1,synthetic_simulation
+437,주방,16,3520,4,5,0,0,0,0,microwave|kettle|induction,0.1|0.1|0.1,4700,3350,0.952,0.29,0.00,37.2,1,synthetic_simulation
+438,책상,16,3520,4,2,0,0,0,0,laptop|phone,5.7|2.1,91,91,0.026,0.00,0.00,0.0,0,synthetic_simulation
+439,침대 옆,10,2200,5,5,0,0,1,0,phone|stand|blanket|laptop|airclean,2.3|3.0|4.2|5.7|7.3,259,259,0.118,0.00,0.00,0.6,2,synthetic_simulation
+440,책상,16,3520,4,1,1,0,0,0,laptop|mon27|phone|stand,5.5|3.9|1.8|3.3,124,112,0.032,0.00,0.00,0.0,1,synthetic_simulation
+441,몰아 쓰기,16,3520,1,1,0,0,0,0,phone|fridge,2.1|24.0,87,87,0.025,0.00,0.00,0.0,0,synthetic_simulation
+442,침대 옆,16,3520,3,2,0,0,0,1,phone|blanket|fanheater,2.0|3.9|1.3,2138,2138,0.607,0.00,0.00,16.6,2,synthetic_simulation
+443,몰아 쓰기,16,3520,6,4,0,0,0,0,laptop|phone|stand|dryer|kettle|humid_u,5.4|2.1|3.2|0.1|0.1|4.2,3076,1726,0.490,0.00,0.00,10.4,0,synthetic_simulation
+444,주방,16,3520,5,0,0,0,0,0,microwave|kettle|airfryer|induction,0.1|0.1|0.1|0.2,6200,3350,0.952,0.43,0.00,38.6,1,synthetic_simulation
+445,몰아 쓰기,16,3520,7,1,0,0,0,0,laptop|phone|kettle|fridge|blanket|fanheater|airfryer,5.4|1.9|0.1|24.0|5.0|1.1|0.1,5130,3642,1.035,2.07,1.32,48.1,2,synthetic_simulation
+446,화장대,16,3520,5,2,0,0,0,0,dryer|phone,0.1|1.9,1618,1618,0.460,0.00,0.00,9.4,0,synthetic_simulation
+447,책상,16,3520,4,6,0,0,0,0,laptop|mon24|phone|humid_u,4.8|4.8|1.9|3.5,129,129,0.037,0.00,0.00,0.1,1,synthetic_simulation
+448,주방,16,3520,6,4,0,0,0,0,fridge|microwave|kettle,24.0|0.1|0.1,2769,1419,0.403,0.00,0.00,7.2,0,synthetic_simulation
+449,책상,16,3520,5,8,1,0,0,1,laptop|phone,5.6|2.1,91,91,0.026,0.00,0.00,0.0,2,synthetic_simulation
+450,주방,16,3520,2,3,0,0,0,1,fridge|microwave|kettle,24.0|0.1|0.1,2769,2769,0.787,0.00,0.00,23.4,2,synthetic_simulation
+451,책상,16,3520,3,2,0,0,0,0,laptop|mon24|phone,4.8|4.4|2.0,106,106,0.030,0.00,0.00,0.0,0,synthetic_simulation
+452,책상,16,3520,3,3,0,0,1,0,laptop|mon24|phone,5.0|4.5|2.2,106,106,0.030,0.00,0.00,0.0,2,synthetic_simulation
+453,화장대,16,3520,4,4,1,0,0,0,dryer|straight|phone|stand,0.1|0.1|2.2|3.4,1673,1630,0.463,0.00,0.00,9.4,1,synthetic_simulation
+454,몰아 쓰기,16,3520,6,4,0,0,0,0,laptop|phone|stand|dryer|blanket|fanheater,5.1|2.0|2.8|0.1|3.9|1.5,3823,3612,1.026,0.50,0.50,45.6,2,synthetic_simulation
+455,화장대,16,3520,4,2,0,0,0,1,dryer|straight|stand|vacuum,0.1|0.1|3.3|0.1,2909,1643,0.467,0.00,0.00,9.4,2,synthetic_simulation
+456,주방,10,2200,4,3,0,0,0,0,fridge|kettle|rice6|toaster,24.0|0.1|0.2|0.0,3199,2299,1.045,0.36,0.18,44.1,1,synthetic_simulation
+457,화장대,16,3520,4,4,1,0,0,0,dryer|straight|stand,0.1|0.1|3.5,1655,1612,0.458,0.00,0.00,9.4,1,synthetic_simulation
+458,책상,16,3520,3,4,0,0,0,0,laptop|phone,5.0|2.0,91,91,0.026,0.00,0.00,0.0,0,synthetic_simulation
+459,책상,16,3520,4,6,0,0,0,1,laptop|phone,5.0|2.1,91,91,0.026,0.00,0.00,0.0,2,synthetic_simulation
+460,화장대,16,3520,2,3,0,0,0,0,dryer|straight|phone,0.1|0.1|1.9,1661,1618,0.460,0.00,0.00,9.4,0,synthetic_simulation
+461,책상,16,3520,6,1,0,0,0,0,laptop|mon24|mon27|phone,5.4|4.2|4.9|2.1,127,127,0.036,0.00,0.00,0.1,0,synthetic_simulation
+462,책상,16,3520,4,1,1,0,1,0,laptop|phone|laser|humid_u,5.1|2.0|0.0|4.1,884,843,0.239,0.00,0.00,2.5,2,synthetic_simulation
+463,책상,16,3520,4,1,0,0,0,0,laptop|mon27|phone|ledbulb,5.6|4.7|2.0|4.2,126,108,0.031,0.00,0.00,0.0,0,synthetic_simulation
+464,책상,16,3520,6,2,0,0,0,0,laptop|phone,5.0|2.2,91,91,0.026,0.00,0.00,0.0,0,synthetic_simulation
+465,침대 옆,16,3520,6,1,0,0,0,0,phone|humid_u|humid_h|fanheater,2.1|4.1|3.7|1.4,2641,2641,0.750,0.00,0.00,25.3,0,synthetic_simulation
+466,책상,10,2200,6,3,0,0,0,0,laptop|mon27|phone,5.6|4.2|2.1,112,112,0.051,0.00,0.00,0.1,0,synthetic_simulation
+467,책상,16,3520,5,8,0,0,0,0,mon27|phone|stand,5.0|2.0|3.3,51,51,0.014,0.00,0.00,0.0,1,synthetic_simulation
+468,책상,16,3520,4,3,0,0,0,0,laptop|phone|stand,5.5|2.1|3.0,103,91,0.026,0.00,0.00,0.0,0,synthetic_simulation
+469,책상,10,2200,4,0,0,0,0,0,laptop|mon27|phone|stand,5.4|3.9|2.2|3.7,124,124,0.056,0.00,0.00,0.1,0,synthetic_simulation
+470,주방,16,3520,3,4,0,0,0,0,microwave|kettle|ramen,0.1|0.1|0.0,3520,1350,0.384,0.00,0.00,6.1,0,synthetic_simulation
+471,책상,16,3520,4,0,1,0,0,0,laptop|mon27|phone|stand,5.4|4.0|2.1|2.6,124,112,0.032,0.00,0.00,0.0,1,synthetic_simulation
+472,책상,16,3520,4,4,1,0,0,0,laptop|stand|humid_u|airclean,5.1|3.1|3.5|9.2,144,132,0.037,0.00,0.00,0.1,1,synthetic_simulation
+473,침대 옆,16,3520,2,8,0,1,0,0,phone|humid_u|laptop,1.9|3.9|5.1,114,114,0.032,0.00,0.00,0.0,2,synthetic_simulation
+474,책상,16,3520,6,3,0,0,0,0,laptop|phone|stand|ledbulb|airclean,5.1|1.9|3.6|3.8|8.6,153,153,0.043,0.00,0.00,0.1,0,synthetic_simulation
+475,주방,16,3520,4,1,1,0,0,0,fridge|kettle|toaster,24.0|0.1|0.0,2319,1419,0.403,0.00,0.00,6.7,1,synthetic_simulation
+476,몰아 쓰기,10,2200,6,2,0,0,0,0,laptop|phone|tv43|kettle|microwave|fridge,5.2|2.0|2.0|0.1|0.1|24.0,2906,1538,0.699,0.00,0.00,20.2,0,synthetic_simulation
+477,책상,10,2200,5,1,0,0,0,0,laptop|mon27|phone|stand|humid_u,5.7|4.8|2.0|3.0|4.2,147,147,0.067,0.00,0.00,0.2,0,synthetic_simulation
+478,주방,16,3520,4,2,0,0,0,0,fridge|airfryer|coffee,24.0|0.1|0.0,2829,1569,0.446,0.00,0.00,8.9,0,synthetic_simulation
+479,책상,16,3520,6,0,0,0,0,0,laptop|stand,5.2|2.6,85,85,0.024,0.00,0.00,0.0,0,synthetic_simulation
+480,책상,10,2200,6,7,0,0,0,0,laptop|phone|airclean,4.9|2.1|9.3,127,127,0.058,0.00,0.00,0.1,1,synthetic_simulation
+481,침대 옆,16,3520,4,2,0,0,0,0,phone|stand|humid_u|blanket,2.0|2.8|4.0|4.9,173,173,0.049,0.00,0.00,0.1,0,synthetic_simulation
+482,몰아 쓰기,10,2200,5,8,0,0,0,0,laptop|phone|dryer|fanheater|airfryer,5.0|2.0|0.1|1.9|0.1,5191,3673,1.670,115.64,2.79,124.9,3,synthetic_simulation
+483,책상,16,3520,4,0,0,0,0,0,laptop|mon27|phone,5.4|4.8|2.0,112,112,0.032,0.00,0.00,0.0,0,synthetic_simulation
+484,주방,16,3520,6,1,1,0,0,0,fridge|rice6|airfryer|induction|ramen|coffee,24.0|0.3|0.1|0.1|0.0|0.0,6529,3569,1.014,1.21,0.36,45.6,2,synthetic_simulation
+485,침대 옆,16,3520,4,6,0,0,0,0,phone|stand|blanket|laptop,2.1|3.3|3.9|4.8,223,223,0.063,0.00,0.00,0.2,1,synthetic_simulation
+486,화장대,16,3520,6,1,0,0,0,0,dryer|straight|phone|stand,0.1|0.0|2.0|3.0,1673,1630,0.463,0.00,0.00,9.6,0,synthetic_simulation
+487,침대 옆,10,2200,4,8,0,0,0,0,phone|stand|blanket|laptop,2.1|2.7|4.2|4.9,223,223,0.101,0.00,0.00,0.5,1,synthetic_simulation
+488,화장대,16,3520,4,6,0,0,0,0,dryer|phone|vacuum,0.1|2.1|0.1,2872,1618,0.460,0.00,0.00,9.4,1,synthetic_simulation
+489,화장대,16,3520,4,2,0,0,0,0,dryer|straight|phone,0.1|0.1|2.0,1661,1643,0.467,0.00,0.00,9.4,0,synthetic_simulation
+490,몰아 쓰기,10,2200,4,0,0,0,0,0,laptop|phone|blanket,5.3|1.9|4.5,211,211,0.096,0.00,0.00,0.4,0,synthetic_simulation
+491,침대 옆,16,3520,5,6,0,0,0,1,phone|stand|humid_u|humid_h|blanket,2.1|3.1|3.6|4.7|4.1,773,773,0.220,0.00,0.00,2.2,2,synthetic_simulation
+492,몰아 쓰기,16,3520,3,1,0,0,0,0,phone|stand|kettle,2.1|2.9|0.1,1380,1362,0.387,0.00,0.00,6.2,0,synthetic_simulation
+493,몰아 쓰기,10,2200,6,5,0,0,0,0,laptop|phone|kettle|blanket,5.4|2.0|0.1|5.1,1561,1423,0.647,0.00,0.00,15.6,1,synthetic_simulation
+494,침대 옆,16,3520,5,1,0,0,0,0,phone|stand|humid_u,2.0|2.7|3.8,53,53,0.015,0.00,0.00,0.0,0,synthetic_simulation
+495,주방,16,3520,3,3,0,0,0,0,fridge|toaster|coffee,24.0|0.0|0.0,2229,1329,0.378,0.00,0.00,4.6,0,synthetic_simulation
+496,주방,16,3520,6,3,1,0,0,0,microwave|kettle|rice6|airfryer,0.1|0.1|0.3|0.1,5080,2850,0.810,0.07,0.00,20.1,1,synthetic_simulation
+497,주방,16,3520,4,1,1,0,0,0,microwave|kettle|rice6|airfryer|toaster,0.1|0.1|0.2|0.1|0.0,5980,2850,0.810,0.18,0.00,26.8,1,synthetic_simulation
+498,침대 옆,16,3520,3,3,0,0,0,1,phone|stand|blanket,1.9|2.9|3.8,150,150,0.043,0.00,0.00,0.1,2,synthetic_simulation
+499,화장대,16,3520,5,3,0,0,0,0,dryer|phone,0.1|2.1,1618,1618,0.460,0.00,0.00,9.4,0,synthetic_simulation
+500,침대 옆,16,3520,3,2,0,0,0,0,phone|humid_u|fanheater,2.1|5.1|1.4,2041,2041,0.580,0.00,0.00,15.1,0,synthetic_simulation
+501,침대 옆,16,3520,4,3,0,0,0,0,phone|humid_u,2.1|5.3,41,41,0.012,0.00,0.00,0.0,0,synthetic_simulation
+502,책상,16,3520,5,1,0,0,0,0,laptop|mon24|ledbulb,5.0|4.6|3.5,102,102,0.029,0.00,0.00,0.0,0,synthetic_simulation
+503,책상,16,3520,4,7,0,0,0,0,laptop|phone|ledbulb,5.3|2.2|3.7,105,105,0.030,0.00,0.00,0.0,1,synthetic_simulation
+504,몰아 쓰기,16,3520,7,0,0,0,0,0,laptop|phone|stand|dryer|kettle|microwave|blanket,4.9|2.1|3.0|0.1|0.1|0.1|5.2,4523,2700,0.767,0.00,0.00,17.3,0,synthetic_simulation
+505,몰아 쓰기,16,3520,6,3,0,0,0,0,laptop|phone|stand|tv43|humid_u|airfryer,5.3|2.2|2.8|1.9|4.8|0.1,1672,1631,0.463,0.00,0.00,9.7,0,synthetic_simulation
+506,화장대,16,3520,3,0,0,0,0,0,dryer|straight|stand,0.1|0.1|3.1,1655,1612,0.458,0.00,0.00,9.4,0,synthetic_simulation
+507,주방,16,3520,5,1,1,0,0,0,microwave|rice6|airfryer|ramen|toaster,0.1|0.3|0.2|0.1|0.0,5450,2850,0.810,0.18,0.00,23.4,1,synthetic_simulation
+508,책상,16,3520,3,3,0,0,0,0,laptop|mon27|phone|airclean,5.6|5.1|2.1|7.5,148,148,0.042,0.00,0.00,0.1,0,synthetic_simulation
+509,책상,10,2200,4,6,0,0,0,0,laptop|mon24|phone|stand,5.7|4.1|2.1|3.4,118,118,0.054,0.00,0.00,0.1,1,synthetic_simulation
+510,몰아 쓰기,16,3520,4,1,0,0,0,0,phone|microwave|fanheater,1.9|0.1|1.8,3368,3350,0.952,0.32,0.00,38.6,1,synthetic_simulation
+511,몰아 쓰기,10,2200,4,7,0,0,0,0,laptop|phone|stand|airfryer,4.8|2.1|3.0|0.1,1603,1585,0.720,0.00,0.00,23.4,1,synthetic_simulation
+512,책상,16,3520,5,0,0,0,0,0,laptop|mon27|phone|stand|airclean,5.7|4.5|2.1|2.5|7.5,160,160,0.045,0.00,0.00,0.1,0,synthetic_simulation
+513,화장대,10,2200,4,8,0,0,0,0,dryer|straight|phone,0.1|0.1|1.9,1661,1618,0.735,0.00,0.00,24.1,1,synthetic_simulation
+514,화장대,16,3520,4,0,0,0,0,0,dryer|straight|phone|stand,0.1|0.1|2.0|2.6,1673,1618,0.460,0.00,0.00,9.4,0,synthetic_simulation
+515,주방,16,3520,1,4,0,0,0,0,microwave|kettle,0.1|0.1,2700,1350,0.384,0.00,0.00,6.3,0,synthetic_simulation
+516,몰아 쓰기,16,3520,6,3,0,0,0,0,laptop|phone|stand|tv43|dryer|kettle,5.3|2.1|3.4|1.3|0.1|0.1,3099,1749,0.497,0.00,0.00,11.0,0,synthetic_simulation
+517,화장대,16,3520,4,4,0,0,0,0,dryer|straight|stand,0.1|0.0|3.2,1655,1612,0.458,0.00,0.00,9.4,0,synthetic_simulation
+518,몰아 쓰기,16,3520,5,2,1,0,0,0,laptop|phone|tv43|dryer|blanket,4.9|2.2|2.2|0.1|4.8,1857,1784,0.507,0.00,0.00,11.3,1,synthetic_simulation
+519,책상,16,3520,1,0,0,0,0,0,laptop|phone,5.6|2.0,91,91,0.026,0.00,0.00,0.0,0,synthetic_simulation
+520,주방,16,3520,6,5,1,0,0,0,microwave|kettle|rice6|airfryer,0.1|0.1|0.3|0.2,5080,2850,0.810,0.11,0.00,23.2,1,synthetic_simulation
+521,책상,16,3520,4,3,0,0,0,0,laptop|phone|stand|ledbulb,5.4|2.0|3.4|4.7,117,117,0.033,0.00,0.00,0.0,0,synthetic_simulation
+522,주방,16,3520,4,3,0,0,0,0,microwave|kettle,0.1|0.1,2700,1350,0.384,0.00,0.00,6.6,0,synthetic_simulation
+523,몰아 쓰기,16,3520,4,5,0,0,0,0,laptop|phone|dryer|kettle,5.5|2.2|0.1|0.1,3041,3023,0.859,0.18,0.00,30.2,1,synthetic_simulation
+524,주방,16,3520,4,4,0,0,0,0,rice6|airfryer,0.3|0.1,2380,2380,0.676,0.00,0.00,20.5,0,synthetic_simulation
+525,주방,16,3520,6,3,0,0,0,0,fridge|microwave|airfryer|induction|ramen|coffee,24.0|0.1|0.1|0.2|0.1|0.0,6999,3569,1.014,1.21,1.21,46.3,2,synthetic_simulation
+526,주방,16,3520,2,4,0,0,1,1,microwave|kettle|airfryer,0.1|0.1|0.1,4200,2850,0.810,0.14,0.00,25.5,2,synthetic_simulation
+527,침대 옆,16,3520,5,2,0,0,0,0,phone|stand|humid_u|laptop|airclean,1.9|3.8|3.6|4.8|8.0,162,144,0.041,0.00,0.00,0.1,0,synthetic_simulation
+528,책상,16,3520,5,4,0,0,1,0,laptop|phone|airclean,5.0|2.1|9.4,127,127,0.036,0.00,0.00,0.1,2,synthetic_simulation
+529,책상,16,3520,5,1,0,0,0,0,laptop|mon24|phone|stand,4.6|4.4|2.0|3.0,118,118,0.034,0.00,0.00,0.1,0,synthetic_simulation
+530,침대 옆,16,3520,3,1,0,0,0,0,humid_u|blanket|laptop,4.3|4.2|5.8,216,216,0.061,0.00,0.00,0.2,0,synthetic_simulation
+531,침대 옆,16,3520,4,5,0,0,0,0,phone|stand,2.1|3.0,30,30,0.009,0.00,0.00,0.0,1,synthetic_simulation
+532,책상,16,3520,4,7,1,0,0,0,laptop|phone|stand,5.7|2.1|2.5,103,103,0.029,0.00,0.00,0.0,1,synthetic_simulation
+533,주방,16,3520,4,2,1,0,0,0,microwave|rice6|airfryer|ramen,0.1|0.3|0.2|0.1,4550,2380,0.676,0.00,0.00,15.5,1,synthetic_simulation
+534,몰아 쓰기,16,3520,5,0,0,0,0,0,laptop|phone|stand|fridge|blanket,4.9|1.9|2.9|24.0|4.4,292,292,0.083,0.00,0.00,0.3,0,synthetic_simulation
+535,화장대,16,3520,5,3,0,0,0,0,dryer|straight|phone|iron,0.1|0.1|2.0|0.0,3461,1843,0.524,0.00,0.00,12.1,0,synthetic_simulation
+536,침대 옆,16,3520,5,3,0,0,0,0,phone|stand|humid_u|airclean|tv43,1.8|3.2|5.1|7.5|2.2,135,123,0.035,0.00,0.00,0.1,0,synthetic_simulation
+537,침대 옆,16,3520,6,4,0,0,0,0,phone|blanket|airclean|beam,2.0|3.7|8.6|0.2,426,408,0.116,0.00,0.00,0.6,0,synthetic_simulation
+538,몰아 쓰기,10,2200,5,1,0,0,0,0,laptop|phone|tv43|dryer|fanheater,4.7|2.1|1.6|0.1|1.6,3737,3719,1.690,97.71,1.89,127.1,3,synthetic_simulation
+539,화장대,16,3520,6,5,1,0,0,0,dryer|stand,0.1|3.1,1612,1612,0.458,0.00,0.00,9.4,1,synthetic_simulation
+540,책상,16,3520,3,2,0,1,0,0,laptop|phone,5.5|2.1,91,91,0.026,0.00,0.00,0.0,2,synthetic_simulation
+541,몰아 쓰기,16,3520,5,0,0,0,0,0,laptop|phone|dryer|blanket|airfryer,5.4|2.0|0.1|3.8|0.1,3311,1811,0.514,0.00,0.00,11.7,0,synthetic_simulation
+542,화장대,16,3520,5,1,0,0,0,1,dryer|phone,0.1|2.0,1618,1618,0.460,0.00,0.00,9.4,2,synthetic_simulation
+543,주방,16,3520,4,8,0,0,0,0,microwave|kettle|rice6,0.1|0.1|0.4,3580,2230,0.634,0.00,0.00,16.8,1,synthetic_simulation
+544,책상,16,3520,6,6,0,0,0,0,laptop|mon24|phone|stand|humid_u,5.4|4.3|2.0|3.0|3.7,141,141,0.040,0.00,0.00,0.1,1,synthetic_simulation
+545,침대 옆,16,3520,6,3,0,0,0,0,phone|stand|humid_u|humid_h|blanket|laptop,2.1|3.1|3.5|4.8|3.8|5.4,846,846,0.240,0.00,0.00,2.6,0,synthetic_simulation
+546,화장대,10,2200,4,1,0,0,0,0,straight|phone|stand,0.1|2.0|3.0,73,43,0.020,0.00,0.00,0.0,0,synthetic_simulation
+547,몰아 쓰기,16,3520,6,2,0,0,0,0,phone|dryer,2.0|0.1,1618,1600,0.455,0.00,0.00,9.2,0,synthetic_simulation
+548,책상,16,3520,4,2,0,0,0,1,laptop|phone|stand,5.2|2.3|3.2,103,103,0.029,0.00,0.00,0.0,2,synthetic_simulation
+549,화장대,16,3520,2,6,0,0,0,0,straight|phone,0.1|2.1,61,43,0.012,0.00,0.00,0.0,1,synthetic_simulation
+550,몰아 쓰기,16,3520,3,4,0,0,0,0,phone|kettle|fanheater|humid_u,1.9|0.1|1.1|4.8,3391,3350,0.952,0.96,0.00,38.6,1,synthetic_simulation
+551,화장대,16,3520,3,4,0,0,0,0,dryer|straight|phone|vacuum,0.1|0.1|2.1|0.1,2915,1643,0.467,0.00,0.00,9.4,0,synthetic_simulation
+552,책상,16,3520,5,0,0,0,0,0,laptop|phone|airclean,5.2|1.9|8.1,127,127,0.036,0.00,0.00,0.1,0,synthetic_simulation
+553,책상,16,3520,6,1,0,0,0,0,laptop|mon24|phone|stand,5.3|4.7|2.0|2.6,118,118,0.034,0.00,0.00,0.1,0,synthetic_simulation
+554,주방,16,3520,6,3,0,0,0,0,fridge|microwave|rice6|coffee,24.0|0.1|0.3|0.0,3559,2679,0.761,0.00,0.00,14.4,0,synthetic_simulation
+555,침대 옆,16,3520,6,0,1,0,0,0,phone|humid_u|humid_h|blanket|laptop|fanheater,2.1|4.8|4.0|4.3|5.5|1.4,2834,2834,0.805,0.89,0.00,29.2,1,synthetic_simulation
+556,책상,16,3520,4,1,0,0,0,0,laptop|phone|ledbulb,5.0|2.2|3.9,105,105,0.030,0.00,0.00,0.0,0,synthetic_simulation
+557,몰아 쓰기,10,2200,6,3,0,0,0,0,laptop|phone|tv43|kettle|fridge|fanheater,5.2|2.0|1.4|0.1|24.0|1.3,3556,3492,1.587,78.79,0.50,103.0,3,synthetic_simulation
+558,책상,16,3520,3,2,0,0,0,0,laptop|phone|airclean,5.3|1.9|7.7,127,127,0.036,0.00,0.00,0.1,0,synthetic_simulation
+559,책상,16,3520,6,0,0,0,0,0,laptop|stand,5.1|2.3,85,85,0.024,0.00,0.00,0.0,0,synthetic_simulation
+560,책상,16,3520,4,3,0,0,0,0,laptop|phone,5.4|2.0,91,91,0.026,0.00,0.00,0.0,0,synthetic_simulation
+561,침대 옆,16,3520,6,3,1,0,0,0,phone|airclean,2.1|7.7,54,54,0.015,0.00,0.00,0.0,1,synthetic_simulation
+562,몰아 쓰기,16,3520,6,3,0,0,0,0,laptop|stand|tv43|dryer|microwave|humid_u,4.6|2.7|1.5|0.1|0.1|4.2,3104,1719,0.488,0.00,0.00,10.3,0,synthetic_simulation
+563,주방,16,3520,6,0,1,0,0,0,microwave|kettle|rice6,0.1|0.1|0.3,3580,2700,0.767,0.00,0.00,20.2,1,synthetic_simulation
+564,주방,16,3520,5,8,0,0,0,0,microwave|kettle,0.1|0.1,2700,1350,0.384,0.00,0.00,6.3,1,synthetic_simulation
+565,침대 옆,16,3520,4,0,0,0,0,0,phone|stand|blanket|laptop,2.0|3.4|3.8|4.9,223,223,0.063,0.00,0.00,0.2,0,synthetic_simulation
+566,침대 옆,16,3520,5,1,0,0,0,0,phone|stand|blanket|laptop,2.1|2.8|3.7|5.8,223,223,0.063,0.00,0.00,0.2,0,synthetic_simulation
+567,침대 옆,16,3520,4,1,0,0,0,0,phone|humid_h|blanket|airclean,2.2|3.5|4.6|8.9,774,774,0.220,0.00,0.00,2.2,0,synthetic_simulation
+568,침대 옆,16,3520,4,0,1,0,0,0,phone|stand|humid_u,1.9|2.9|3.8,53,53,0.015,0.00,0.00,0.0,1,synthetic_simulation
+569,침대 옆,16,3520,5,2,0,0,0,0,phone|stand|humid_u|blanket|laptop,1.9|3.5|4.7|4.5|5.4,246,246,0.070,0.00,0.00,0.2,0,synthetic_simulation
+570,침대 옆,16,3520,6,2,0,0,0,1,phone|stand|humid_u|humid_h,1.9|2.8|4.2|3.8,653,653,0.186,0.00,0.00,1.5,2,synthetic_simulation
+571,침대 옆,16,3520,5,1,0,0,0,0,phone|humid_h|laptop|airclean|tv43,1.9|3.3|5.2|7.3|1.8,773,755,0.214,0.00,0.00,2.1,0,synthetic_simulation
+572,몰아 쓰기,10,2200,6,5,0,0,0,0,phone|tv43|kettle|microwave,2.2|1.7|0.1|0.1,2764,2700,1.227,0.04,0.04,32.2,1,synthetic_simulation
+573,책상,16,3520,5,1,0,0,0,0,laptop|mon24|mon27|phone|stand,5.2|4.4|4.1|2.1|2.8,139,139,0.039,0.00,0.00,0.1,0,synthetic_simulation
+574,주방,16,3520,4,6,0,0,0,0,kettle|airfryer,0.1|0.1,2850,2850,0.810,0.11,0.00,20.2,1,synthetic_simulation
+575,책상,16,3520,5,3,0,0,0,0,laptop|mon24|mon27|phone|humid_u,5.1|4.5|4.6|1.9|4.2,150,150,0.043,0.00,0.00,0.1,0,synthetic_simulation
+576,몰아 쓰기,16,3520,6,6,0,0,0,0,phone|stand|tv43|dryer,2.1|2.5|2.0|0.1,1676,1676,0.476,0.00,0.00,9.9,1,synthetic_simulation
+577,주방,16,3520,5,3,0,0,0,0,microwave|kettle,0.1|0.1,2700,2700,0.767,0.00,0.00,17.0,0,synthetic_simulation
+578,책상,10,2200,5,3,0,0,0,0,laptop|phone|ledbulb|humid_u|airclean,5.3|2.0|4.4|4.3|7.3,164,164,0.075,0.00,0.00,0.3,0,synthetic_simulation
+579,몰아 쓰기,16,3520,5,4,0,0,0,0,laptop|phone|stand|microwave|humid_u,5.6|2.2|2.9|0.1|4.0,1476,1435,0.408,0.00,0.00,6.8,0,synthetic_simulation
+580,화장대,16,3520,4,2,0,0,0,0,dryer|straight,0.1|0.1,1643,1643,0.467,0.00,0.00,9.5,0,synthetic_simulation
+581,화장대,16,3520,4,0,0,0,0,0,dryer|phone,0.1|2.1,1618,1618,0.460,0.00,0.00,9.4,0,synthetic_simulation
+582,책상,16,3520,4,7,1,0,0,0,laptop|mon24|mon27|phone|stand,5.6|5.5|4.0|2.0|3.1,139,127,0.036,0.00,0.00,0.1,1,synthetic_simulation
+583,책상,16,3520,4,7,0,0,1,0,laptop|phone,6.1|2.0,91,91,0.026,0.00,0.00,0.0,2,synthetic_simulation
+584,주방,10,2200,6,0,0,0,0,0,fridge|microwave|kettle|rice6|airfryer|coffee,24.0|0.1|0.1|0.2|0.1|0.0,6409,2919,1.327,1.32,1.32,59.0,2,synthetic_simulation
+585,몰아 쓰기,16,3520,6,6,0,0,0,0,laptop|phone|kettle|fridge|blanket|fanheater,5.0|2.1|0.1|24.0|3.3|1.3,3630,3492,0.992,0.43,0.00,40.8,1,synthetic_simulation
+586,침대 옆,16,3520,4,6,0,0,0,0,phone|blanket|laptop|beam,2.1|4.3|4.7|0.4,463,390,0.111,0.00,0.00,0.6,1,synthetic_simulation
+587,화장대,16,3520,2,3,0,0,0,0,dryer|straight|stand,0.1|0.1|2.8,1655,1612,0.458,0.00,0.00,9.3,0,synthetic_simulation
+588,화장대,10,2200,2,1,0,0,0,0,dryer|phone,0.1|2.0,1618,1618,0.735,0.00,0.00,23.9,0,synthetic_simulation
+589,책상,16,3520,3,2,0,0,0,0,laptop|mon24|phone|stand,6.1|4.7|2.1|3.2,118,118,0.034,0.00,0.00,0.1,0,synthetic_simulation
+590,주방,10,2200,3,0,0,0,0,0,microwave|kettle|airfryer,0.1|0.1|0.1,4200,2850,1.295,0.18,0.18,59.1,2,synthetic_simulation
+591,책상,16,3520,1,2,0,0,0,0,laptop|stand,5.2|3.3,85,85,0.024,0.00,0.00,0.0,0,synthetic_simulation
+592,침대 옆,16,3520,4,6,0,0,0,0,phone|stand|humid_u|blanket,2.1|2.6|3.9|4.1,173,173,0.049,0.00,0.00,0.1,1,synthetic_simulation
+593,책상,16,3520,6,3,0,0,0,0,laptop|mon24|phone|stand,5.8|3.6|1.9|2.7,118,118,0.034,0.00,0.00,0.1,0,synthetic_simulation
+594,화장대,16,3520,6,5,0,0,0,0,dryer|phone,0.1|2.1,1618,1618,0.460,0.00,0.00,9.4,1,synthetic_simulation
+595,책상,16,3520,5,4,0,0,0,0,laptop|phone|stand,5.6|2.0|2.8,103,103,0.029,0.00,0.00,0.0,0,synthetic_simulation
+596,주방,10,2200,4,3,0,0,0,0,fridge|microwave|airfryer,24.0|0.1|0.1,2919,2919,1.327,0.21,0.21,63.1,2,synthetic_simulation
+597,주방,10,2200,4,2,1,0,0,0,microwave|kettle|toaster,0.1|0.1|0.0,3600,2700,1.227,0.11,0.11,51.1,2,synthetic_simulation
+598,침대 옆,16,3520,3,8,0,0,0,1,phone|stand|blanket,2.2|3.9|4.3,150,150,0.043,0.00,0.00,0.1,2,synthetic_simulation
+599,책상,16,3520,3,1,0,0,0,0,laptop|mon27|phone|stand,5.3|4.4|2.2|3.3,124,112,0.032,0.00,0.00,0.0,0,synthetic_simulation
+600,주방,16,3520,4,4,0,0,0,0,microwave|kettle|coffee,0.1|0.1|0.0,3960,2700,0.767,0.00,0.00,17.3,0,synthetic_simulation
+601,화장대,16,3520,6,1,0,0,0,1,dryer|straight|phone|stand,0.1|0.1|2.0|3.0,1673,1643,0.467,0.00,0.00,9.6,2,synthetic_simulation
+602,책상,16,3520,4,4,0,0,0,0,mon24|phone|stand|humid_u,4.7|2.0|3.7|3.0,68,68,0.019,0.00,0.00,0.0,0,synthetic_simulation
+603,화장대,10,2200,4,1,0,0,0,0,dryer|straight|phone|vacuum,0.1|0.0|2.1|0.0,2915,1618,0.735,0.00,0.00,24.0,0,synthetic_simulation
+604,주방,10,2200,7,4,0,0,0,0,fridge|microwave|kettle|rice6|airfryer|ramen|coffee,24.0|0.1|0.1|0.3|0.1|0.0|0.0,7229,2769,1.259,0.57,0.57,57.8,2,synthetic_simulation
+605,주방,16,3520,4,1,0,0,0,0,microwave|kettle|rice6|airfryer,0.1|0.1|0.3|0.1,5080,2850,0.810,0.21,0.00,27.7,0,synthetic_simulation
+606,주방,16,3520,5,7,0,0,0,0,microwave|rice6|airfryer|toaster|coffee,0.1|0.3|0.1|0.0|0.0,5890,2230,0.634,0.00,0.00,11.4,1,synthetic_simulation
+607,주방,16,3520,3,1,1,0,0,0,fridge|airfryer,24.0|0.2,1569,1569,0.446,0.00,0.00,8.9,1,synthetic_simulation
+608,화장대,16,3520,6,4,0,0,0,0,dryer|straight|phone|stand|vacuum,0.1|0.1|2.2|3.0|0.1,2927,1643,0.467,0.00,0.00,9.6,0,synthetic_simulation
+609,주방,16,3520,6,0,0,0,0,0,fridge|microwave|rice6|toaster,24.0|0.1|0.3|0.0,3199,1849,0.525,0.00,0.00,10.7,0,synthetic_simulation
+610,책상,10,2200,5,3,0,0,0,0,laptop|mon24|mon27|phone|airclean,4.4|5.1|3.5|2.1|7.5,163,145,0.066,0.00,0.00,0.2,0,synthetic_simulation
+611,책상,16,3520,5,1,0,0,0,0,laptop|mon27|phone|stand,5.5|4.5|2.0|3.2,124,124,0.035,0.00,0.00,0.1,0,synthetic_simulation
+612,화장대,16,3520,6,0,1,0,0,0,dryer|stand,0.1|2.8,1612,1612,0.458,0.00,0.00,9.2,1,synthetic_simulation
+613,책상,10,2200,6,0,0,0,0,0,laptop|mon24|phone|stand,5.1|4.6|2.2|3.4,118,118,0.054,0.00,0.00,0.1,0,synthetic_simulation
+614,주방,16,3520,4,1,0,0,0,0,fridge|microwave|rice6|induction,24.0|0.1|0.2|0.2,4299,3419,0.971,0.75,0.00,31.6,1,synthetic_simulation
+615,화장대,16,3520,4,4,0,0,0,0,dryer|straight,0.1|0.1,1643,1643,0.467,0.00,0.00,9.7,0,synthetic_simulation
+616,책상,16,3520,6,4,0,0,0,0,laptop|mon24|phone|stand|humid_u|airclean,5.1|3.4|2.1|3.0|4.2|7.1,177,162,0.046,0.00,0.00,0.1,0,synthetic_simulation
+617,몰아 쓰기,16,3520,7,2,1,0,0,0,laptop|phone|stand|tv43|dryer|microwave|blanket,5.1|2.0|3.3|2.3|0.1|0.1|4.9,3219,1749,0.497,0.00,0.00,10.9,1,synthetic_simulation
+618,주방,16,3520,4,2,0,1,0,0,fridge|microwave|kettle,24.0|0.1|0.1,2769,2769,0.787,0.00,0.00,20.6,2,synthetic_simulation
+619,몰아 쓰기,16,3520,5,1,0,1,0,0,laptop|phone|dryer,5.0|1.9|0.1,1691,1691,0.480,0.00,0.00,10.1,2,synthetic_simulation
+620,주방,16,3520,6,4,0,0,0,0,fridge|microwave|kettle|airfryer,24.0|0.1|0.1|0.1,4269,2919,0.829,0.14,0.00,25.9,0,synthetic_simulation
+621,주방,16,3520,4,1,0,0,0,0,fridge|microwave|kettle|rice6|ramen,24.0|0.1|0.1|0.3|0.0,4469,1419,0.403,0.00,0.00,7.2,0,synthetic_simulation
+622,몰아 쓰기,16,3520,3,1,1,0,0,0,laptop|phone|kettle|microwave,5.3|2.0|0.1|0.1,2791,2700,0.767,0.00,0.00,19.5,1,synthetic_simulation
+623,주방,16,3520,5,2,0,0,0,0,fridge|rice6,24.0|0.3,949,949,0.270,0.00,0.00,3.3,0,synthetic_simulation
+624,주방,16,3520,4,1,0,1,0,0,fridge|microwave|ramen|toaster,24.0|0.1|0.0|0.0,3139,1419,0.403,0.00,0.00,6.7,2,synthetic_simulation
+625,침대 옆,16,3520,6,5,0,0,0,0,phone|blanket|fanheater,2.1|4.7|1.4,2138,2138,0.607,0.00,0.00,16.6,1,synthetic_simulation
+626,책상,10,2200,6,2,0,0,0,0,laptop|phone,5.0|2.1,91,91,0.041,0.00,0.00,0.1,0,synthetic_simulation
+627,책상,10,2200,3,2,0,1,0,0,laptop|mon24|mon27|phone,5.3|4.3|4.3|2.0,127,127,0.058,0.00,0.00,0.1,2,synthetic_simulation
+628,책상,16,3520,5,4,1,0,0,0,laptop|mon24|phone|stand|ledbulb,5.4|4.2|2.1|3.0|4.2,132,117,0.033,0.00,0.00,0.0,1,synthetic_simulation
+629,책상,16,3520,3,3,0,0,0,1,laptop|phone|stand,5.1|2.1|2.7,103,103,0.029,0.00,0.00,0.0,2,synthetic_simulation
+630,책상,16,3520,2,3,0,0,0,0,laptop|phone|stand,5.2|2.0|3.6,103,103,0.029,0.00,0.00,0.0,0,synthetic_simulation
+631,화장대,16,3520,4,2,1,0,0,0,dryer|stand,0.1|3.1,1612,1612,0.458,0.00,0.00,9.4,1,synthetic_simulation
+632,몰아 쓰기,10,2200,7,7,0,0,0,0,laptop|phone|dryer|kettle|fridge|blanket|humid_u,5.4|2.2|0.1|0.1|24.0|4.6|5.0,3253,1903,0.865,1.96,0.00,32.5,1,synthetic_simulation
+633,침대 옆,16,3520,4,2,0,0,0,0,phone|humid_u|airclean,2.0|3.7|7.7,77,77,0.022,0.00,0.00,0.0,0,synthetic_simulation
+634,책상,16,3520,6,2,0,1,0,0,laptop|phone|stand,5.1|2.0|3.2,103,103,0.029,0.00,0.00,0.0,2,synthetic_simulation
+635,화장대,16,3520,3,2,0,0,0,0,dryer|straight,0.1|0.1,1643,1600,0.455,0.00,0.00,9.2,0,synthetic_simulation
+636,주방,16,3520,4,2,0,0,0,0,microwave|kettle|induction|coffee,0.1|0.1|0.2|0.0,5960,3350,0.952,0.07,0.00,29.3,1,synthetic_simulation
+637,주방,10,2200,4,2,0,0,0,0,microwave|kettle,0.1|0.1,2700,1350,0.614,0.00,0.00,15.6,0,synthetic_simulation
+638,화장대,10,2200,4,1,1,0,0,0,dryer|phone|stand,0.1|2.1|3.4,1630,1618,0.735,0.00,0.00,24.2,1,synthetic_simulation
+639,책상,16,3520,2,1,0,0,0,0,mon27|phone|stand,4.7|2.0|3.4,51,51,0.014,0.00,0.00,0.0,0,synthetic_simulation
+640,책상,16,3520,6,3,0,0,0,0,laptop|mon24|stand|humid_u,4.7|4.5|3.3|4.4,123,123,0.035,0.00,0.00,0.1,0,synthetic_simulation
+641,주방,16,3520,3,6,0,0,0,0,kettle|rice6,0.1|0.3,2230,2230,0.634,0.00,0.00,16.2,1,synthetic_simulation
+642,화장대,16,3520,6,4,0,0,0,0,dryer|phone,0.1|2.0,1618,1618,0.460,0.00,0.00,9.2,0,synthetic_simulation
+643,몰아 쓰기,16,3520,3,0,0,0,0,1,laptop|phone|fridge,5.2|2.0|24.0,160,160,0.045,0.00,0.00,0.1,2,synthetic_simulation
+644,주방,16,3520,2,2,0,0,0,0,fridge|microwave|rice6,24.0|0.1|0.3,2299,1419,0.403,0.00,0.00,6.7,0,synthetic_simulation
+645,책상,10,2200,2,6,0,0,0,0,laptop|phone|stand,5.6|2.1|2.5,103,103,0.047,0.00,0.00,0.1,1,synthetic_simulation
+646,책상,16,3520,3,3,0,0,0,0,laptop|mon24|mon27|phone,5.3|3.8|4.0|2.1,127,127,0.036,0.00,0.00,0.1,0,synthetic_simulation
+647,침대 옆,16,3520,4,4,0,0,0,0,phone|humid_u|blanket|tv43,2.2|3.8|4.4|1.9,207,184,0.052,0.00,0.00,0.1,0,synthetic_simulation
+648,침대 옆,16,3520,5,4,0,0,0,0,phone|stand|blanket|laptop|airclean,2.1|3.2|4.0|5.3|9.4,259,259,0.074,0.00,0.00,0.2,0,synthetic_simulation
+649,책상,16,3520,4,2,0,0,0,0,laptop|phone,5.8|2.2,91,91,0.026,0.00,0.00,0.0,0,synthetic_simulation
+650,책상,16,3520,5,2,0,0,0,0,laptop|mon24|phone|stand|airclean,5.4|4.6|2.3|3.0|7.9,154,154,0.044,0.00,0.00,0.1,0,synthetic_simulation
+651,화장대,16,3520,6,6,0,0,0,0,dryer|straight|phone|stand,0.1|0.1|2.2|3.2,1673,1643,0.467,0.00,0.00,9.4,1,synthetic_simulation
+652,화장대,16,3520,3,1,0,0,0,1,dryer|phone,0.2|2.0,1618,1618,0.460,0.00,0.00,9.4,2,synthetic_simulation
+653,주방,16,3520,4,3,0,0,0,0,fridge|microwave,24.0|0.1,1419,1419,0.403,0.00,0.00,6.7,0,synthetic_simulation
+654,주방,16,3520,4,2,0,0,0,0,fridge|rice6,24.0|0.3,949,949,0.270,0.00,0.00,3.3,0,synthetic_simulation
+655,몰아 쓰기,16,3520,7,2,1,0,0,0,laptop|phone|dryer|kettle|microwave|fridge|blanket,5.3|2.0|0.1|0.1|0.1|24.0|4.8,4580,3019,0.858,0.11,0.00,24.8,1,synthetic_simulation
+656,침대 옆,16,3520,5,1,0,0,1,0,phone|humid_h,1.9|4.5,618,618,0.176,0.00,0.00,1.4,2,synthetic_simulation
+657,침대 옆,16,3520,6,2,0,0,0,0,phone|stand|humid_u,2.1|3.3|3.0,53,53,0.015,0.00,0.00,0.0,0,synthetic_simulation
+658,주방,16,3520,4,4,0,0,0,0,microwave|kettle|airfryer,0.1|0.1|0.1,4200,2850,0.810,0.14,0.00,25.4,0,synthetic_simulation
+659,주방,16,3520,4,4,0,0,0,0,kettle|rice6|toaster|coffee,0.1|0.2|0.0|0.0,4390,2230,0.634,0.00,0.00,16.8,0,synthetic_simulation
+660,화장대,16,3520,2,4,0,0,0,0,dryer|straight|phone,0.1|0.1|2.0,1661,1618,0.460,0.00,0.00,9.2,0,synthetic_simulation
+661,책상,16,3520,5,3,0,0,0,0,laptop|mon24|phone|airclean,5.2|4.9|2.1|7.2,142,127,0.036,0.00,0.00,0.1,0,synthetic_simulation
+662,침대 옆,16,3520,3,3,0,0,0,0,phone|blanket,1.9|3.7,138,138,0.039,0.00,0.00,0.1,0,synthetic_simulation
+663,책상,16,3520,4,4,0,0,0,0,laptop|mon24|phone|stand,5.9|4.3|2.0|3.3,118,118,0.034,0.00,0.00,0.1,0,synthetic_simulation
+664,책상,16,3520,3,4,0,0,0,0,laptop|mon24|phone,5.2|4.5|2.1,106,91,0.026,0.00,0.00,0.0,0,synthetic_simulation
+665,책상,16,3520,4,5,0,0,0,0,laptop|phone,5.3|2.1,91,91,0.026,0.00,0.00,0.0,1,synthetic_simulation
+666,주방,16,3520,5,0,0,0,0,0,fridge|kettle|rice6,24.0|0.1|0.3,2299,2299,0.653,0.00,0.00,17.2,0,synthetic_simulation
+667,침대 옆,10,2200,5,1,0,0,0,0,phone|stand|humid_u|blanket|airclean,1.9|3.3|3.6|4.3|6.2,209,209,0.095,0.00,0.00,0.4,0,synthetic_simulation
+668,책상,16,3520,3,3,0,0,0,0,laptop|phone|stand,5.5|1.9|3.6,103,103,0.029,0.00,0.00,0.0,0,synthetic_simulation
+669,화장대,16,3520,4,0,0,0,0,0,straight|phone|stand,0.1|2.2|3.3,73,43,0.012,0.00,0.00,0.0,0,synthetic_simulation
+670,몰아 쓰기,10,2200,5,3,0,0,0,0,laptop|phone|stand|dryer|kettle,5.5|2.1|3.3|0.2|0.1,3053,2950,1.341,0.07,0.07,42.7,1,synthetic_simulation
+671,주방,10,2200,4,0,1,0,0,0,fridge|rice6,24.0|0.2,949,949,0.431,0.00,0.00,8.4,1,synthetic_simulation
+672,화장대,16,3520,3,0,0,0,0,0,straight|stand|iron|vacuum,0.1|3.4|0.0|0.1,3109,1800,0.511,0.00,0.00,11.3,0,synthetic_simulation
+673,침대 옆,10,2200,5,1,0,0,0,0,phone|humid_u|blanket|laptop|tv43,2.0|3.7|4.1|5.2|1.9,280,280,0.127,0.00,0.00,0.7,0,synthetic_simulation
+674,책상,16,3520,3,2,0,0,0,0,laptop|stand,5.4|3.1,85,85,0.024,0.00,0.00,0.0,0,synthetic_simulation
+675,침대 옆,16,3520,5,4,0,0,0,0,phone|humid_u|blanket|tv43|fanheater,2.0|4.8|4.2|1.5|1.3,2207,2161,0.614,0.00,0.00,16.6,0,synthetic_simulation
+676,책상,10,2200,4,2,0,0,0,0,laptop|phone|stand,4.9|2.1|3.7,103,103,0.047,0.00,0.00,0.1,0,synthetic_simulation
+677,몰아 쓰기,16,3520,6,2,0,0,0,0,laptop|phone|dryer|kettle|fridge|blanket,5.2|2.0|0.2|0.1|24.0|4.3,3230,1880,0.534,0.00,0.00,12.7,0,synthetic_simulation
+678,침대 옆,16,3520,3,0,0,0,0,0,phone|blanket,2.0|4.9,138,138,0.039,0.00,0.00,0.1,0,synthetic_simulation
+679,책상,16,3520,4,1,0,0,0,0,laptop|phone|stand,4.9|2.2|3.2,103,103,0.029,0.00,0.00,0.0,0,synthetic_simulation
+680,주방,16,3520,2,5,0,0,0,0,microwave|kettle|rice6,0.1|0.1|0.3,3580,2230,0.634,0.00,0.00,13.5,1,synthetic_simulation
+681,주방,16,3520,6,1,1,0,0,0,microwave|kettle|airfryer,0.1|0.1|0.1,4200,2850,0.810,0.32,0.00,23.4,1,synthetic_simulation
+682,화장대,16,3520,6,1,0,0,0,0,dryer|phone,0.1|2.1,1618,1618,0.460,0.00,0.00,9.3,0,synthetic_simulation
+683,책상,16,3520,2,2,0,0,0,0,laptop|phone|stand,4.8|2.0|3.8,103,103,0.029,0.00,0.00,0.0,0,synthetic_simulation
+684,주방,16,3520,5,2,0,0,0,0,fridge|microwave|kettle|rice6|airfryer,24.0|0.1|0.1|0.2|0.1,5149,2769,0.787,0.00,0.00,23.1,0,synthetic_simulation
+685,화장대,16,3520,6,2,0,1,0,0,dryer|straight|phone,0.1|0.1|2.1,1661,1618,0.460,0.00,0.00,9.4,2,synthetic_simulation
+686,주방,16,3520,2,1,1,0,0,0,kettle|airfryer,0.1|0.2,2850,2850,0.810,0.18,0.00,26.8,1,synthetic_simulation
+687,화장대,16,3520,4,4,0,0,0,0,dryer|phone,0.1|2.0,1618,1618,0.460,0.00,0.00,9.4,0,synthetic_simulation
+688,침대 옆,16,3520,4,5,0,0,0,0,phone|stand|humid_u|humid_h,2.1|3.1|3.7|4.6,653,653,0.186,0.00,0.00,1.5,1,synthetic_simulation
+689,책상,10,2200,5,4,0,0,0,0,laptop|phone|stand,5.1|2.1|3.8,103,103,0.047,0.00,0.00,0.1,0,synthetic_simulation
+690,침대 옆,16,3520,4,2,0,0,0,0,phone|stand|humid_u|humid_h,2.3|3.4|3.5|3.9,653,653,0.186,0.00,0.00,1.5,0,synthetic_simulation
+691,화장대,16,3520,3,1,0,0,0,0,dryer|phone|stand,0.1|2.0|2.7,1630,1618,0.460,0.00,0.00,9.4,0,synthetic_simulation
+692,화장대,16,3520,3,3,0,0,0,1,dryer|phone|stand,0.1|2.1|2.8,1630,1630,0.463,0.00,0.00,9.5,2,synthetic_simulation
+693,책상,16,3520,4,3,0,0,0,0,laptop|mon27|phone,5.4|4.7|1.9,112,112,0.032,0.00,0.00,0.0,0,synthetic_simulation
+694,주방,16,3520,4,0,0,0,0,0,microwave|kettle|rice6|airfryer,0.1|0.1|0.3|0.1,5080,2230,0.634,0.00,0.00,16.2,0,synthetic_simulation
+695,주방,16,3520,4,3,1,0,0,0,fridge|microwave|kettle|rice6,24.0|0.1|0.1|0.2,3649,2299,0.653,0.00,0.00,17.2,1,synthetic_simulation
+696,주방,16,3520,4,7,0,0,1,0,fridge|microwave|kettle,24.0|0.1|0.1,2769,1419,0.403,0.00,0.00,6.7,2,synthetic_simulation
+697,몰아 쓰기,16,3520,6,5,0,0,0,0,laptop|phone|stand|tv43|kettle|blanket,4.6|2.0|2.8|2.1|0.1|4.2,1619,1481,0.421,0.00,0.00,7.3,1,synthetic_simulation
+698,책상,16,3520,4,2,0,0,0,0,laptop|mon27|phone|stand,5.5|4.1|2.0|3.5,124,124,0.035,0.00,0.00,0.1,0,synthetic_simulation
+699,책상,16,3520,6,0,0,0,0,0,laptop|mon24|phone|stand,5.6|4.4|2.1|3.5,118,106,0.030,0.00,0.00,0.0,0,synthetic_simulation
+700,침대 옆,16,3520,3,7,0,0,0,0,blanket|laptop|stove,5.4|5.1|1.4,1393,1393,0.396,0.00,0.00,7.0,1,synthetic_simulation
+701,침대 옆,16,3520,4,0,0,0,0,0,phone|blanket,1.9|4.8,138,138,0.039,0.00,0.00,0.1,0,synthetic_simulation
+702,주방,16,3520,6,8,0,0,0,0,fridge|kettle|rice6|airfryer|toaster|coffee,24.0|0.1|0.2|0.1|0.0|0.0,5959,2449,0.696,0.00,0.00,21.7,1,synthetic_simulation
+703,몰아 쓰기,16,3520,6,0,0,0,0,0,laptop|phone|dryer|microwave|blanket|humid_u,5.9|2.0|0.1|0.1|4.5|4.0,3184,1761,0.500,0.00,0.00,10.9,0,synthetic_simulation
+704,책상,16,3520,4,2,0,0,0,0,laptop|phone|stand,5.0|2.1|3.1,103,103,0.029,0.00,0.00,0.0,0,synthetic_simulation
+705,주방,16,3520,3,2,0,0,0,0,kettle|airfryer|toaster,0.1|0.1|0.0,3750,2850,0.810,0.11,0.00,23.4,0,synthetic_simulation
+706,책상,16,3520,3,6,0,0,0,0,laptop|phone|humid_u,5.4|2.2|4.3,114,114,0.032,0.00,0.00,0.0,1,synthetic_simulation
+707,화장대,10,2200,4,6,1,0,0,0,dryer|vacuum,0.1|0.0,2854,1600,0.727,0.00,0.00,23.6,1,synthetic_simulation
+708,주방,16,3520,4,4,0,0,0,0,fridge|microwave|kettle,24.0|0.1|0.1,2769,2769,0.787,0.00,0.00,23.4,0,synthetic_simulation
+709,책상,16,3520,4,8,0,0,0,0,laptop|mon27|phone,5.5|4.3|1.9,112,94,0.027,0.00,0.00,0.0,1,synthetic_simulation
+710,침대 옆,16,3520,4,2,0,0,0,0,phone|airclean,2.1|7.8,54,54,0.015,0.00,0.00,0.0,0,synthetic_simulation
+711,주방,16,3520,5,2,0,0,0,0,microwave|kettle|airfryer|induction|toaster,0.1|0.1|0.1|0.1|0.0,7100,3500,0.994,0.82,0.00,44.3,1,synthetic_simulation
+712,책상,16,3520,4,2,0,0,0,0,laptop|phone|stand,5.0|1.9|3.5,103,103,0.029,0.00,0.00,0.0,0,synthetic_simulation
+713,주방,16,3520,6,0,0,0,0,0,fridge|microwave|rice6,24.0|0.1|0.2,2299,2299,0.653,0.00,0.00,16.1,0,synthetic_simulation
+714,책상,16,3520,2,0,0,0,0,0,laptop|phone,5.3|2.2,91,91,0.026,0.00,0.00,0.0,0,synthetic_simulation
+715,책상,16,3520,4,0,0,0,0,0,laptop|phone,5.3|2.1,91,91,0.026,0.00,0.00,0.0,0,synthetic_simulation
+716,책상,10,2200,6,0,0,0,0,0,laptop|mon24|mon27|phone|stand|ledbulb,5.7|4.2|4.5|1.9|2.9|3.8,153,135,0.061,0.00,0.00,0.2,0,synthetic_simulation
+717,책상,16,3520,4,2,0,1,0,0,laptop|mon24|phone|stand,5.0|4.5|2.0|3.0,118,118,0.034,0.00,0.00,0.1,2,synthetic_simulation
+718,침대 옆,16,3520,3,2,0,0,0,0,phone|humid_u|blanket|tv43,1.9|4.9|3.8|1.9,207,207,0.059,0.00,0.00,0.2,0,synthetic_simulation
+719,책상,16,3520,3,1,0,0,0,0,laptop|mon27|phone|stand,5.1|4.7|2.1|3.1,124,124,0.035,0.00,0.00,0.1,0,synthetic_simulation
+720,몰아 쓰기,16,3520,5,2,1,0,0,0,phone|dryer|kettle|fanheater,2.0|0.1|0.1|1.8,4968,3600,1.023,2.61,1.39,46.8,2,synthetic_simulation
+721,주방,16,3520,5,4,0,0,0,0,fridge|microwave|kettle|ramen|coffee,24.0|0.1|0.1|0.1|0.0,4849,2679,0.761,0.00,0.00,18.6,0,synthetic_simulation
+722,책상,10,2200,4,7,0,0,0,0,laptop|mon24|ledbulb,4.8|4.8|4.0,102,102,0.046,0.00,0.00,0.1,1,synthetic_simulation
+723,침대 옆,16,3520,3,6,0,0,0,0,phone|blanket,2.0|4.0,138,138,0.039,0.00,0.00,0.1,1,synthetic_simulation
+724,주방,16,3520,6,4,0,0,0,0,microwave|kettle|airfryer|toaster,0.1|0.1|0.1|0.0,5100,2850,0.810,0.07,0.00,17.7,0,synthetic_simulation
+725,침대 옆,16,3520,4,4,0,0,0,0,phone|stand|blanket,2.1|4.1|4.3,150,150,0.043,0.00,0.00,0.1,0,synthetic_simulation
+726,몰아 쓰기,16,3520,6,2,0,0,0,0,laptop|phone|stand|dryer|kettle|microwave,4.9|2.0|2.3|0.1|0.1|0.1,4403,2700,0.767,0.00,0.00,12.1,0,synthetic_simulation
+727,책상,10,2200,5,1,0,0,0,0,laptop|phone|stand|ledbulb|humid_u,5.1|2.2|3.2|3.9|3.8,140,140,0.064,0.00,0.00,0.2,0,synthetic_simulation
+728,책상,16,3520,4,2,0,0,0,0,laptop|phone|stand,4.9|2.0|3.6,103,103,0.029,0.00,0.00,0.0,0,synthetic_simulation
+729,화장대,16,3520,4,2,0,0,0,0,dryer|straight|phone,0.1|0.1|2.1,1661,1618,0.460,0.00,0.00,9.4,0,synthetic_simulation
+730,화장대,16,3520,4,7,0,0,0,0,dryer|stand,0.1|3.9,1612,1612,0.458,0.00,0.00,9.4,1,synthetic_simulation
+731,책상,16,3520,4,0,0,0,0,0,laptop|phone|stand,5.5|2.0|3.2,103,103,0.029,0.00,0.00,0.0,0,synthetic_simulation
+732,책상,10,2200,6,2,0,0,0,0,laptop|mon27|phone|stand,5.2|4.1|2.1|3.4,124,106,0.048,0.00,0.00,0.1,0,synthetic_simulation
+733,침대 옆,16,3520,5,0,0,0,0,1,phone|stand|humid_u|laptop|airclean,2.2|2.9|5.5|4.7|7.0,162,162,0.046,0.00,0.00,0.1,2,synthetic_simulation
+734,책상,16,3520,5,2,0,0,0,0,laptop|phone|ledbulb,4.8|2.2|3.9,105,105,0.030,0.00,0.00,0.0,0,synthetic_simulation
+735,책상,16,3520,4,4,0,0,0,0,laptop|phone|stand,5.5|2.1|3.3,103,103,0.029,0.00,0.00,0.0,0,synthetic_simulation
+736,주방,16,3520,5,1,0,0,0,0,fridge|microwave|kettle|airfryer|ramen,24.0|0.1|0.1|0.1|0.1,5089,2919,0.829,0.11,0.00,24.6,0,synthetic_simulation
+737,주방,10,2200,6,0,0,0,0,0,microwave|rice6|airfryer|induction,0.1|0.3|0.1|0.2,5730,3500,1.591,11.29,1.39,111.6,3,synthetic_simulation
+738,주방,16,3520,6,0,0,0,0,1,fridge|microwave|kettle|rice6|airfryer|induction,24.0|0.1|0.1|0.3|0.1|0.2,7149,3569,1.014,1.00,0.46,46.1,2,synthetic_simulation
+739,침대 옆,16,3520,4,2,0,0,0,0,phone|blanket|airclean|tv43,2.1|3.6|7.6|2.5,220,220,0.063,0.00,0.00,0.2,0,synthetic_simulation
+740,몰아 쓰기,16,3520,7,3,0,0,0,1,phone|stand|dryer|kettle|fridge|fanheater|airfryer,2.1|3.3|0.1|0.1|24.0|1.5|0.1,6549,5031,1.429,3.39,2.71,67.2,2,synthetic_simulation
+741,화장대,10,2200,5,3,0,0,0,0,dryer|straight|phone,0.1|0.1|1.9,1661,1618,0.735,0.00,0.00,24.2,0,synthetic_simulation
+742,주방,10,2200,6,4,0,0,0,0,fridge|kettle|rice6|airfryer|induction|coffee,24.0|0.1|0.3|0.2|0.1|0.0,7059,3569,1.622,6.68,1.18,118.1,3,synthetic_simulation
+743,주방,16,3520,3,2,0,0,0,0,fridge|kettle|rice6,24.0|0.1|0.3,2299,2299,0.653,0.00,0.00,17.2,0,synthetic_simulation
+744,몰아 쓰기,10,2200,7,2,0,0,0,0,laptop|phone|stand|dryer|microwave|fridge|blanket,5.0|2.1|3.3|0.1|0.1|24.0|3.7,3242,1807,0.821,1.96,0.00,30.1,1,synthetic_simulation
+745,침대 옆,16,3520,6,7,0,0,0,0,phone|stand|humid_u|laptop|tv43|stove,2.1|3.6|4.0|5.2|1.9|1.7,1372,1354,0.385,0.00,0.00,6.7,1,synthetic_simulation
+746,몰아 쓰기,16,3520,6,8,0,0,0,0,laptop|phone|stand|blanket,5.0|1.9|3.4|3.5,223,223,0.063,0.00,0.00,0.2,1,synthetic_simulation
+747,화장대,16,3520,5,1,0,0,0,0,dryer|straight|phone|stand|iron,0.1|0.1|2.1|2.8|0.0,3473,1812,0.515,0.00,0.00,11.9,0,synthetic_simulation
+748,주방,16,3520,3,0,0,0,0,0,fridge|microwave|kettle,24.0|0.1|0.1,2769,1419,0.403,0.00,0.00,7.1,0,synthetic_simulation
+749,책상,16,3520,5,4,0,0,0,0,laptop|phone|stand|humid_u,5.3|2.0|2.7|3.7,126,126,0.036,0.00,0.00,0.1,0,synthetic_simulation
+750,주방,16,3520,6,8,1,0,0,0,fridge|microwave|kettle|rice6|ramen|coffee,24.0|0.1|0.1|0.4|0.1|0.0,5729,2209,0.628,0.00,0.00,11.4,1,synthetic_simulation
+751,화장대,16,3520,2,2,0,0,0,0,dryer|straight|phone,0.1|0.1|2.1,1661,1618,0.460,0.00,0.00,9.4,0,synthetic_simulation
+752,몰아 쓰기,16,3520,5,4,0,0,0,0,laptop|dryer|airfryer,5.3|0.1|0.1,3173,1673,0.475,0.00,0.00,10.1,0,synthetic_simulation
+753,화장대,16,3520,4,3,1,0,0,0,dryer|phone,0.1|2.0,1618,1618,0.460,0.00,0.00,9.3,1,synthetic_simulation
+754,주방,16,3520,4,1,0,0,0,0,fridge|microwave|kettle|ramen,24.0|0.1|0.1|0.1,3589,2769,0.787,0.00,0.00,13.7,0,synthetic_simulation
+755,주방,10,2200,5,1,0,0,0,0,fridge|microwave|airfryer|induction|coffee,24.0|0.1|0.1|0.1|0.0,6179,2919,1.327,5.82,0.07,50.3,2,synthetic_simulation
+756,몰아 쓰기,16,3520,6,5,0,0,0,0,laptop|phone|stand|dryer|fridge|blanket,5.1|1.9|2.9|0.1|24.0|4.3,1892,1807,0.513,0.00,0.00,11.2,1,synthetic_simulation
+757,몰아 쓰기,16,3520,5,2,0,0,0,0,laptop|tv43|dryer|blanket|airfryer,4.9|2.0|0.1|4.7|0.1,3339,1793,0.509,0.00,0.00,10.7,0,synthetic_simulation
+758,침대 옆,16,3520,6,2,0,0,0,0,phone|stand,2.1|3.3,30,30,0.009,0.00,0.00,0.0,0,synthetic_simulation
+759,주방,10,2200,6,4,1,0,0,0,microwave|coffee,0.1|0.0,2610,1350,0.614,0.00,0.00,15.6,1,synthetic_simulation
+760,화장대,16,3520,5,2,0,0,0,0,dryer|straight|phone,0.1|0.1|2.1,1661,1643,0.467,0.00,0.00,9.4,0,synthetic_simulation
+761,화장대,10,2200,5,2,0,0,0,0,dryer|vacuum,0.1|0.0,2854,1600,0.727,0.00,0.00,23.6,0,synthetic_simulation
+762,몰아 쓰기,16,3520,4,0,0,0,0,0,laptop|phone|stand|dryer,4.8|2.1|3.2|0.1,1703,1685,0.479,0.00,0.00,10.2,0,synthetic_simulation
+763,책상,16,3520,4,1,0,0,0,0,laptop|stand|ledbulb,4.9|3.7|3.9,99,99,0.028,0.00,0.00,0.0,0,synthetic_simulation
+764,몰아 쓰기,16,3520,6,0,1,0,0,0,laptop|phone|stand|blanket|fanheater|humid_u,5.0|2.2|3.5|4.1|1.4|4.6,2246,2223,0.632,0.00,0.00,17.9,1,synthetic_simulation
+765,침대 옆,16,3520,4,1,0,0,1,0,phone|blanket|laptop|tv43,2.0|3.8|5.3|2.5,257,257,0.073,0.00,0.00,0.2,2,synthetic_simulation
+766,책상,16,3520,4,3,0,0,0,0,laptop|phone,5.5|1.9,91,91,0.026,0.00,0.00,0.0,0,synthetic_simulation
+767,책상,16,3520,4,0,1,0,0,0,laptop|mon24|phone|ledbulb|humid_u,5.3|4.3|1.9|3.9|4.2,143,143,0.041,0.00,0.00,0.1,1,synthetic_simulation
+768,책상,10,2200,4,4,0,0,0,0,laptop|phone|stand,5.2|2.0|3.1,103,103,0.047,0.00,0.00,0.1,0,synthetic_simulation
+769,책상,16,3520,6,5,1,0,0,0,laptop|mon24|mon27|phone|airclean,5.6|4.7|4.5|2.2|9.2,163,163,0.046,0.00,0.00,0.1,1,synthetic_simulation
+770,화장대,16,3520,2,1,0,0,0,0,dryer|phone|stand,0.1|2.1|3.4,1630,1630,0.463,0.00,0.00,9.4,0,synthetic_simulation
+771,몰아 쓰기,16,3520,5,2,0,0,0,0,phone|dryer|kettle|fridge|fanheater|humid_u,2.2|0.1|0.1|24.0|1.4|4.5,5060,3710,1.054,1.75,1.14,49.8,2,synthetic_simulation
+772,몰아 쓰기,16,3520,4,0,0,0,0,0,laptop|phone|stand|fridge,4.8|2.0|3.4|24.0,172,172,0.049,0.00,0.00,0.1,0,synthetic_simulation
+773,책상,10,2200,4,1,0,0,0,0,laptop|phone|stand|ledbulb,5.4|1.9|3.6|3.6,117,117,0.053,0.00,0.00,0.1,0,synthetic_simulation
+774,책상,10,2200,4,4,0,0,0,0,laptop|mon24|phone|stand,5.9|4.4|1.9|3.6,118,106,0.048,0.00,0.00,0.1,0,synthetic_simulation
+775,몰아 쓰기,16,3520,5,8,0,0,0,0,laptop|phone|dryer|microwave,4.6|2.1|0.1|0.1,3041,1673,0.475,0.00,0.00,10.0,1,synthetic_simulation
+776,주방,16,3520,4,0,0,0,0,0,fridge|microwave|rice6|induction,24.0|0.1|0.3|0.1,4299,2949,0.838,0.71,0.00,31.5,1,synthetic_simulation
+777,주방,16,3520,4,3,0,0,0,0,microwave|kettle|rice6|toaster,0.1|0.1|0.2|0.0,4480,2700,0.767,0.00,0.00,16.6,0,synthetic_simulation
+778,주방,10,2200,4,1,0,0,0,1,fridge|kettle|airfryer,24.0|0.1|0.1,2919,1569,0.713,0.00,0.00,22.9,2,synthetic_simulation
+779,몰아 쓰기,16,3520,5,1,0,0,0,0,laptop|phone|humid_u,5.2|2.1|3.0,114,114,0.032,0.00,0.00,0.0,0,synthetic_simulation
+780,주방,16,3520,4,3,1,0,0,0,fridge|microwave|kettle|toaster,24.0|0.1|0.1|0.0,3669,1419,0.403,0.00,0.00,6.9,1,synthetic_simulation
+781,책상,16,3520,4,1,0,0,0,0,laptop|mon24|phone,5.2|5.3|2.1,106,106,0.030,0.00,0.00,0.0,0,synthetic_simulation
+782,책상,16,3520,6,2,0,0,0,0,laptop|phone|humid_u,5.7|2.0|3.1,114,114,0.032,0.00,0.00,0.0,0,synthetic_simulation
+783,침대 옆,16,3520,5,3,0,0,0,0,phone|blanket,2.1|4.3,138,138,0.039,0.00,0.00,0.1,0,synthetic_simulation
+784,주방,10,2200,4,4,0,0,0,0,microwave|kettle|rice6,0.1|0.1|0.2,3580,2230,1.014,0.25,0.25,38.9,1,synthetic_simulation
+785,침대 옆,16,3520,5,3,1,0,0,0,laptop|beam,5.1|0.4,325,325,0.092,0.00,0.00,0.4,1,synthetic_simulation
+786,주방,16,3520,3,5,0,0,0,0,microwave|kettle|airfryer,0.1|0.1|0.1,4200,1500,0.426,0.00,0.00,8.2,1,synthetic_simulation
+787,침대 옆,10,2200,4,2,0,0,0,0,phone|stand|humid_h|laptop,2.1|2.7|4.0|5.1,703,703,0.320,0.00,0.00,4.4,0,synthetic_simulation
+788,책상,16,3520,6,1,0,0,0,0,laptop|mon24|phone,4.8|4.6|2.1,106,106,0.030,0.00,0.00,0.0,0,synthetic_simulation
+789,침대 옆,16,3520,5,1,0,0,0,0,phone|stand|humid_u|blanket|laptop,2.2|2.2|2.7|4.1|5.5,246,234,0.066,0.00,0.00,0.2,0,synthetic_simulation
+790,책상,16,3520,4,1,0,0,0,0,laptop|phone|airclean,5.9|2.2|8.4,127,127,0.036,0.00,0.00,0.1,0,synthetic_simulation
+791,주방,16,3520,6,2,0,0,0,0,fridge|microwave|kettle|airfryer,24.0|0.1|0.1|0.1,4269,2919,0.829,0.11,0.00,24.6,0,synthetic_simulation
+792,침대 옆,16,3520,4,1,0,0,0,0,phone|blanket|airclean,2.1|4.0|7.8,174,174,0.049,0.00,0.00,0.1,0,synthetic_simulation
+793,책상,10,2200,6,1,0,0,0,0,laptop|mon24|phone|stand|ledbulb|laser|airclean,5.6|4.7|1.9|3.0|4.6|0.0|8.4,938,784,0.356,0.00,0.00,5.4,0,synthetic_simulation
+794,주방,16,3520,3,1,0,0,0,0,fridge|microwave|kettle,24.0|0.1|0.1,2769,2769,0.787,0.00,0.00,13.7,0,synthetic_simulation
+795,몰아 쓰기,16,3520,5,0,0,0,0,1,laptop|phone|stand|blanket|fanheater,4.9|2.1|4.2|4.4|1.5,2223,2205,0.626,0.00,0.00,17.6,2,synthetic_simulation
+796,책상,10,2200,4,0,0,0,0,0,laptop|mon24|phone|airclean,5.4|5.3|2.2|8.2,142,142,0.065,0.00,0.00,0.2,0,synthetic_simulation
+797,책상,10,2200,3,7,0,0,0,0,mon27|phone|stand,4.5|2.0|3.1,51,51,0.023,0.00,0.00,0.0,1,synthetic_simulation
+798,침대 옆,16,3520,4,2,0,0,0,0,phone|stand,2.0|2.6,30,30,0.009,0.00,0.00,0.0,0,synthetic_simulation
+799,침대 옆,10,2200,4,3,0,0,0,0,phone|humid_u,2.1|3.3,41,41,0.019,0.00,0.00,0.0,0,synthetic_simulation
+800,책상,16,3520,6,7,0,0,0,0,laptop|mon24|phone|stand|laser|airclean,4.9|4.9|2.1|3.4|0.0|7.1,924,821,0.233,0.00,0.00,2.3,1,synthetic_simulation
+801,책상,10,2200,4,3,0,0,0,0,laptop|mon27|phone|stand,5.7|4.6|2.3|2.9,124,124,0.056,0.00,0.00,0.1,0,synthetic_simulation
+802,책상,10,2200,4,0,0,0,0,0,laptop|mon27|phone|laser,5.8|4.5|2.1|0.0,882,791,0.360,0.00,0.00,5.3,0,synthetic_simulation
+803,책상,16,3520,1,6,0,0,0,1,laptop|phone,4.9|2.0,91,91,0.026,0.00,0.00,0.0,2,synthetic_simulation
+804,책상,16,3520,4,1,0,0,0,0,laptop|mon27|phone|stand,5.4|3.9|2.1|2.9,124,112,0.032,0.00,0.00,0.0,0,synthetic_simulation
+805,책상,10,2200,4,2,0,0,0,0,laptop|phone|stand|humid_u,5.2|2.2|3.2|3.9,126,126,0.057,0.00,0.00,0.1,0,synthetic_simulation
+806,주방,16,3520,2,2,0,0,0,0,microwave|kettle|induction,0.1|0.1|0.2,4700,3350,0.952,0.04,0.00,18.9,0,synthetic_simulation
+807,책상,10,2200,4,2,1,0,0,0,laptop|phone|stand,5.1|1.9|3.2,103,103,0.047,0.00,0.00,0.1,1,synthetic_simulation
+808,화장대,16,3520,4,0,1,0,0,0,dryer|phone|stand|vacuum,0.1|2.1|2.9|0.1,2884,1630,0.463,0.00,0.00,9.6,1,synthetic_simulation
+809,화장대,16,3520,6,5,0,0,0,0,stand|vacuum,3.1|0.1,1266,1254,0.356,0.00,0.00,5.7,1,synthetic_simulation
+810,몰아 쓰기,16,3520,4,7,0,0,0,0,laptop|phone|stand|microwave,5.0|2.1|3.7|0.1,1453,1435,0.408,0.00,0.00,6.9,1,synthetic_simulation
+811,책상,16,3520,3,4,0,0,0,0,laptop|mon27|phone,4.8|4.6|2.0,112,112,0.032,0.00,0.00,0.0,0,synthetic_simulation
+812,주방,16,3520,6,1,0,0,0,0,fridge|microwave|kettle|rice6|ramen,24.0|0.1|0.1|0.2|0.1,4469,2299,0.653,0.00,0.00,14.6,0,synthetic_simulation
+813,주방,16,3520,5,3,0,0,0,0,fridge|microwave|kettle|airfryer|ramen,24.0|0.1|0.1|0.1|0.0,5089,2769,0.787,0.00,0.00,18.5,0,synthetic_simulation
+814,화장대,16,3520,4,4,0,0,0,0,dryer|straight|phone|vacuum,0.1|0.1|2.0|0.0,2915,1618,0.460,0.00,0.00,9.4,0,synthetic_simulation
+815,주방,16,3520,4,3,0,0,0,0,microwave|kettle|rice6|airfryer,0.1|0.1|0.3|0.1,5080,2700,0.767,0.00,0.00,23.5,0,synthetic_simulation
+816,화장대,16,3520,5,1,0,0,0,0,dryer|phone|stand,0.1|1.9|3.3,1630,1630,0.463,0.00,0.00,9.6,0,synthetic_simulation
+817,몰아 쓰기,16,3520,5,0,0,0,0,0,laptop|phone|tv43|kettle|humid_u,5.3|2.1|1.9|0.1|3.8,1510,1469,0.417,0.00,0.00,6.8,0,synthetic_simulation
+818,주방,16,3520,5,2,0,0,0,0,fridge|microwave|airfryer|toaster,24.0|0.1|0.1|0.0,3819,1569,0.446,0.00,0.00,8.9,0,synthetic_simulation
+819,몰아 쓰기,10,2200,4,8,1,0,0,0,phone|dryer|kettle|blanket,2.0|0.1|0.1|4.4,3088,1720,0.782,0.00,0.00,27.2,1,synthetic_simulation
+820,화장대,16,3520,4,1,0,0,0,0,dryer|straight|phone|stand,0.1|0.1|2.0|3.4,1673,1630,0.463,0.00,0.00,9.6,0,synthetic_simulation
+821,몰아 쓰기,16,3520,4,2,0,0,0,0,laptop|phone|tv43|kettle,4.8|2.2|1.8|0.1,1487,1469,0.417,0.00,0.00,7.2,0,synthetic_simulation
+822,화장대,16,3520,4,1,0,0,0,0,dryer|straight|vacuum,0.1|0.1|0.0,2897,1600,0.455,0.00,0.00,9.2,0,synthetic_simulation
+823,주방,16,3520,4,5,0,0,0,0,fridge|kettle|rice6,24.0|0.1|0.3,2299,2299,0.653,0.00,0.00,17.2,1,synthetic_simulation
+824,침대 옆,16,3520,3,6,0,0,0,0,phone|humid_h|tv43,1.9|3.5|2.3,664,664,0.189,0.00,0.00,1.6,1,synthetic_simulation
+825,책상,16,3520,4,1,0,0,0,0,laptop|mon24|phone,5.3|4.9|2.2,106,106,0.030,0.00,0.00,0.0,0,synthetic_simulation
+826,책상,16,3520,4,3,0,0,0,0,laptop|mon27|phone|stand,5.4|4.3|2.1|3.6,124,124,0.035,0.00,0.00,0.1,0,synthetic_simulation
+827,책상,10,2200,4,3,0,0,0,0,laptop|mon24|phone,5.0|4.5|2.0,106,106,0.048,0.00,0.00,0.1,0,synthetic_simulation
+828,책상,16,3520,3,3,1,1,0,0,laptop|phone,5.3|2.0,91,91,0.026,0.00,0.00,0.0,2,synthetic_simulation
+829,책상,16,3520,4,8,0,0,0,0,laptop|mon27|phone|stand,5.7|4.7|1.8|3.4,124,124,0.035,0.00,0.00,0.1,1,synthetic_simulation
+830,책상,10,2200,4,2,0,0,0,0,laptop|phone,5.6|1.9,91,91,0.041,0.00,0.00,0.1,0,synthetic_simulation
+831,몰아 쓰기,10,2200,6,0,0,0,0,0,laptop|phone|microwave|blanket|fanheater,5.2|2.1|0.1|4.8|1.0,3561,3423,1.556,60.57,4.11,103.3,3,synthetic_simulation
+832,책상,16,3520,6,1,0,0,0,0,laptop|mon24|phone|stand,5.2|4.9|1.9|3.3,118,118,0.034,0.00,0.00,0.1,0,synthetic_simulation
+833,주방,16,3520,3,0,0,0,0,0,fridge|microwave,24.0|0.1,1419,1419,0.403,0.00,0.00,6.7,0,synthetic_simulation
+834,책상,16,3520,5,1,0,1,0,0,laptop|mon24|mon27|phone|stand,5.5|4.0|4.6|2.2|3.6,139,139,0.039,0.00,0.00,0.1,2,synthetic_simulation
+835,침대 옆,16,3520,6,2,1,0,0,0,phone|laptop|airclean,2.0|5.2|8.3,127,127,0.036,0.00,0.00,0.1,1,synthetic_simulation
+836,책상,16,3520,6,3,0,0,0,1,laptop|mon24|phone|stand|laser,4.9|5.0|2.1|3.2|0.0,888,843,0.239,0.00,0.00,2.4,2,synthetic_simulation
+837,주방,16,3520,6,0,0,0,0,0,fridge|microwave|kettle|rice6|airfryer|ramen,24.0|0.1|0.1|0.3|0.1|0.1,5969,2769,0.787,0.00,0.00,21.1,0,synthetic_simulation
+838,화장대,16,3520,4,4,0,0,0,0,dryer|stand,0.1|2.9,1612,1612,0.458,0.00,0.00,9.4,0,synthetic_simulation
+839,침대 옆,16,3520,4,8,0,0,0,0,phone|laptop|fanheater|stove,1.9|5.3|1.0|1.2,3291,3200,0.909,10.46,0.00,37.2,1,synthetic_simulation
+840,침대 옆,16,3520,6,0,0,0,0,0,phone|stand|humid_u|blanket|tv43|fanheater,2.0|3.3|4.1|3.5|1.7|1.5,2219,2161,0.614,0.00,0.00,17.0,0,synthetic_simulation
+841,책상,16,3520,5,4,0,0,0,0,laptop|mon24|phone|stand,5.8|4.5|2.0|3.5,118,118,0.034,0.00,0.00,0.1,0,synthetic_simulation
+842,몰아 쓰기,10,2200,7,3,0,0,0,0,laptop|phone|dryer|kettle|microwave|fridge|humid_u,5.1|2.2|0.1|0.1|0.1|24.0|3.1,4483,3019,1.372,0.64,0.07,37.7,1,synthetic_simulation
+843,책상,16,3520,3,6,0,0,0,0,laptop|phone|stand,4.9|1.9|3.7,103,103,0.029,0.00,0.00,0.0,1,synthetic_simulation
+844,몰아 쓰기,16,3520,5,6,1,0,0,0,laptop|phone|dryer|blanket|fanheater,5.7|2.2|0.1|4.6|1.5,3811,3691,1.049,1.82,1.82,49.3,2,synthetic_simulation
+845,화장대,16,3520,4,3,0,0,0,0,dryer|straight|phone,0.1|0.1|2.0,1661,1618,0.460,0.00,0.00,9.3,0,synthetic_simulation
+846,화장대,16,3520,2,5,0,0,0,0,dryer|straight,0.1|0.1,1643,1600,0.455,0.00,0.00,9.2,1,synthetic_simulation
+847,몰아 쓰기,16,3520,7,4,1,0,0,0,laptop|phone|stand|tv43|microwave|fridge|humid_u,5.0|2.1|3.1|1.3|0.1|24.0|4.9,1591,1538,0.437,0.00,0.00,7.3,1,synthetic_simulation
+848,몰아 쓰기,10,2200,6,2,0,0,0,0,laptop|phone,5.4|2.0,91,91,0.041,0.00,0.00,0.1,0,synthetic_simulation
+849,책상,16,3520,5,3,0,0,0,0,laptop|phone,4.8|2.1,91,91,0.026,0.00,0.00,0.0,0,synthetic_simulation
+850,몰아 쓰기,16,3520,8,8,0,0,0,0,laptop|phone|dryer|kettle|microwave|fridge|blanket|humid_u,5.8|2.0|0.1|0.1|0.1|24.0|4.9|5.3,4603,3019,0.858,0.11,0.00,24.6,1,synthetic_simulation
+851,책상,16,3520,4,0,0,0,0,0,laptop|phone,5.7|1.8,91,91,0.026,0.00,0.00,0.0,0,synthetic_simulation
+852,몰아 쓰기,10,2200,3,3,0,0,0,0,phone|dryer|blanket,2.0|0.1|4.0,1738,1738,0.790,0.00,0.00,26.1,0,synthetic_simulation
+853,주방,10,2200,5,3,0,0,0,0,fridge|microwave|kettle|rice6,24.0|0.1|0.1|0.3,3649,2769,1.259,0.18,0.18,41.3,1,synthetic_simulation
+854,침대 옆,10,2200,4,2,1,0,1,0,phone|blanket|beam,2.1|3.9|0.2,390,372,0.169,0.00,0.00,1.3,2,synthetic_simulation
+855,화장대,10,2200,4,6,0,0,0,0,dryer|straight|phone,0.1|0.1|2.0,1661,1618,0.735,0.00,0.00,24.2,1,synthetic_simulation
+856,침대 옆,10,2200,4,3,0,0,0,0,phone|humid_u|laptop|beam,2.1|3.5|5.1|0.2,366,293,0.133,0.00,0.00,0.8,0,synthetic_simulation
+857,침대 옆,10,2200,5,6,0,0,0,0,phone|humid_h|laptop,2.0|3.9|5.2,691,691,0.314,0.00,0.00,4.4,1,synthetic_simulation
+858,책상,16,3520,3,2,0,0,0,0,laptop|phone,5.7|2.1,91,91,0.026,0.00,0.00,0.0,0,synthetic_simulation
+859,몰아 쓰기,16,3520,4,3,0,0,0,0,laptop|phone|stand|dryer|fanheater,4.8|2.2|3.3|0.1|1.1,3703,3612,1.026,0.82,0.82,46.7,2,synthetic_simulation
+860,책상,10,2200,4,5,0,0,0,0,laptop|phone|stand|ledbulb,5.2|2.1|3.4|3.7,117,117,0.053,0.00,0.00,0.1,1,synthetic_simulation
+861,주방,16,3520,4,3,0,0,0,0,microwave|kettle,0.1|0.1,2700,1350,0.384,0.00,0.00,6.1,0,synthetic_simulation
+862,화장대,16,3520,4,5,1,0,0,0,dryer|straight|phone,0.1|0.1|2.1,1661,1643,0.467,0.00,0.00,9.6,1,synthetic_simulation
+863,침대 옆,16,3520,5,8,0,0,0,0,phone|humid_h|laptop|tv43|fanheater,1.9|4.5|5.3|1.7|1.8,2737,2737,0.778,0.00,0.00,27.2,1,synthetic_simulation
+864,책상,10,2200,4,6,0,1,0,0,laptop|phone|stand,5.3|2.0|3.1,103,103,0.047,0.00,0.00,0.1,2,synthetic_simulation
+865,화장대,16,3520,5,3,0,0,0,0,dryer|straight|phone|stand|iron,0.1|0.1|2.2|3.3|0.0,3473,1800,0.511,0.00,0.00,11.6,0,synthetic_simulation
+866,침대 옆,16,3520,6,6,0,0,0,0,phone|stand|airclean|beam,2.1|3.8|8.3|0.3,318,318,0.090,0.00,0.00,0.4,1,synthetic_simulation
+867,침대 옆,16,3520,5,1,0,0,0,0,phone|humid_u|humid_h|blanket|laptop,2.0|5.2|3.7|4.1|5.0,834,834,0.237,0.00,0.00,2.5,0,synthetic_simulation
+868,주방,10,2200,4,1,0,0,0,0,microwave|kettle|rice6|induction,0.1|0.1|0.3|0.2,5580,2230,1.014,10.93,0.32,41.3,1,synthetic_simulation
+869,책상,10,2200,4,2,0,0,0,0,laptop|mon24|mon27|airclean,5.2|4.6|4.9|7.4,145,145,0.066,0.00,0.00,0.2,0,synthetic_simulation
+870,책상,16,3520,4,2,0,0,0,0,laptop|phone|stand,4.9|2.0|2.6,103,103,0.029,0.00,0.00,0.0,0,synthetic_simulation
+871,화장대,10,2200,4,3,0,0,0,0,dryer|stand,0.1|2.6,1612,1612,0.733,0.00,0.00,24.0,0,synthetic_simulation
+872,주방,16,3520,5,1,0,0,0,0,fridge|microwave|toaster,24.0|0.1|0.0,2319,1419,0.403,0.00,0.00,6.7,0,synthetic_simulation
+873,책상,16,3520,5,4,0,0,0,0,laptop|phone,5.2|2.0,91,91,0.026,0.00,0.00,0.0,0,synthetic_simulation
+874,책상,16,3520,5,3,0,0,0,0,laptop|mon24|mon27|phone,4.8|4.5|4.4|2.1,127,112,0.032,0.00,0.00,0.0,0,synthetic_simulation
+875,책상,16,3520,5,1,0,0,0,0,laptop|phone,4.6|2.2,91,91,0.026,0.00,0.00,0.0,0,synthetic_simulation
+876,몰아 쓰기,16,3520,5,0,0,0,0,0,laptop|phone|tv43|microwave|blanket,5.4|2.2|1.4|0.1|4.2,1607,1469,0.417,0.00,0.00,7.2,0,synthetic_simulation
+877,침대 옆,16,3520,5,5,0,0,0,0,phone|blanket,2.1|4.3,138,138,0.039,0.00,0.00,0.1,1,synthetic_simulation
+878,화장대,16,3520,4,2,0,0,0,0,dryer|phone,0.1|2.1,1618,1618,0.460,0.00,0.00,9.2,0,synthetic_simulation
+879,책상,16,3520,4,1,0,0,0,0,laptop|phone,5.4|2.1,91,91,0.026,0.00,0.00,0.0,0,synthetic_simulation
+880,주방,16,3520,3,0,0,0,0,0,fridge|kettle|induction,24.0|0.1|0.1,3419,2069,0.588,0.00,0.00,15.5,0,synthetic_simulation
+881,책상,16,3520,4,1,0,0,0,0,laptop|mon27|phone|stand,5.2|4.8|2.2|3.4,124,124,0.035,0.00,0.00,0.1,0,synthetic_simulation
+882,화장대,16,3520,4,1,0,0,0,0,straight|phone,0.1|2.2,61,43,0.012,0.00,0.00,0.0,0,synthetic_simulation
+883,책상,16,3520,4,4,0,0,0,0,laptop|phone|stand,5.6|2.1|3.3,103,103,0.029,0.00,0.00,0.0,0,synthetic_simulation
+884,책상,10,2200,5,0,1,0,0,0,laptop|phone,5.8|2.1,91,91,0.041,0.00,0.00,0.1,1,synthetic_simulation
+885,책상,16,3520,5,8,0,0,0,0,laptop|phone|stand|laser,4.7|2.1|2.9|0.0,873,843,0.239,0.00,0.00,2.1,1,synthetic_simulation
+886,책상,16,3520,3,8,0,0,0,0,laptop|mon24|mon27|stand,5.4|4.6|4.1|3.1,121,121,0.034,0.00,0.00,0.1,1,synthetic_simulation
+887,책상,16,3520,2,4,0,0,0,0,laptop|mon27|phone,5.1|4.1|2.0,112,112,0.032,0.00,0.00,0.0,0,synthetic_simulation
+888,침대 옆,16,3520,5,7,0,0,0,0,phone|blanket|laptop|airclean|stove,2.1|3.9|5.2|8.3|1.2,1447,1327,0.377,0.00,0.00,6.4,1,synthetic_simulation
+889,몰아 쓰기,10,2200,6,2,0,0,0,0,laptop|phone|tv43|fridge|blanket|airfryer,5.5|2.0|1.7|24.0|3.2|0.1,1826,1688,0.767,0.00,0.00,26.5,0,synthetic_simulation
+890,주방,16,3520,5,0,0,0,0,0,fridge|microwave|ramen|toaster|coffee,24.0|0.1|0.0|0.0|0.0,4399,2319,0.659,0.00,0.00,11.6,0,synthetic_simulation
+891,책상,16,3520,3,3,0,0,0,0,mon24|phone|stand,4.0|2.1|2.8,45,45,0.013,0.00,0.00,0.0,0,synthetic_simulation
+892,주방,16,3520,4,7,1,0,1,1,fridge|microwave|kettle|airfryer,24.0|0.1|0.1|0.1,4269,2919,0.829,0.21,0.00,29.1,2,synthetic_simulation
+893,침대 옆,16,3520,5,5,0,0,0,0,phone|airclean|tv43|beam,2.0|6.3|1.9|0.2,352,316,0.090,0.00,0.00,0.4,1,synthetic_simulation
+894,침대 옆,16,3520,4,8,0,0,0,0,phone|blanket,2.1|4.7,138,138,0.039,0.00,0.00,0.1,1,synthetic_simulation
+895,몰아 쓰기,10,2200,5,2,0,0,0,0,laptop|phone|tv43|dryer|blanket,4.6|2.1|1.4|0.1|3.5,1857,1720,0.782,0.00,0.00,27.0,0,synthetic_simulation
+896,책상,16,3520,5,1,0,0,0,0,laptop|mon27|phone|stand|ledbulb,4.7|4.2|2.2|3.1|4.0,138,126,0.036,0.00,0.00,0.1,0,synthetic_simulation
+897,화장대,16,3520,4,3,0,0,0,0,dryer|straight|stand,0.1|0.1|3.5,1655,1643,0.467,0.00,0.00,9.4,0,synthetic_simulation
+898,화장대,10,2200,4,1,0,0,0,0,dryer|phone|stand,0.1|2.1|3.0,1630,1630,0.741,0.00,0.00,24.5,0,synthetic_simulation
+899,침대 옆,10,2200,3,4,0,0,0,0,phone|humid_u|blanket|airclean,2.1|3.7|4.9|8.2,197,197,0.090,0.00,0.00,0.4,0,synthetic_simulation
+900,몰아 쓰기,10,2200,4,2,1,0,0,0,laptop|phone|dryer|humid_u,5.7|2.0|0.1|3.4,1714,1696,0.771,0.00,0.00,25.8,1,synthetic_simulation
+901,침대 옆,10,2200,5,1,0,0,0,0,phone|humid_h|blanket|laptop|tv43,2.0|3.8|4.0|5.0|1.8,857,811,0.369,0.00,0.00,6.1,0,synthetic_simulation
+902,침대 옆,10,2200,1,1,0,0,0,0,blanket|tv43,4.1|1.9,166,166,0.075,0.00,0.00,0.3,0,synthetic_simulation
+903,몰아 쓰기,16,3520,7,4,1,0,0,0,laptop|phone|stand|dryer|kettle|microwave|blanket|fanheater,5.8|1.8|2.8|0.1|0.1|0.1|4.1|1.0,6523,3685,1.047,2.36,0.82,49.1,2,synthetic_simulation
+904,몰아 쓰기,16,3520,6,0,0,0,0,0,laptop|fanheater,4.8|1.1,2073,2073,0.589,0.00,0.00,15.6,0,synthetic_simulation
+905,주방,10,2200,5,3,0,0,0,0,fridge|microwave|kettle|ramen,24.0|0.1|0.1|0.0,3589,1419,0.645,0.00,0.00,18.3,0,synthetic_simulation
+906,화장대,16,3520,4,3,0,1,0,0,straight|phone,0.1|2.0,61,43,0.012,0.00,0.00,0.0,2,synthetic_simulation
+907,침대 옆,16,3520,3,3,0,0,0,0,phone|stand|tv43,2.3|3.2|1.5,76,76,0.022,0.00,0.00,0.0,0,synthetic_simulation
+908,책상,10,2200,3,0,0,0,0,0,laptop|mon24|phone|ledbulb,5.0|4.3|2.0|4.6,120,120,0.055,0.00,0.00,0.1,0,synthetic_simulation
+909,침대 옆,16,3520,5,0,0,0,0,0,phone|blanket|tv43,2.0|4.4|1.8,184,184,0.052,0.00,0.00,0.1,0,synthetic_simulation
+910,주방,16,3520,6,1,0,0,0,0,microwave|kettle|induction|ramen,0.1|0.1|0.2|0.1,5520,3350,0.952,0.57,0.00,35.7,1,synthetic_simulation
+911,책상,16,3520,3,0,0,0,0,1,laptop|phone,5.4|2.2,91,91,0.026,0.00,0.00,0.0,2,synthetic_simulation
+912,책상,16,3520,4,2,0,0,0,0,laptop|phone,5.4|2.0,91,91,0.026,0.00,0.00,0.0,0,synthetic_simulation
+913,몰아 쓰기,16,3520,6,1,1,0,0,0,laptop|phone|stand|tv43|dryer|kettle|humid_u,5.1|2.1|3.7|1.6|0.1|0.1|4.8,3122,1749,0.497,0.00,0.00,10.8,1,synthetic_simulation
+914,몰아 쓰기,10,2200,6,0,1,0,0,0,laptop|phone|tv43|dryer|microwave|fridge,5.1|2.0|1.5|0.1|0.1|24.0,3156,1788,0.813,0.54,0.00,29.0,1,synthetic_simulation
+915,책상,16,3520,4,8,0,0,0,0,laptop|mon27|phone|stand,4.4|4.8|2.0|2.9,124,124,0.035,0.00,0.00,0.1,1,synthetic_simulation
+916,침대 옆,10,2200,1,1,0,0,0,0,phone|humid_u,1.9|3.6,41,41,0.019,0.00,0.00,0.0,0,synthetic_simulation
+917,화장대,16,3520,3,1,0,0,0,0,dryer|phone|stand,0.1|2.0|2.7,1630,1618,0.460,0.00,0.00,9.4,0,synthetic_simulation
+918,책상,10,2200,5,3,0,0,0,0,laptop|mon27|phone|stand|ledbulb,5.5|4.5|2.2|3.2|4.6,138,138,0.063,0.00,0.00,0.2,0,synthetic_simulation
+919,책상,10,2200,2,4,0,0,0,0,laptop|phone|stand,5.2|2.2|3.5,103,103,0.047,0.00,0.00,0.1,0,synthetic_simulation
+920,화장대,16,3520,3,1,0,0,0,0,dryer|straight|phone,0.1|0.1|2.1,1661,1643,0.467,0.00,0.00,9.4,0,synthetic_simulation
+921,침대 옆,16,3520,6,4,0,0,0,0,phone|stand|laptop|airclean,2.0|3.4|5.8|8.5,139,139,0.039,0.00,0.00,0.1,0,synthetic_simulation
+922,주방,16,3520,5,1,0,0,0,0,microwave|kettle|airfryer|coffee,0.1|0.1|0.1|0.0,5460,2850,0.810,0.32,0.00,25.5,0,synthetic_simulation
+923,책상,16,3520,4,0,0,0,0,0,laptop|mon27|phone|stand,4.5|5.0|2.1|3.4,124,124,0.035,0.00,0.00,0.0,0,synthetic_simulation
+924,주방,10,2200,5,2,1,1,0,0,fridge|microwave|rice6|induction|coffee,24.0|0.1|0.3|0.2|0.0,5559,3419,1.554,10.68,0.36,78.7,3,synthetic_simulation
+925,주방,16,3520,4,0,0,0,0,0,fridge|microwave|rice6|ramen,24.0|0.1|0.3|0.0,3119,1419,0.403,0.00,0.00,6.7,0,synthetic_simulation
+926,몰아 쓰기,10,2200,6,1,0,0,0,0,laptop|phone|stand|dryer|kettle|microwave,5.4|2.1|3.6|0.1|0.1|0.1,4403,1685,0.766,0.00,0.00,26.0,0,synthetic_simulation
+927,책상,16,3520,5,1,0,0,0,0,laptop|phone|humid_u,5.2|2.1|2.8,114,114,0.032,0.00,0.00,0.0,0,synthetic_simulation
+928,화장대,16,3520,4,5,0,0,0,0,dryer|straight|stand,0.1|0.1|3.0,1655,1643,0.467,0.00,0.00,9.4,1,synthetic_simulation
+929,책상,16,3520,4,3,0,0,0,0,laptop|phone|stand|laser,5.5|2.1|3.3|0.0,873,843,0.239,0.00,0.00,2.4,0,synthetic_simulation
+930,책상,16,3520,4,1,0,0,0,0,laptop|phone,5.5|2.1,91,91,0.026,0.00,0.00,0.0,0,synthetic_simulation
+931,주방,16,3520,5,1,0,0,0,0,microwave|kettle|airfryer|toaster|coffee,0.1|0.1|0.1|0.0|0.0,6360,2700,0.767,0.00,0.00,12.6,0,synthetic_simulation
+932,주방,16,3520,7,1,0,0,0,0,fridge|microwave|kettle|rice6|airfryer|toaster|coffee,24.0|0.1|0.1|0.3|0.1|0.0|0.0,7309,4269,1.213,0.32,0.11,53.8,2,synthetic_simulation
+933,책상,16,3520,3,4,0,0,0,0,laptop|phone|ledbulb,5.7|2.0|4.1,105,105,0.030,0.00,0.00,0.0,0,synthetic_simulation
+934,책상,16,3520,4,3,0,0,0,0,laptop|mon27|phone,5.1|4.6|2.0,112,112,0.032,0.00,0.00,0.0,0,synthetic_simulation
+935,침대 옆,16,3520,6,6,0,0,0,0,phone|stand|humid_h|laptop|fanheater,2.0|3.1|3.0|4.9|1.5,2703,2673,0.759,0.00,0.00,25.9,1,synthetic_simulation
+936,주방,16,3520,4,2,0,0,0,0,microwave|kettle|airfryer|induction,0.1|0.1|0.1|0.2,6200,3500,0.994,0.61,0.00,43.2,1,synthetic_simulation
+937,침대 옆,10,2200,5,2,0,0,0,0,phone|stand|laptop,1.9|3.4|5.1,103,103,0.047,0.00,0.00,0.1,0,synthetic_simulation
+938,책상,16,3520,5,3,0,0,0,0,laptop|phone|stand,5.4|2.0|3.1,103,103,0.029,0.00,0.00,0.0,0,synthetic_simulation
+939,침대 옆,16,3520,4,4,0,0,0,0,phone|stand,2.2|2.8,30,30,0.009,0.00,0.00,0.0,0,synthetic_simulation
+940,주방,16,3520,4,1,0,0,0,0,microwave|kettle,0.1|0.1,2700,2700,0.767,0.00,0.00,15.9,0,synthetic_simulation
+941,침대 옆,16,3520,4,2,0,0,0,0,phone|stand|humid_u|blanket,2.0|3.2|4.3|5.0,173,173,0.049,0.00,0.00,0.1,0,synthetic_simulation
+942,화장대,16,3520,5,4,0,0,0,0,dryer|straight|phone,0.1|0.1|1.9,1661,1618,0.460,0.00,0.00,9.4,0,synthetic_simulation
+943,몰아 쓰기,16,3520,3,4,0,0,0,0,phone|dryer|fridge,1.8|0.1|24.0,1687,1687,0.479,0.00,0.00,10.3,0,synthetic_simulation
+944,책상,16,3520,3,1,0,0,0,0,laptop|mon24|phone|stand,5.1|4.0|2.2|3.2,118,118,0.034,0.00,0.00,0.1,0,synthetic_simulation
+945,책상,16,3520,4,3,0,0,0,0,laptop|mon24|phone|humid_u,5.4|4.3|2.1|4.0,129,129,0.037,0.00,0.00,0.1,0,synthetic_simulation
+946,주방,16,3520,4,1,0,0,0,0,microwave|kettle|rice6|airfryer,0.1|0.1|0.4|0.1,5080,2700,0.767,0.00,0.00,20.6,0,synthetic_simulation
+947,침대 옆,10,2200,3,5,0,0,0,0,phone|stand|blanket,2.1|3.6|4.9,150,150,0.068,0.00,0.00,0.2,1,synthetic_simulation
+948,책상,16,3520,6,1,0,0,0,0,laptop|mon24|mon27|phone|stand,5.4|4.2|4.4|2.0|2.9,139,127,0.036,0.00,0.00,0.1,0,synthetic_simulation
+949,책상,10,2200,3,4,1,0,0,0,laptop|mon24|phone|stand,5.4|4.3|2.1|3.7,118,118,0.054,0.00,0.00,0.1,1,synthetic_simulation
+950,몰아 쓰기,16,3520,6,4,0,0,0,0,laptop|phone|stand|kettle|microwave|blanket,5.5|1.9|3.7|0.1|0.1|4.1,2923,1470,0.418,0.00,0.00,7.3,0,synthetic_simulation
+951,화장대,16,3520,4,0,0,0,0,0,dryer|straight|phone,0.1|0.1|2.0,1661,1618,0.460,0.00,0.00,9.4,0,synthetic_simulation
+952,책상,16,3520,3,3,0,0,0,0,laptop|mon24|phone,5.5|4.0|2.0,106,106,0.030,0.00,0.00,0.0,0,synthetic_simulation
+953,화장대,10,2200,4,5,0,0,0,0,dryer|straight|phone|stand,0.1|0.1|2.0|3.2,1673,1643,0.747,0.00,0.00,24.4,1,synthetic_simulation
+954,주방,16,3520,5,6,0,0,0,0,fridge|microwave|induction|ramen,24.0|0.1|0.1|0.0,4239,2889,0.821,0.43,0.00,29.5,1,synthetic_simulation
+955,책상,16,3520,4,1,0,0,0,0,laptop|mon27,5.1|4.5,94,94,0.027,0.00,0.00,0.0,0,synthetic_simulation
+956,몰아 쓰기,16,3520,6,1,0,0,0,0,laptop|phone|tv43|dryer|blanket|humid_u,5.4|2.1|1.5|0.1|4.4|2.9,1880,1880,0.534,0.00,0.00,12.6,0,synthetic_simulation
+957,몰아 쓰기,16,3520,7,4,0,0,0,0,laptop|phone|stand|dryer|microwave|fridge|blanket,5.5|1.9|2.9|0.1|0.1|24.0|4.0,3242,1892,0.537,0.00,0.00,12.7,0,synthetic_simulation
+958,몰아 쓰기,16,3520,6,3,0,0,0,0,phone|dryer|fanheater|humid_u|airfryer,2.0|0.1|2.0|5.0|0.1,5141,3641,1.034,3.32,2.29,47.9,2,synthetic_simulation
+959,책상,16,3520,4,0,0,0,0,0,laptop|phone|stand|humid_u,5.3|2.1|3.3|4.0,126,114,0.032,0.00,0.00,0.0,0,synthetic_simulation
+960,책상,16,3520,4,3,0,0,0,0,laptop|mon27|phone|stand,5.1|4.2|2.1|3.2,124,124,0.035,0.00,0.00,0.1,0,synthetic_simulation
+961,주방,16,3520,1,1,0,0,0,0,fridge|microwave,24.0|0.1,1419,1419,0.403,0.00,0.00,6.7,0,synthetic_simulation
+962,침대 옆,16,3520,4,2,0,0,0,0,phone|humid_u|beam,2.1|4.6|0.4,293,293,0.083,0.00,0.00,0.3,0,synthetic_simulation
+963,몰아 쓰기,16,3520,5,4,0,0,0,1,laptop|phone|dryer|kettle|fanheater,5.2|2.0|0.1|0.1|1.3,5041,3618,1.028,0.86,0.43,44.9,2,synthetic_simulation
+964,침대 옆,16,3520,3,3,0,0,0,0,stand|airclean,3.7|8.8,48,48,0.014,0.00,0.00,0.0,0,synthetic_simulation
+965,침대 옆,16,3520,5,2,0,0,0,0,phone|stand|airclean|tv43|beam,2.1|3.0|7.6|1.7|0.5,364,334,0.095,0.00,0.00,0.4,0,synthetic_simulation
+966,책상,10,2200,4,2,0,0,0,0,laptop|phone|stand,5.0|1.8|3.4,103,103,0.047,0.00,0.00,0.1,0,synthetic_simulation
+967,책상,16,3520,6,1,0,0,0,0,laptop|phone|stand,4.9|1.9|3.4,103,103,0.029,0.00,0.00,0.0,0,synthetic_simulation
+968,주방,16,3520,5,1,0,0,0,0,microwave|kettle|rice6|airfryer|ramen,0.1|0.1|0.3|0.1|0.1,5900,2700,0.767,0.00,0.00,16.6,0,synthetic_simulation
+969,책상,16,3520,4,1,0,0,0,0,laptop|mon27|humid_u,5.2|4.9|3.9,117,117,0.033,0.00,0.00,0.0,0,synthetic_simulation
+970,몰아 쓰기,16,3520,7,0,1,0,0,0,laptop|phone|stand|microwave|blanket|fanheater|humid_u,4.8|2.0|3.5|0.1|4.4|1.2|4.0,3596,3435,0.976,0.57,0.00,37.5,1,synthetic_simulation
+971,책상,16,3520,4,7,0,0,0,1,laptop|phone,5.4|2.2,91,91,0.026,0.00,0.00,0.0,2,synthetic_simulation
+972,책상,16,3520,3,3,0,0,0,0,laptop|phone|stand,5.2|2.0|3.0,103,103,0.029,0.00,0.00,0.0,0,synthetic_simulation
+973,몰아 쓰기,16,3520,4,5,0,0,0,0,laptop|phone|dryer|kettle,4.7|1.7|0.1|0.1,3041,1673,0.475,0.00,0.00,10.0,1,synthetic_simulation
+974,책상,10,2200,3,1,0,0,0,0,laptop|phone,5.4|2.1,91,91,0.041,0.00,0.00,0.1,0,synthetic_simulation
+975,주방,16,3520,4,4,0,0,0,0,fridge|microwave,24.0|0.1,1419,1419,0.403,0.00,0.00,6.7,0,synthetic_simulation
+976,주방,16,3520,4,1,0,0,1,0,microwave|kettle|airfryer,0.1|0.1|0.1,4200,2700,0.767,0.00,0.00,10.7,2,synthetic_simulation
+977,주방,16,3520,6,5,0,0,0,0,fridge|microwave|kettle|rice6|airfryer,24.0|0.1|0.1|0.2|0.1,5149,2919,0.829,0.25,0.00,26.8,1,synthetic_simulation
+978,책상,16,3520,3,1,0,0,0,0,laptop|mon27|phone|stand,5.6|4.8|2.1|3.3,124,124,0.035,0.00,0.00,0.1,0,synthetic_simulation
+979,주방,10,2200,4,0,0,0,0,0,fridge|microwave|rice6|toaster,24.0|0.1|0.3|0.0,3199,2299,1.045,0.14,0.14,33.6,1,synthetic_simulation
+980,책상,16,3520,5,0,0,0,0,0,laptop|phone|stand|laser,5.2|1.9|3.7|0.0,873,855,0.243,0.00,0.00,2.6,0,synthetic_simulation
+981,주방,16,3520,4,4,0,0,0,0,microwave|kettle|rice6|toaster,0.1|0.1|0.3|0.0,4480,2230,0.634,0.00,0.00,16.2,0,synthetic_simulation
+982,책상,16,3520,6,2,0,0,0,0,laptop|phone|stand|airclean,5.2|2.2|2.2|7.5,139,139,0.039,0.00,0.00,0.1,0,synthetic_simulation
+983,몰아 쓰기,16,3520,6,3,0,0,0,0,laptop|phone|stand|tv43|blanket|fanheater,5.1|2.1|3.2|2.1|3.9|1.3,2269,2196,0.624,0.00,0.00,17.5,0,synthetic_simulation
+984,책상,16,3520,6,2,0,0,0,0,laptop|mon24|phone|stand|ledbulb|humid_u,5.1|4.0|2.1|3.1|3.6|4.4,155,143,0.041,0.00,0.00,0.1,0,synthetic_simulation
+985,침대 옆,16,3520,5,1,0,0,0,0,phone|stand|blanket|laptop|tv43,1.9|3.7|4.5|5.1|2.0,269,269,0.076,0.00,0.00,0.3,0,synthetic_simulation
+986,주방,16,3520,4,8,1,0,0,1,microwave|kettle|rice6|coffee,0.1|0.1|0.3|0.0,4840,2230,0.634,0.00,0.00,16.2,2,synthetic_simulation
+987,몰아 쓰기,16,3520,6,2,0,0,0,0,laptop|kettle|microwave|fridge|blanket|humid_u,5.0|0.1|0.1|24.0|4.9|5.3,2985,2769,0.787,0.00,0.00,18.0,0,synthetic_simulation
+988,주방,10,2200,6,5,1,1,0,0,kettle|rice6|induction,0.1|0.3|0.2,4230,3350,1.523,10.79,1.04,98.4,3,synthetic_simulation
+989,침대 옆,16,3520,4,3,0,0,0,0,phone|stand|blanket|tv43,2.0|3.9|5.3|1.5,196,196,0.056,0.00,0.00,0.1,0,synthetic_simulation
+990,침대 옆,16,3520,2,3,0,0,0,0,phone|blanket|airclean,2.1|4.1|7.0,174,174,0.049,0.00,0.00,0.1,0,synthetic_simulation
+991,책상,16,3520,6,4,0,0,0,0,laptop|mon24|mon27|phone|stand,4.7|5.2|4.0|2.0|2.8,139,139,0.039,0.00,0.00,0.1,0,synthetic_simulation
+992,침대 옆,16,3520,4,1,1,0,0,0,phone|stand,1.9|3.8,30,30,0.009,0.00,0.00,0.0,1,synthetic_simulation
+993,책상,16,3520,4,3,0,0,0,0,laptop|mon24|stand|ledbulb,5.0|5.0|3.0|3.7,114,114,0.032,0.00,0.00,0.0,0,synthetic_simulation
+994,화장대,16,3520,3,7,0,0,0,0,dryer|phone,0.1|2.0,1618,1618,0.460,0.00,0.00,9.4,1,synthetic_simulation
+995,화장대,16,3520,4,2,0,0,0,0,dryer|straight|phone,0.1|0.1|2.0,1661,1618,0.460,0.00,0.00,9.4,0,synthetic_simulation
+996,책상,16,3520,6,1,0,0,0,0,laptop|mon24|mon27|phone,4.8|4.9|4.8|2.0,127,127,0.036,0.00,0.00,0.1,0,synthetic_simulation
+997,주방,16,3520,4,3,0,0,0,0,microwave|rice6|airfryer|induction,0.1|0.2|0.1|0.2,5730,4380,1.244,2.07,0.07,48.3,2,synthetic_simulation
+998,책상,16,3520,2,7,0,0,0,0,laptop|phone|stand,4.7|2.0|2.9,103,103,0.029,0.00,0.00,0.0,1,synthetic_simulation
+999,책상,16,3520,4,3,0,0,0,0,laptop|mon27|phone|airclean,4.9|4.1|2.1|7.2,148,148,0.042,0.00,0.00,0.1,0,synthetic_simulation
+1000,몰아 쓰기,16,3520,5,7,0,0,0,0,laptop|phone|stand|kettle|microwave,5.4|2.3|3.3|0.1|0.1,2803,1435,0.408,0.00,0.00,7.0,1,synthetic_simulation

@@ -106,6 +106,7 @@ details.custom summary{cursor:pointer;color:var(--ice);font-weight:600;font-size
 .scale span{position:absolute;transform:translateX(-50%)}
 .scale span:first-child{transform:none}.scale span:last-child{transform:translateX(-100%)}
 .floor{margin-top:10px;background:#fff7e8;border:1px solid #edd5a4;border-radius:8px;padding:8px 12px;font-size:14.5px}
+.floor.worst{background:var(--ice-soft);border-color:#c3dbea}
 .kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:16px 0 4px}
 .kpis div{border-top:3px solid var(--ice);padding-top:6px}
 .kpis span{display:block;font-size:13px;color:var(--mute)}
@@ -239,7 +240,7 @@ th,td{text-align:left;border-bottom:1px solid var(--line);padding:6px 8px 6px 0;
             <p class="hint" id="cMsg" role="status"></p>
           </details>
           <div class="strip" id="strip" aria-hidden="true"></div>
-          <div class="legend"><span><i style="background:#c44a18"></i>발열 기기</span><span><i style="background:#22638f"></i>일반 기기</span><span>흐리게: 동시 사용 안 함</span></div>
+          <div class="legend"><span><i style="background:#c44a18"></i>발열 기기</span><span><i style="background:#22638f"></i>일반 기기</span><span>흐리게: 번갈아 사용(가장 큰 1개만 계산)</span></div>
           <ul class="items" id="items"></ul>
         </div>
       </div>
@@ -296,6 +297,7 @@ th,td{text-align:left;border-bottom:1px solid var(--line);padding:6px 8px 6px 0;
    ║ kind: kea=공단 값, conv=공단 값 환산, est=추정값,               ║
    ║       est1=추정값(제품 1개)                                    ║
    ║ heat: 발열 기기 기본값,  heating: 난방기기                      ║
+   ║ short: 잠깐 쓰는 기기 (처음에 '동시 사용'을 꺼 둠)              ║
    ╚══════════════════════════════════════════════════════════════╝ */
 const EEP = n => `https://eep.energy.or.kr/certification/certi_list_${n}.aspx`;
 const DNW = q => `https://search.danawa.com/dsearch.php?query=${encodeURIComponent(q)}`;
@@ -312,22 +314,22 @@ const DEVICE_DB = [
   { id:"portac",    cat:"난방·계절", name:"이동식 에어컨",     watts:1823, heat:false, kind:"kea",  url:EEP(290), src:"공단 신고 619개 냉방 소비전력 측정 중앙값" },
   { id:"dehumid",   cat:"난방·계절", name:"제습기(12L 이하)",  watts:162,  heat:false, kind:"kea",  url:EEP(145), src:"공단 신고 220개 1시간 소비전력량 중앙값(2022년 이후)" },
   // 주방
-  { id:"kettle",    cat:"주방", name:"전기포트",           watts:1350, heat:true,  kind:"est",  url:DNW("무선주전자"), src:"다나와 표기 39개 중앙값(중간 50% 900~1,850W)" },
-  { id:"microwave", cat:"주방", name:"전자레인지",         watts:1350, heat:true,  kind:"est",  url:DNW("전자레인지"), src:"다나와 소비전력 표기 40개 중앙값(중간 50% 1,100~1,570W)" },
-  { id:"airfryer",  cat:"주방", name:"에어프라이어",       watts:1500, heat:true,  kind:"est",  url:DNW("에어프라이어"), src:"다나와 표기 39개 중앙값(중간 50% 1,400~1,750W)" },
-  { id:"rice6",     cat:"주방", name:"전기밥솥(6인용 이하)", watts:880,  heat:true,  kind:"kea",  url:EEP(295), src:"공단 신고 726개 정격 중앙값(2022년 이후)" },
-  { id:"rice10",    cat:"주방", name:"전기밥솥(10인용 이상)", watts:1455, heat:true,  kind:"kea",  url:EEP(295), src:"공단 신고 337개 정격 중앙값(2022년 이후)" },
-  { id:"induction", cat:"주방", name:"인덕션(1구)",        watts:2000, heat:true,  kind:"est",  url:DNW("1구 인덕션"), src:"다나와 표기 39개 중앙값(중간 50% 2,000~2,000W)" },
-  { id:"ramen",     cat:"주방", name:"라면포트·멀티쿠커",  watts:820,  heat:true,  kind:"est",  url:DNW("멀티쿠커 라면포트"), src:"다나와 표기 24개 중앙값(중간 50% 730~1,000W)" },
-  { id:"grill",     cat:"주방", name:"전기그릴",           watts:1500, heat:true,  kind:"est",  url:DNW("전기그릴"), src:"다나와 표기 35개 중앙값(중간 50% 1,200~1,700W)" },
-  { id:"toaster",   cat:"주방", name:"토스터",             watts:900,  heat:true,  kind:"est",  url:DNW("토스터기"), src:"다나와 표기 37개 중앙값(중간 50% 800~1,300W)" },
-  { id:"coffee",    cat:"주방", name:"캡슐커피머신",       watts:1260, heat:true,  kind:"est",  url:DNW("캡슐커피머신"), src:"다나와 표기 35개 중앙값(중간 50% 1,150~1,340W)" },
+  { id:"kettle",    cat:"주방", name:"전기포트",           watts:1350, heat:true, short:true,  kind:"est",  url:DNW("무선주전자"), src:"다나와 표기 39개 중앙값(중간 50% 900~1,850W)" },
+  { id:"microwave", cat:"주방", name:"전자레인지",         watts:1350, heat:true, short:true,  kind:"est",  url:DNW("전자레인지"), src:"다나와 소비전력 표기 40개 중앙값(중간 50% 1,100~1,570W)" },
+  { id:"airfryer",  cat:"주방", name:"에어프라이어",       watts:1500, heat:true, short:true,  kind:"est",  url:DNW("에어프라이어"), src:"다나와 표기 39개 중앙값(중간 50% 1,400~1,750W)" },
+  { id:"rice6",     cat:"주방", name:"전기밥솥(6인용 이하)", watts:880,  heat:true, short:true,  kind:"kea",  url:EEP(295), src:"공단 신고 726개 정격 중앙값(2022년 이후)" },
+  { id:"rice10",    cat:"주방", name:"전기밥솥(10인용 이상)", watts:1455, heat:true, short:true,  kind:"kea",  url:EEP(295), src:"공단 신고 337개 정격 중앙값(2022년 이후)" },
+  { id:"induction", cat:"주방", name:"인덕션(1구)",        watts:2000, heat:true, short:true,  kind:"est",  url:DNW("1구 인덕션"), src:"다나와 표기 39개 중앙값(중간 50% 2,000~2,000W)" },
+  { id:"ramen",     cat:"주방", name:"라면포트·멀티쿠커",  watts:820,  heat:true, short:true,  kind:"est",  url:DNW("멀티쿠커 라면포트"), src:"다나와 표기 24개 중앙값(중간 50% 730~1,000W)" },
+  { id:"grill",     cat:"주방", name:"전기그릴",           watts:1500, heat:true, short:true,  kind:"est",  url:DNW("전기그릴"), src:"다나와 표기 35개 중앙값(중간 50% 1,200~1,700W)" },
+  { id:"toaster",   cat:"주방", name:"토스터",             watts:900,  heat:true, short:true,  kind:"est",  url:DNW("토스터기"), src:"다나와 표기 37개 중앙값(중간 50% 800~1,300W)" },
+  { id:"coffee",    cat:"주방", name:"캡슐커피머신",       watts:1260, heat:true, short:true,  kind:"est",  url:DNW("캡슐커피머신"), src:"다나와 표기 35개 중앙값(중간 50% 1,150~1,340W)" },
   { id:"fridge",    cat:"주방", name:"소형 냉장고",        watts:69,   heat:false, kind:"est1", url:DNW("소형냉장고"), src:"다나와 제품 1개 표기" },
   { id:"icemaker",  cat:"주방", name:"제빙기",             watts:200,  heat:false, kind:"est",  url:DNW("제빙기"), src:"다나와 표기 30개 중앙값(중간 50% 150~500W)" },
   // 미용·의류
-  { id:"dryer",     cat:"미용·의류", name:"헤어드라이어",     watts:1600, heat:true,  kind:"est",  url:DNW("헤어드라이어"), src:"다나와 표기 38개 중앙값(중간 50% 1,600~1,700W)" },
-  { id:"straight",  cat:"미용·의류", name:"고데기",           watts:43,   heat:true,  kind:"est",  url:DNW("고데기"), src:"다나와 표기 27개 중앙값(중간 50% 35~70W)" },
-  { id:"iron",      cat:"미용·의류", name:"스팀다리미",       watts:1800, heat:true,  kind:"est",  url:DNW("스팀다리미"), src:"다나와 표기 37개 중앙값(중간 50% 1,500~2,100W)" },
+  { id:"dryer",     cat:"미용·의류", name:"헤어드라이어",     watts:1600, heat:true, short:true,  kind:"est",  url:DNW("헤어드라이어"), src:"다나와 표기 38개 중앙값(중간 50% 1,600~1,700W)" },
+  { id:"straight",  cat:"미용·의류", name:"고데기",           watts:43,   heat:true, short:true,  kind:"est",  url:DNW("고데기"), src:"다나와 표기 27개 중앙값(중간 50% 35~70W)" },
+  { id:"iron",      cat:"미용·의류", name:"스팀다리미",       watts:1800, heat:true, short:true,  kind:"est",  url:DNW("스팀다리미"), src:"다나와 표기 37개 중앙값(중간 50% 1,500~2,100W)" },
   { id:"washer",    cat:"미용·의류", name:"통돌이 세탁기(10kg)", watts:300, heat:false, kind:"est1", url:"https://www.lge.co.kr/washing-machines/tr10wl-dkor", src:"LG TR10WL 1개(원문 표 대조는 못 함)" },
   // 책상·영상
   { id:"laptop",    cat:"책상·영상", name:"노트북 충전기(65W)", watts:73,  heat:false, kind:"conv", url:EEP(125), src:"공단 어댑터 출력 65W ÷ 효율 중앙값 88.6%(574개)" },
@@ -336,9 +338,9 @@ const DEVICE_DB = [
   { id:"mon27",     cat:"책상·영상", name:"모니터(27형)",       watts:21,  heat:false, kind:"kea",  url:EEP(278), src:"공단 신고 4,533개 켜진 상태 측정 중앙값(2022년 이후)" },
   { id:"tv43",      cat:"책상·영상", name:"TV(43형급)",         watts:46,  heat:false, kind:"conv", url:EEP(143), src:"공단 √㎡당 소비전력 × √화면면적, 3,262개 중앙값(2022년 이후)" },
   { id:"beam",      cat:"책상·영상", name:"빔프로젝터",         watts:252, heat:false, kind:"est",  url:DNW("빔프로젝터"), src:"다나와 표기 34개 중앙값(중간 50% 137~335W)" },
-  { id:"laser",     cat:"책상·영상", name:"레이저 복합기",      watts:770, heat:true,  kind:"kea",  url:EEP(286), src:"공단 신고 344개 정격 중앙값(2022년 이후)" },
+  { id:"laser",     cat:"책상·영상", name:"레이저 복합기",      watts:770, heat:true, short:true,  kind:"kea",  url:EEP(286), src:"공단 신고 344개 정격 중앙값(2022년 이후)" },
   // 청소·공기·조명
-  { id:"vacuum",    cat:"청소·공기·조명", name:"유선 청소기",   watts:1254, heat:false, kind:"kea",  url:EEP(115), src:"공단 신고 299개 측정 소비전력 중앙값(전체 연도)" },
+  { id:"vacuum",    cat:"청소·공기·조명", name:"유선 청소기",   watts:1254, heat:false, short:true, kind:"kea",  url:EEP(115), src:"공단 신고 299개 측정 소비전력 중앙값(전체 연도)" },
   { id:"airclean",  cat:"청소·공기·조명", name:"공기청정기",    watts:36,   heat:false, kind:"conv", url:EEP(121), src:"공단 ㎡당 소비전력 × 표준사용면적, 80개 표본 중앙값" },
   { id:"stand",     cat:"청소·공기·조명", name:"LED 스탠드",    watts:12,   heat:false, kind:"est",  url:DNW("LED 스탠드"), src:"다나와 표기 30개 중앙값(중간 50% 6~20W)" },
   { id:"ledbulb",   cat:"청소·공기·조명", name:"LED 전구",      watts:14,   heat:false, kind:"kea",  url:EEP(246), src:"공단 신고 3,318개 정격 중앙값(2022년 이후)" },
@@ -369,7 +371,10 @@ const EVIDENCE = [
   ["동시 사용","멀티탭 16A를 넘어도 20A 분기 차단기는 차단되지 않음","한국화재보험협회","https://www.kfpa.or.kr/webzine/202510/disaster8.html"],
   ["과전류와 온도","20A에서 20분 뒤 87.9℃, 30A에서 약 13분 뒤 161℃(과부하 차단 없는 3구)","전기안전연구원 실험(2015)","https://www.koreascience.or.kr/article/CFKO201531751956880.pdf"],
   ["발열 한도","단자 온도 상승 45K 이하","KC 60884-1","https://www.law.go.kr/LSW/flDownload.do?flSeq=169459195"],
-  ["판정 규칙","부하율 80%, 5년, 먼지, 손상, 발열, 연속 연결 기준(합성 데이터)","첨부 powerstrip_training.csv",null],
+  ["기본 정격 16A","멀티탭의 정격전류는 보통 16A","한국화재보험협회","https://www.kfpa.or.kr/webzine/202510/disaster8.html"],
+  ["125% 기준","16A의 125%인 20A에서 20분 뒤 87.9℃까지 오른 실험을 참고","전기안전연구원 실험(2015)","https://www.koreascience.or.kr/article/CFKO201531751956880.pdf"],
+  ["판정 규칙","부하율 80%·100%, 5년, 먼지, 손상, 발열, 연속 연결 기준(합성 데이터)","첨부 powerstrip_training.csv",null],
+  ["현실형 점검","자취방 1,000곳의 28일 사용을 분 단위로 모의한 가상 데이터","팀 제작 powerstrip_realistic.csv",null],
   ["화재 원인 통계","2025년 전기화재 발화원인별 현황","첨부 한국전기안전공사 CSV",null],
 ];
 
@@ -379,9 +384,9 @@ const EVIDENCE = [
 const RISK = {
   voltage: 220,
   highPowerW: 1000,                       // 이 이상은 벽 콘센트 권장
-  load:    { max:50, safePct:80, curve:[[0,0],[50,10],[80,28],[100,45],[125,50]] }, // [부하율%, 점수], 사이는 비례
+  load:    { max:50, safePct:80, overPct:125, curve:[[0,0],[50,10],[80,28],[100,45],[125,50]] }, // [부하율%, 점수], 사이는 비례
   age:     { max:18, steps:[[0,0],[1,4],[2,9],[3,13],[5,18]], replaceFrom:2, oldFrom:5 }, // [이상 년, 점수]
-  heat:    { max:15, byCount:[0,5,11,15] },                          // 동시 사용 발열 기기 0,1,2,3개 이상
+  heat:    { max:15, byCount:[0,5,11,15], minW:500 },                 // 동시 사용 고발열 기기(minW 이상) 0,1,2,3개 이상
   long:    { max:9,  heatHours:6, heatPts:6, normalHours:12, normalPts:3 },
   sockets: { max:8 },                                                // 구수 초과 시 점수
   grades: [
@@ -392,26 +397,27 @@ const RISK = {
   ],
   /* 점수와 상관없이 보장하는 최소 등급 */
   floors: [
-    { grade:"critical", text:"부하율 100% 초과",               test:m => m.peakW > m.capacityW },
-    { grade:"critical", text:"기기 하나만 켜도 정격 용량 초과", test:m => m.soloW > m.capacityW && m.peakW <= m.capacityW },
-    { grade:"danger",   text:"연결 기기 수가 구수를 초과",      test:m => m.socketOver > 0 },
-    { grade:"danger",   text:"겉면·전선 손상",                 test:(m,s) => s.damage },
-    { grade:"danger",   text:"이상 발열·탄 냄새",              test:(m,s) => s.overheat },
-    { grade:"danger",   text:"멀티탭 연속 연결",               test:(m,s) => s.daisy },
-    { grade:"caution",  text:"부하율 80% 이상",                test:m => m.loadPct >= RISK.load.safePct },
-    { grade:"caution",  text:"기기 하나만 켜도 80% 이상",       test:m => m.soloW / m.capacityW * 100 >= RISK.load.safePct && m.loadPct < RISK.load.safePct },
-    { grade:"caution",  text:"사용 기간 5년 이상",             test:(m,s) => s.years >= RISK.age.oldFrom },
-    { grade:"caution",  text:"먼지 쌓임",                      test:(m,s) => s.dust },
+    { grade:"critical", text:"부하율 125% 이상",           test:m => m.loadPct >= RISK.load.overPct },
+    { grade:"danger",   text:"부하율 100% 초과",           test:m => m.peakW > m.capacityW && m.loadPct < RISK.load.overPct },
+    { grade:"danger",   text:"겉면·전선 손상",             test:(m,s) => s.damage },
+    { grade:"danger",   text:"이상 발열·탄 냄새",          test:(m,s) => s.overheat },
+    { grade:"danger",   text:"멀티탭 연속 연결",           test:(m,s) => s.daisy },
+    { grade:"caution",  text:"모두 한꺼번에 켜면 정격 용량 초과", test:m => m.allW > m.capacityW && m.peakW <= m.capacityW },
+    { grade:"caution",  text:"부하율 80% 이상",            test:m => m.loadPct >= RISK.load.safePct },
+    { grade:"caution",  text:"연결 기기 수가 구수를 초과", test:m => m.socketOver > 0 },
+    { grade:"caution",  text:"사용 기간 5년 이상",         test:(m,s) => s.years >= RISK.age.oldFrom },
+    { grade:"caution",  text:"먼지 쌓임",                  test:(m,s) => s.dust },
   ],
 };
 
 /* ╔══════════════════════════════════════════════════════════════╗
    ║ 3. 예시 시나리오  (사용 시간은 시연용 예시값)                    ║
+   ║ 기기: [id, 하루 시간, 동시 사용(생략하면 기본값)]                ║
    ╚══════════════════════════════════════════════════════════════╝ */
 const SCENARIOS = [
   { name:"자취방 책상",            strip:{ amps:10, sockets:4, years:1 }, items:[["laptop",8],["mon27",8],["stand",5],["phone",3]] },
   { name:"겨울철 난방",            strip:{ amps:16, sockets:4, years:1 }, items:[["fanheater",4],["stove",3],["blanket",8]] },
-  { name:"드라이기 + 전기포트",    strip:{ amps:10, sockets:3, years:1 }, items:[["dryer",0.5],["kettle",0.5],["phone",3]] },
+  { name:"드라이기 + 전기포트",    strip:{ amps:10, sockets:3, years:1 }, items:[["dryer",0.5,true],["kettle",0.5,true],["phone",3]] },
   { name:"5년 넘은 멀티탭",        strip:{ amps:10, sockets:3, years:6 }, items:[["laptop",8],["mon24",8],["stand",5]] },
 ];
 
@@ -420,13 +426,13 @@ const SCENARIOS = [
    ║ item = { uid, dbId, name, watts, hours, heat, heating, simul, kind, src } ║
    ╚══════════════════════════════════════════════════════════════╝ */
 const AppState = (() => {
-  const blankStrip = () => ({ amps:10, sockets:4, years:1, dust:false, damage:false, overheat:false, daisy:false });
+  const blankStrip = () => ({ amps:16, sockets:4, years:1, dust:false, damage:false, overheat:false, daisy:false });
   let strip = blankStrip(), items = [], uid = 0;
   const subs = [];
   const emit = kind => subs.forEach(fn => fn(kind));            // kind: "list"=목록이 바뀜, "value"=값만 바뀜
-  const make = (dbId, hours = null) => {
+  const make = (dbId, hours = null, simul) => {
     const d = DEVICE_DB.find(x => x.id === dbId);
-    return { uid:++uid, dbId, name:d.name, watts:d.watts, hours, heat:d.heat, heating:!!d.heating, simul:true, kind:d.kind, src:d.src };
+    return { uid:++uid, dbId, name:d.name, watts:d.watts, hours, heat:d.heat, heating:!!d.heating, simul:!d.short, kind:d.kind, src:d.src, ...(simul === undefined ? {} : { simul }) };
   };
   return {
     get strip(){ return strip; },
@@ -437,7 +443,7 @@ const AppState = (() => {
     addCustom(name, watts, heat){ items = [...items, { uid:++uid, dbId:null, name, watts, hours:null, heat, heating:false, simul:true, kind:"user", src:"사용자 입력" }]; emit("list"); },
     updateItem(id, patch){ items = items.map(i => i.uid === id ? { ...i, ...patch } : i); emit("value"); },
     removeItem(id){ items = items.filter(i => i.uid !== id); emit("list"); },
-    load(sc){ strip = { ...blankStrip(), ...sc.strip }; items = sc.items.map(([id,h]) => make(id,h)); emit("list"); },
+    load(sc){ strip = { ...blankStrip(), ...sc.strip }; items = sc.items.map(x => make(...x)); emit("list"); },
   };
 })();
 
@@ -447,7 +453,11 @@ const AppState = (() => {
 const josa = (w, a, b) => { const b0 = w.replace(/\([^)]*\)$/, ""), c = b0.charCodeAt(b0.length-1); return w + (c >= 0xAC00 && c <= 0xD7A3 ? ((c - 0xAC00) % 28 ? a : b) : a === "을" ? "을(를)" : "은(는)"); };   // 받침에 맞는 조사
 const sumWatts = list => list.reduce((s, i) => s + (i.watts || 0), 0);
 const calcCapacity = amps => RISK.voltage * amps;
-const calcPeakWatts = items => sumWatts(items.filter(i => i.simul));
+/* 번갈아 쓰는 기기(동시 사용 꺼짐) 중 가장 큰 1개 */
+const topAlternate = items => items.filter(i => !i.simul).reduce((a, i) => !a || (i.watts || 0) > (a.watts || 0) ? i : a, null);
+/* 최대 동시 사용 전력이 나오는 순간에 켜져 있는 기기들 */
+const peakItems = items => { const t = topAlternate(items), on = items.filter(i => i.simul); return t ? [...on, t] : on; };
+const calcPeakWatts = items => sumWatts(peakItems(items));
 const gradeIndex = key => RISK.grades.findIndex(g => g.key === key);
 const gradeByScore = score => RISK.grades.reduce((a, g) => score >= g.min ? g : a);
 
@@ -460,15 +470,17 @@ function interpolate(x, pts){
   return pts[pts.length-1][1];
 }
 
+const isHighHeat = i => i.heat && (i.watts || 0) >= RISK.heat.minW;   // 고데기·전기요처럼 전력이 작은 발열 기기는 제외
+
 function calcMetrics(strip, items){
   const capacityW = calcCapacity(strip.amps), peakW = calcPeakWatts(items);
   return {
-    capacityW, peakW, loadPct: peakW / capacityW * 100,
-    soloW: Math.max(0, ...items.map(i => i.watts || 0)),
-    simul: items.filter(i => i.simul),
-    heatSimul: items.filter(i => i.simul && i.heat),
-    heatLong: items.filter(i => i.heat && i.hours !== null && i.hours >= RISK.long.heatHours),
-    normalLong: items.filter(i => !i.heat && i.hours !== null && i.hours >= RISK.long.normalHours),
+    capacityW, peakW, loadPct: peakW / capacityW * 100, allW: sumWatts(items),
+    simul: peakItems(items),
+    alternates: items.filter(i => !i.simul),
+    heatSimul: peakItems(items).filter(isHighHeat),
+    heatLong: items.filter(i => isHighHeat(i) && i.hours !== null && i.hours >= RISK.long.heatHours),
+    normalLong: items.filter(i => !isHighHeat(i) && i.hours !== null && i.hours >= RISK.long.normalHours),
     socketOver: Math.max(0, items.length - strip.sockets),
     noHours: items.filter(i => i.hours === null), noWatts: items.filter(i => !i.watts),
   };
@@ -479,7 +491,7 @@ function scoreRisk(strip, items){
   const factors = [
     { key:"load",    name:"부하율",         max:R.load.max,    pts: interpolate(m.loadPct, R.load.curve) },
     { key:"age",     name:"사용 기간",      max:R.age.max,     pts: R.age.steps.reduce((p,[y,v]) => strip.years >= y ? v : p, 0) },
-    { key:"heat",    name:"동시 사용 발열 기기", max:R.heat.max, pts: R.heat.byCount[Math.min(m.heatSimul.length, R.heat.byCount.length-1)] },
+    { key:"heat",    name:"동시 사용 고발열 기기", max:R.heat.max, pts: R.heat.byCount[Math.min(m.heatSimul.length, R.heat.byCount.length-1)] },
     { key:"long",    name:"장시간 사용",    max:R.long.max,    pts: (m.heatLong.length ? R.long.heatPts : 0) + (m.normalLong.length ? R.long.normalPts : 0) },
     { key:"sockets", name:"구수 초과",      max:R.sockets.max, pts: m.socketOver ? R.sockets.max : 0 },
   ];
@@ -490,6 +502,9 @@ function scoreRisk(strip, items){
   return { metrics:m, factors, total, base, grade:R.grades[gi], floors:hits.filter(h => gradeIndex(h.grade) > gradeIndex(base.key)) };
 }
 
+/* 모든 기기를 한꺼번에 켠 최악의 경우 */
+const scoreWorst = (strip, items) => scoreRisk(strip, items.map(i => ({ ...i, simul:true })));
+
 /* 벽 콘센트로 옮길 기기를 고르고, 적용 후 점수를 다시 계산 */
 function buildPlan(strip, items){
   let stay = [...items]; const move = [];
@@ -498,7 +513,7 @@ function buildPlan(strip, items){
   const cap = calcCapacity(strip.amps);
   byW(items.filter(i => i.watts >= RISK.highPowerW)).forEach(i => take(i, `${RISK.highPowerW.toLocaleString()}W 이상`));
   byW(stay.filter(i => i.heating)).forEach(i => take(i, "난방기기 단독 연결"));
-  for (let h; (h = byW(stay.filter(i => i.heat && i.simul))).length > 1;) take(h[0], "발열 기기 분리");
+  for (let h; (h = byW(peakItems(stay).filter(isHighHeat))).length > 1;) take(h[0], "발열 기기 분리");
   for (let s; calcPeakWatts(stay) >= cap * RISK.load.safePct / 100 && (s = byW(stay.filter(i => i.simul))).length;) take(s[0], "부하율 낮추기");
   while (stay.length > strip.sockets) take(byW(stay)[0], "구수 맞추기");
   const replace = strip.damage || strip.overheat || strip.years >= RISK.age.replaceFrom;
@@ -506,6 +521,7 @@ function buildPlan(strip, items){
   return { stay, move, replace, after: scoreRisk(afterStrip, stay) };
 }
 
+const byWatts = list => [...list].sort((a,b) => (b.watts||0) - (a.watts||0));
 function buildAdvice(strip, items, res, plan){
   const m = res.metrics, a = [], W = n => Math.round(n).toLocaleString() + "W", P = n => Math.round(n) + "%";
   const names = l => l.map(i => i.name).join(", ");
@@ -514,6 +530,9 @@ function buildAdvice(strip, items, res, plan){
   if (strip.damage) push("즉시", "손상된 멀티탭은 더 쓰지 말고 교체하세요.", true);
   if (strip.daisy) push("즉시", "멀티탭에 꽂은 멀티탭을 빼고, 각각 벽 콘센트에 직접 연결하세요.", true);
   const highs = m.simul.filter(i => i.watts >= RISK.highPowerW);
+  const worst = scoreWorst(strip, items);
+  if (m.alternates.length && worst.metrics.loadPct >= RISK.load.safePct && worst.metrics.loadPct > m.loadPct)
+    push("순서", `${names(byWatts(items.filter(i => i.watts >= RISK.heat.minW)).slice(0, 4))} 등을 한꺼번에 켜면 부하율이 ${P(worst.metrics.loadPct)}까지 올라갑니다. 지금처럼 하나씩 번갈아 쓰세요.`);
   if (highs.length >= 2){
     const alt = m.peakW - sumWatts(highs) + Math.max(...highs.map(i => i.watts));
     push("번갈아", `${josa(names(highs), "을", "를")} 동시에 켜지 않고 하나씩 쓰면 부하율이 ${P(m.loadPct)}에서 ${P(alt / m.capacityW * 100)}로 내려갑니다.`);
@@ -582,9 +601,9 @@ function factorText(f, s, m){
   const top = [...m.simul].sort((a,b) => (b.watts||0) - (a.watts||0)).filter((i,n) => n === 0 || (n < 3 && i.watts >= m.peakW * .05)).map(i => i.name);   // 비중이 작은 기기는 "외 n개"로
   const more = m.simul.length > top.length ? ` 외 ${m.simul.length - top.length}개` : "";
   switch (f.key){
-    case "load": return m.simul.length ? `${top.join(" + ")}${more}${m.simul.length > 1 ? " 동시" : ""} 사용으로 부하율 ${m.loadPct.toFixed(1)}%` : "동시 사용으로 체크한 기기 없음";
+    case "load": return m.simul.length ? `${top.join(" + ")}${more}${m.simul.length > 1 ? " 동시" : ""} 사용으로 부하율 ${m.loadPct.toFixed(1)}%` : "연결한 기기 없음";
     case "age": return `멀티탭 ${s.years}년 사용`;
-    case "heat": return m.heatSimul.length ? `${m.heatSimul.map(i => i.name).join(", ")} (${m.heatSimul.length}개)` : "동시에 켜는 발열 기기 없음";
+    case "heat": return m.heatSimul.length ? `${m.heatSimul.map(i => i.name).join(", ")} (${m.heatSimul.length}개)` : `동시에 켜는 ${RISK.heat.minW}W 이상 발열 기기 없음`;
     case "long": { const l = [...m.heatLong, ...m.normalLong]; return l.length ? l.map(i => `${i.name} ${i.hours}시간`).join(", ") : "장시간 사용 기기 없음"; }
     case "sockets": return m.socketOver ? `${s.sockets}구에 ${s.sockets + m.socketOver}개 연결` : "구수 이내";
   }
@@ -600,13 +619,15 @@ function renderResult(){
   $("gradeBox").innerHTML = `<div class="grade g-${r.grade.key}"><strong>${r.grade.label}</strong><span class="sc num">${r.total}점 / 100점</span></div>`;
   const segs = G.map((g,i) => `<span style="width:${(G[i+1]?.min ?? 100) - g.min}%;background:${g.color}"></span>`).join("");
   const loadG = m.loadPct > 100 ? "var(--critical)" : m.loadPct >= RISK.load.safePct ? "var(--danger)" : "var(--safe)";
-  const warn = [];
+  const warn = [], w = scoreWorst(s, items), alt = m.alternates.filter(i => i.watts);
+  const worstBox = w.metrics.peakW > m.peakW ? `<div class="floor worst"><b>번갈아 쓰는 기준입니다.</b> ${esc(byWatts(alt).slice(0,4).map(i => i.name).join(", "))}${alt.length > 4 ? ` 외 ${alt.length-4}개` : ""}는 동시에 켜지 않는다고 보고 가장 큰 1개만 더했습니다.<br>모두 한꺼번에 켜면 <span class="pill g-${w.grade.key}">${w.grade.label} ${w.total}점</span> 부하율 ${w.metrics.loadPct.toFixed(1)}%</div>` : "";
   if (m.noHours.length) warn.push(`사용 시간을 입력하지 않은 기기 ${m.noHours.length}개는 장시간 사용 점수에서 빠졌습니다.`);
   if (m.noWatts.length) warn.push(`소비전력이 비었거나 잘못된 기기 ${m.noWatts.length}개는 0W로 계산했습니다.`);
   $("resultBody").innerHTML = `
     <div class="gauge" role="img" aria-label="위험도 점수 ${r.total}점"><div class="bar">${segs}</div><div class="mark" style="left:${Math.min(100, r.total)}%"></div></div>
     <div class="scale num"><span style="left:0">0</span>${G.slice(1).map(g => `<span style="left:${g.min}%">${g.min}</span>`).join("")}<span style="left:100%">100</span></div>
     ${r.floors.length ? `<div class="floor"><b>최소 등급 적용:</b> 점수만 보면 ${r.base.label}이지만 ${r.floors.map(f => f.text).join(", ")} 때문에 ${r.grade.label}로 판정했습니다.</div>` : ""}
+    ${worstBox}
     ${warn.length ? `<div class="floor">${warn.join("<br>")}</div>` : ""}
     <div class="kpis num">
       <div><span>최대 동시 사용 전력</span><b>${won(m.peakW)}W</b></div>
@@ -643,8 +664,8 @@ function renderBasis(){
       <div class="tw"><table><tr><th>요인</th><th>배점</th><th>계산</th></tr>
         <tr><td>부하율</td><td>${R.load.max}</td><td>${R.load.curve.slice(1).map(([x,y]) => `${x}% → ${y}점`).join(", ")} (사이는 비례)</td></tr>
         <tr><td>사용 기간</td><td>${R.age.max}</td><td>${R.age.steps.map(([y,p]) => y ? `${y}년 이상 ${p}점` : `1년 미만 ${p}점`).join(", ")}</td></tr>
-        <tr><td>동시 사용 발열 기기</td><td>${R.heat.max}</td><td>${R.heat.byCount.map((p,n) => `${n}개${n === R.heat.byCount.length-1 ? " 이상" : ""} ${p}점`).join(", ")}</td></tr>
-        <tr><td>장시간 사용</td><td>${R.long.max}</td><td>발열 하루 ${R.long.heatHours}시간 이상 ${R.long.heatPts}점, 일반 ${R.long.normalHours}시간 이상 ${R.long.normalPts}점</td></tr>
+        <tr><td>동시 사용 고발열 기기 (${R.heat.minW}W 이상)</td><td>${R.heat.max}</td><td>${R.heat.byCount.map((p,n) => `${n}개${n === R.heat.byCount.length-1 ? " 이상" : ""} ${p}점`).join(", ")}</td></tr>
+        <tr><td>장시간 사용</td><td>${R.long.max}</td><td>고발열 하루 ${R.long.heatHours}시간 이상 ${R.long.heatPts}점, 일반 ${R.long.normalHours}시간 이상 ${R.long.normalPts}점</td></tr>
         <tr><td>구수 초과</td><td>${R.sockets.max}</td><td>연결 기기 수가 구수보다 많으면 ${R.sockets.max}점</td></tr>
       </table></div>
     </div>
@@ -652,7 +673,7 @@ function renderBasis(){
       <h3 style="margin-top:0">등급과 최소 등급</h3>
       <ul><li>${G.map((g,i) => `${g.label} ${rng(g,i)}`).join(" / ")}</li>
       ${["critical","danger","caution"].map(k => `<li>최소 ${G[gradeIndex(k)].label}: ${R.floors.filter(f => f.grade === k).map(f => f.text).join(", ")}</li>`).join("")}</ul>
-      <p class="hint" style="margin-top:8px">장시간 기준(6·12시간)과 배점은 팀이 정한 값입니다.</p>
+      <p class="hint" style="margin-top:8px">최대 동시 사용 전력 = 동시 사용 기기의 합 + 번갈아 쓰는 기기 중 가장 큰 1개. 배점, 장시간 기준(6·12시간), 고발열 기준(${R.heat.minW}W)은 팀이 정한 값입니다.</p>
     </div>`;
   /* 전기화재 원인 */
   const bars = list => { const max = Math.max(...list.map(c => c[2])); return `<div class="cause num">${list.map(([n,c,p,f]) => `<span>${n}${f ? `<span class="fx">입력: ${f}</span>` : ""}</span><span class="b"><i style="width:${p/max*100}%"></i></span><span class="v">${c.toLocaleString()} (${p}%)</span>`).join("")}</div>`; };
